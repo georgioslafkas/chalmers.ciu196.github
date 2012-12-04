@@ -15,5 +15,6 @@
     <string name="title_activity_play_quiz">PlayQuizActivity</string>
     <string name="title_activity_play_tap">PlayTapActivity</string>
     <string name="title_activity_play_end">PlayEndActivity</string>
+    <string name="btnLearn">Learn!</string>
 
 </resources>
