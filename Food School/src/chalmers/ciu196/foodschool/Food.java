@@ -76,7 +76,6 @@ public class Food {
 		}
 		
 		// Constructor
-		
 		public Food(String fname, String fdescription, String fsound_path, String fcategory , int fnumber_of_questions,int fnumber_of_pictures  ){
 			
 			this.setName(fname);

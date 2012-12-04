@@ -61,7 +61,4 @@ public class FoodCategory {
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
 	}
-
-
-
 }
