@@ -22,5 +22,6 @@
     <string name="btnMeat">Meat</string>
     <string name="btnCereals">Cereals</string>
     <string name="btnDairy">Dairy</string>
+    <string name="btnApple">Apple</string>
 
 </resources>

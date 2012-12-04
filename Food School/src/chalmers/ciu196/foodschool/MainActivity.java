@@ -34,7 +34,8 @@ public class MainActivity extends Activity {
 	}
 
 	/* Learn button click listener, takes you to the food
-	 * categories, which displays the grid with all the foods.
+	 * categories, which displays the grid with all the food
+	 * types.
 	 */
 	public void startLearnActivity(View v)
 	{
@@ -45,7 +46,8 @@ public class MainActivity extends Activity {
 	}
 	
 	/* Play button click listener, takes you to the food
-	 * categories, which displays the grid with all the foods.
+	 * categories, which displays the grid with all the food
+	 * types.
 	 */
 	public void startPlayActivity(View v)
 	{
