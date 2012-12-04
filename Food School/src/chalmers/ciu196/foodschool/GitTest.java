@@ -7,5 +7,6 @@ public class GitTest {
 		System.out.println();
 		System.out.print("Malaka");
 		System.out.print("Of course you are...nooot");
+		System.out.print("Man I love these print quotes");
 	}
 }
