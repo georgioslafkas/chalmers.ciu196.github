@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
+	private MediaPlayer mediaPlayer;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -19,8 +20,8 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume(){
 		super.onResume();
-		MediaPlayer mediaPlayer;
-		mediaPlayer= MediaPlayer.create(this, R.raw.bg);
+		mediaPlayer= MediaPlayer.create(this, R.raw.foodschoolbso1);
+
 		Log.d("COsa","COsa");
 		mediaPlayer.start();
 	}
@@ -32,9 +33,16 @@ public class MainActivity extends Activity {
 
 		return true;
 	}
+	@Override
+	protected void onStop(){
+		super.onStop();
+		mediaPlayer.stop();
+	}
+	
 
 	public void startLearnActivity(View v)
 	{
+		
 		Intent startLearn = new Intent(this, LearnCategoriesActivity.class);
 		startLearn.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(startLearn);
