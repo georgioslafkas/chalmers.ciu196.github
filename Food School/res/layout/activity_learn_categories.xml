@@ -5,10 +5,64 @@
     tools:context=".LearnCategoriesActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="@string/hello_world" />
+
+    <!-- Buttons should be replaced with image buttons -->
+    <Button
+        android:id="@+id/btnFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="72dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/btnFruit"
+        android:onClick="startLearnFoodActivity" />
+
+    <Button
+        android:id="@+id/btnVegetables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnFruit"
+        android:layout_alignBottom="@+id/btnFruit"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginLeft="18dp"
+        android:text="@string/btnVegetables" 
+        android:onClick="startLearnFoodActivity" />
+
+    <Button
+        android:id="@+id/btnMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnFruit"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="40dp"
+        android:text="@string/btnMeat" 
+        android:onClick="startLearnFoodActivity" />
+
+    <Button
+        android:id="@+id/btnCereals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnMeat"
+        android:layout_alignBottom="@+id/btnMeat"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="@string/btnCereals" 
+        android:onClick="startLearnFoodActivity" />
+
+    <Button
+        android:id="@+id/btnDairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/btnMeat"
+        android:text="@string/btnDairy" 
+        android:onClick="startLearnFoodActivity" />
 
 </RelativeLayout>

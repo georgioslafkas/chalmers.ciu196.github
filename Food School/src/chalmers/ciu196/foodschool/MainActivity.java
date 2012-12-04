@@ -40,12 +40,28 @@ public class MainActivity extends Activity {
 	}
 	
 
+	/* Learn button click listener, takes you to the food
+	 * categories, which displays the grid with all the food
+	 * types.
+	 */
 	public void startLearnActivity(View v)
 	{
 		
 		Intent startLearn = new Intent(this, LearnCategoriesActivity.class);
 		startLearn.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(startLearn);
+		finish();
+	}
+	
+	/* Play button click listener, takes you to the food
+	 * categories, which displays the grid with all the food
+	 * types.
+	 */
+	public void startPlayActivity(View v)
+	{
+		Intent startPlay = new Intent(this, PlayCategoriesActivity.class);
+		startPlay.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(startPlay);
 		finish();
 	}
 }
