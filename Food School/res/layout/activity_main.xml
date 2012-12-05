@@ -2,34 +2,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+    tools:context=".MainActivity"
+    android:background="@drawable/img__background_main" >
 
     <!-- Buttons should probably be replaced with image buttons  -->
-    <Button									
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="750dp"
+        android:layout_height="375dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="200dp"
+        android:src="@drawable/img_main_logo" />
+
+    <ImageButton
         android:id="@+id/btnLearn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="@string/btnLearn"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/img_main_learn_english"
         android:onClick="startLearnActivity" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
         android:layout_alignLeft="@+id/btnLearn"
-        android:layout_below="@+id/btnLearn"
-        android:text="@string/btnPlay"
-        android:onClick="startPlayActivity" />
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="600dp"
 
+        android:background="@drawable/img_main_play_english"
+        android:onClick="startPlayActivity" />
+    
 </RelativeLayout>
