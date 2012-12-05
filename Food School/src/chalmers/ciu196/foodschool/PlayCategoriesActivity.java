@@ -32,6 +32,6 @@ public class PlayCategoriesActivity extends Activity {
 		Intent startQuiz = new Intent(this, PlayQuizActivity.class);
 		startQuiz.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(startQuiz);
-		finish();
+		//finish();
 	}
 }
