@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume(){
 		super.onResume();
-		mediaPlayer= MediaPlayer.create(this, R.raw.foodschoolbso1);
+		mediaPlayer= MediaPlayer.create(this, R.raw.bg);
 
 		Log.d("COsa","COsa");
 		mediaPlayer.start();
