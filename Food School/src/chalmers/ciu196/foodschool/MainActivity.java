@@ -23,9 +23,10 @@ public class MainActivity extends Activity {
 		mediaPlayer= MediaPlayer.create(this, R.raw.foodschoolbso1);
 
 		Log.d("COsa","COsa");
+		/* Start playing music when this activity starts. */
 		mediaPlayer.start();
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -33,9 +34,11 @@ public class MainActivity extends Activity {
 
 		return true;
 	}
+	
 	@Override
 	protected void onStop(){
 		super.onStop();
+		/* Stop playing music when this activity stops. */
 		mediaPlayer.stop();
 	}
 	
