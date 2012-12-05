@@ -1,6 +1,8 @@
 package chalmers.ciu196.foodschool;
 
-public class FoodCategory {
+
+
+public class FoodCategory { 
 	
 	// PROBABLY NEEDS DISCUSSION WITH THE GROUP
 	
@@ -61,7 +63,5 @@ public class FoodCategory {
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
 	}
-
-
 
 }

@@ -33,6 +33,6 @@ public class LearnCategoriesActivity extends Activity {
 		Intent startFood = new Intent(this, LearnFoodActivity.class);
 		startFood.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(startFood);
-		finish();
+		//finish();
 	}
 }

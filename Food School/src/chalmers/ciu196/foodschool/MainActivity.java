@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
 		Intent startLearn = new Intent(this, LearnCategoriesActivity.class);
 		startLearn.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(startLearn);
-		finish();
+		//finish();
 	}
 	
 	/* Play button click listener, takes you to the food
@@ -62,6 +62,6 @@ public class MainActivity extends Activity {
 		Intent startPlay = new Intent(this, PlayCategoriesActivity.class);
 		startPlay.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(startPlay);
-		finish();
+		//finish();
 	}
 }
