@@ -3,7 +3,7 @@ package chalmers.ciu196.foodschool;
 import java.util.ArrayList;
 
 
-public class Food { 
+public class Food extends Object{ 
 	
 	// PROBABLY NEEDS DISCUSSION WITH THE GROUP
 		
@@ -11,7 +11,9 @@ public class Food {
 		   description, // Description of the food
 		   sound_path, // Path of the sound file for this food
 		   category; // Category indicator where this food belongs
+		private int id; // Id of the food
 		
+
 		private ArrayList<String> questions = new ArrayList<String>(); // Array that holds questions
 		private ArrayList<String> answers = new ArrayList<String>();// Array that holds answers
 		 
@@ -19,6 +21,15 @@ public class Food {
 		
 		
 		// Getters and Setters of the parameters above
+		
+		// id
+		
+		public int getId() {
+			return id;
+		}
+		public void setId(int id) {
+			this.id = id;
+		}
 		
 		// name
 		public String getName() { // Returns the name of the food
@@ -79,12 +90,22 @@ public class Food {
 		
 		// Constructor
 		
-		public Food(String fname, String fdescription, String fsound_path, String fcategory , int fnumber_of_questions,int fnumber_of_pictures  ){
+		public Food(int ID, String fname, String fdescription, String fsound_path, String fcategory , int fnumber_of_questions,int fnumber_of_pictures  ){
 			
+			this.setId(ID);
 			this.setName(fname);
 			this.setDescription(fdescription);
 			this.setSound_path(fsound_path);
 			this.setCategory(fcategory);
+		}
+		
+		// Default constructor
+		public Food(){
+			this.setId(0);
+			this.setName(null);
+			this.setDescription(null);
+			this.setSound_path(null);
+			this.setCategory(null);
 		}
 		
 		
