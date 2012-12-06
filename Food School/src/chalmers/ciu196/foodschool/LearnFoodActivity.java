@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 public class LearnFoodActivity extends Activity {
 
@@ -12,6 +13,14 @@ public class LearnFoodActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_learn_food);
+		
+		/* Get the intent that started this activity */
+		Intent startedThis = getIntent();
+		/* Retrieve which category was tapped, by reading the
+		 * string that was sent with
+		 */
+		String categoryToShow = startedThis.getStringExtra("category");
+		Toast.makeText(this, categoryToShow, Toast.LENGTH_LONG).show();
 	}
 
 	@Override

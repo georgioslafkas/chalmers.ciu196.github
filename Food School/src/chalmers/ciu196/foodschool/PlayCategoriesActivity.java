@@ -7,7 +7,8 @@ import android.view.Menu;
 import android.view.View;
 
 public class PlayCategoriesActivity extends Activity {
-
+	private String selection = "";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,8 +30,38 @@ public class PlayCategoriesActivity extends Activity {
 	 */
 	public void startPlayQuizActivity(View v)
 	{
+		/* Find out which button was tapped 
+		 * and store the respective string
+		 */
+		switch (v.getId())
+		{
+			case R.id.btnVegetables:
+				//Toast.makeText(this, "Vegetables", Toast.LENGTH_LONG).show();
+				selection = "vegetables";
+				break;
+			case R.id.btnCereals:
+				//Toast.makeText(this, "Cereals", Toast.LENGTH_LONG).show();
+				selection = "cereals";
+				break;
+			case R.id.btnDairy:
+				//Toast.makeText(this, "Dairy", Toast.LENGTH_LONG).show();
+				selection = "dairy";
+				break;
+			case R.id.btnMeat:
+				//Toast.makeText(this, "Meat", Toast.LENGTH_LONG).show();
+				selection = "meat";
+				break;
+			case R.id.btnFruit:
+				//Toast.makeText(this, "Fruit", Toast.LENGTH_LONG).show();
+				selection = "fruit";
+				break;
+			default:
+				break;
+		}
 		Intent startQuiz = new Intent(this, PlayQuizActivity.class);
 		startQuiz.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		/* Send along the category picked, to the next activity */
+		startQuiz.putExtra("category", selection);
 		startActivity(startQuiz);
 		//finish();
 	}

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/img__background_main" >
+    android:background="@drawable/back" >
 
     <!-- Buttons should probably be replaced with image buttons  -->
     <ImageView
