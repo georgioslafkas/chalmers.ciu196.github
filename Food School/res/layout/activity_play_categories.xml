@@ -40,7 +40,7 @@
             android:layout_weight="1"
             android:src="@drawable/img_category_fruits"
             android:background="@android:color/transparent"
-            android:onClick="startLearnFoodActivity" />
+            android:onClick="startPlayQuizActivity" />
 
 
         <ImageButton
@@ -53,7 +53,7 @@
             android:layout_weight="1"
             android:src="@drawable/img_category_vegetables"
             android:background="@android:color/transparent"
-            android:onClick="startLearnFoodActivity" />
+            android:onClick="startPlayQuizActivity" />
 
         <ImageButton
             android:id="@+id/btnMeat"
@@ -63,9 +63,9 @@
             android:layout_marginRight="50dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startLearnFoodActivity"
             android:scaleType="fitCenter"
-            android:src="@drawable/img_category_protein" />
+            android:src="@drawable/img_category_protein" 
+            android:onClick="startPlayQuizActivity"/>
 
     </TableRow>
 
@@ -84,7 +84,7 @@
             android:layout_marginTop="70dp"
             android:src="@drawable/img_category_cereals"
             android:background="@android:color/transparent"
-            android:onClick="startLearnFoodActivity" />
+            android:onClick="startPlayQuizActivity" />
 
         <ImageButton
             android:id="@+id/btnDairy"
@@ -95,7 +95,7 @@
             android:layout_marginTop="70dp"
             android:src="@drawable/img_category_dairy"
             android:background="@android:color/transparent"
-            android:onClick="startLearnFoodActivity" />
+            android:onClick="startPlayQuizActivity" />
         
          <ImageButton
             android:id="@+id/btnAll"
@@ -107,7 +107,7 @@
             android:layout_marginRight="50dp"
             android:src="@drawable/play_categories_all"
             android:background="@android:color/transparent"
-            android:onClick="startLearnFoodActivity" />
+            android:onClick="startPlayQuizActivity" />
     </TableRow>
 
 </TableLayout>
