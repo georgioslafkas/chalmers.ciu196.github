@@ -1,14 +1,110 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlayQuizActivity" >
+    tools:context=".PlayQuizActivity" 
+    android:background="@drawable/back">
 
-    <TextView
+    <TableRow
+        android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
 
-</RelativeLayout>
+       <ImageButton
+            android:id="@+id/imageButtonb"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitStart"
+            android:layout_weight="1"
+            android:src="@drawable/img_navigation_grid_button"
+            android:background="@android:color/transparent"/>
+        
+
+        <ImageButton
+            android:id="@+id/imageButtond"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitEnd"
+            android:layout_weight="1"
+            android:src="@drawable/img_navigation_home_english"
+            android:background="@android:color/transparent"/>        
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="50dp">
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play_timer" />
+
+        <TextView
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="There are more than 7000 varieties of apples grown worldwide. " />
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fruits_detail_detail_playdescription"
+            android:background="@android:color/transparent"/>
+        
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp" >
+        <ImageButton
+            android:id="@+id/imageButtonw"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/fruits_detail_apple_applejuice"
+            android:background="@android:color/transparent"/>
+        <ImageButton
+            android:id="@+id/imageButtonx"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/fruits_detail_apple_applebasket"
+            android:background="@android:color/transparent"/>
+         <ImageButton
+            android:id="@+id/imageButtony"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/fruits_detail_apple_appletree"
+            android:background="@android:color/transparent"/>
+         <ImageButton
+            android:id="@+id/imageButtonz"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/fruits_detail_apple_peeledapple"
+            android:background="@android:color/transparent"/>
+    </TableRow>
+
+
+</TableLayout>

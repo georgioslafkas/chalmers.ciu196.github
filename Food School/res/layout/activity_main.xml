@@ -1,40 +1,83 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/back" >
+    android:background="@drawable/back"
+    tools:context=".MainActivity" >
 
-    <!-- Buttons should probably be replaced with image buttons  -->
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="750dp"
-        android:layout_height="375dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="200dp"
-        android:src="@drawable/img_main_logo" />
+    <!-- Buttons should probably be replaced with image buttons -->
 
-    <ImageButton
-        android:id="@+id/btnLearn"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/img_main_learn_english"
-        android:onClick="startLearnActivity" />
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" > >
 
-    <ImageButton
-        android:id="@+id/btnPlay"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:layout_alignLeft="@+id/btnLearn"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="600dp"
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitEnd"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/img__settings_music_on"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
 
-        android:background="@drawable/img_main_play_english"
-        android:onClick="startPlayActivity" />
-    
-</RelativeLayout>
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img__settings_language_english" 
+            android:layout_weight="3"
+            android:background="@android:color/transparent"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="375dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_main_logo" 
+            android:background="@android:color/transparent"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/btnLearn"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="4"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/img_main_learn_english"
+            android:background="@android:color/transparent"
+            android:onClick="startLearnActivity" />
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitStart"
+            android:layout_weight="1"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/img_main_play_english"
+            android:background="@android:color/transparent"
+            android:onClick="startPlayActivity" />
+    </TableRow>
+
+</TableLayout>

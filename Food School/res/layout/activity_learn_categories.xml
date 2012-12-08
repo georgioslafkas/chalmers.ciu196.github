@@ -1,45 +1,58 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/TableLayout1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:context=".LearnCategoriesActivity" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".LearnCategoriesActivity" 
+    android:background="@drawable/back">
 
     <!-- Buttons should be replaced with image buttons -->
-
     <TableRow
         android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitEnd"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+           	android:layout_weight="1"
+            android:src="@drawable/img_navigation_home_english"
+            android:background="@android:color/transparent"
+            android:onClick="startMainActivity" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
         <ImageButton
             android:id="@+id/btnFruit"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/img_category_fruits"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:scaleType="fitStart"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/img_category_fruits"
+            android:background="@android:color/transparent"
             android:onClick="startLearnFoodActivity" />
+
 
         <ImageButton
             android:id="@+id/btnVegetables"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="18dp"
-            android:background="@drawable/img_category_vegetables"
-            android:onClick="startLearnFoodActivity" />
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <ImageButton
-            android:id="@+id/btnMeat"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/img_category_protein"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:scaleType="fitEnd"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/img_category_vegetables"
+            android:background="@android:color/transparent"
             android:onClick="startLearnFoodActivity" />
 
     </TableRow>
@@ -50,18 +63,45 @@
         android:layout_height="wrap_content" >
 
         <ImageButton
+            android:id="@+id/btnMeat"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="20dp"
+           	android:layout_weight="1"
+            android:src="@drawable/img_category_protein"
+            android:background="@android:color/transparent"
+            android:onClick="startLearnFoodActivity" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
             android:id="@+id/btnCereals"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/img_category_cereals"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:scaleType="fitStart"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/img_category_cereals"
+            android:background="@android:color/transparent"
             android:onClick="startLearnFoodActivity" />
 
         <ImageButton
             android:id="@+id/btnDairy"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/img_category_dairy"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:scaleType="fitEnd"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/img_category_dairy"
+            android:background="@android:color/transparent"
             android:onClick="startLearnFoodActivity" />
     </TableRow>
 
