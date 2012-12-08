@@ -22,7 +22,17 @@
             android:layout_weight="1"
             android:src="@drawable/img_navigation_grid_button"
             android:background="@android:color/transparent"/>
-        
+            <ProgressBar
+        android:id="@+id/progBarTap"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp" 
+        android:max="10"
+        android:progress="10"/>
+       
 
         <ImageButton
             android:id="@+id/imageButtond"
