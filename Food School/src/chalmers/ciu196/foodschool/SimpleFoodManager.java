@@ -28,11 +28,6 @@ public class SimpleFoodManager implements FoodManager {
 		private SimpleFoodManager()
 		{	
 			// create the Food Categories 
-			FoodCategory fruits = new FoodCategory();
-			FoodCategory vegetables = new FoodCategory();
-			FoodCategory meat = new FoodCategory();
-			FoodCategory cereals = new FoodCategory();
-			FoodCategory dairy = new FoodCategory();
 			
 			// add the categories to the category collection
 			

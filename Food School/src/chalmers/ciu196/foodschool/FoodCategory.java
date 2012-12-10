@@ -15,20 +15,22 @@ public class FoodCategory extends Object{
 
 
 	// Constructor
-	public FoodCategory(String catName, String catDesc, String cImagePath){
+	public FoodCategory(String catName, String catDesc, String cImagePath, String cSoundPath, int cId){
 			
-		this.setName(catName);
-		this.setDescription(catDesc);
-		this.setImagePath(cImagePath);			
+		this.setCatName(catName);
+		this.setCatDescription(catDesc);
+		this.setCatImagePath(cImagePath);		
+		this.setCatSoundPath(cSoundPath);
+		this.setCatId(cId);
 	}
 		
 	// Default constructor
 	public FoodCategory(){
 			
-		this.setName(null);
-		this.setDescription(null);
-		this.setImagePath(null);
-		this.setSoundPath(null);
+		this.setCatName(null);
+		this.setCatDescription(null);
+		this.setCatImagePath(null);
+		this.setCatSoundPath(null);
 		this.setCatId(0);
 	}	
 		
@@ -45,38 +47,38 @@ public class FoodCategory extends Object{
 	}
 	
 	// name
-	public String getName() {
+	public String getCatName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setCatName(String name) {
 		this.name = name;
 	}
 	
 	// description
-	public String getDescription() {
+	public String getCatDescription() {
 		return description;
 	}
 
-	public void setDescription(String description) {
+	public void setCatDescription(String description) {
 		this.description = description;
 	}
 	
 	// image path
-	public String getImagePath() {
+	public String getCatImagePath() {
 		return imagePath;
 	}
 
-	public void setImagePath(String imagePath) {
+	public void setCatImagePath(String imagePath) {
 		this.imagePath = imagePath;
 	}
 	
 	// sound path
-	public String getSoundPath() {
+	public String getCatSoundPath() {
 		return soundPath;
 	}
 
-	public void setSoundPath(String soundPath) {
+	public void setCatSoundPath(String soundPath) {
 		this.soundPath = soundPath;
 	}
 

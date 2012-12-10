@@ -11,7 +11,7 @@ public class Food extends Object{
 		   description, // Description of the food
 		   sound_path, // Path of the sound file for this food
 		   category; // Category indicator where this food belongs
-		private int id; // Id of the food
+		private int foodId; // Id of the food
 		
 
 		private ArrayList<String> questions = new ArrayList<String>(); // Array that holds questions
@@ -25,10 +25,10 @@ public class Food extends Object{
 		// id
 		
 		public int getId() {
-			return id;
+			return foodId;
 		}
 		public void setId(int id) {
-			this.id = id;
+			this.foodId = id;
 		}
 		
 		// name
@@ -90,7 +90,7 @@ public class Food extends Object{
 		
 		// Constructor
 		
-		public Food(int ID, String fname, String fdescription, String fsound_path, String fcategory , int fnumber_of_questions,int fnumber_of_pictures  ){
+		public Food( String fname, String fdescription, String fsound_path, String fcategory , int ID, ArrayList<String> qstns , ArrayList<String> answrs , ArrayList<String> img_paths   ){
 			
 			this.setId(ID);
 			this.setName(fname);

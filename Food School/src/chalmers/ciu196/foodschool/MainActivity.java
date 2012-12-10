@@ -1,5 +1,8 @@
 package chalmers.ciu196.foodschool;
 
+
+
+import chalmers.ciu196.foodschool.Database.DbManager;
 import android.os.Bundle;
 import android.media.MediaPlayer;
 import android.app.Activity;
@@ -7,16 +10,47 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends Activity {
 	private MediaPlayer mediaPlayer;
+	private DbManager databaseManager;
+	
+	// Database related variables =============================================
+
+    //Close database before exiting the application
+	
+   @Override
+   protected void onPause() {
+         super.onDestroy();
+         dbManager().close();
+         databaseManager = null;
+     }
+	
+	// End of Database related variables ======================================
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+	// DATABASE related code ==================================================
+		
+		
+		
+	// End of database related code ===========================================
 
 	}
+	
+	// DATABASE related code ==================================================
+	private DbManager dbManager() {
+		if (databaseManager == null) {
+			databaseManager = new DbManager(this);
+			databaseManager.database();
+		}
+		return databaseManager;
+	}
+	// End of database related code ===========================================
+	
 	@Override
 	protected void onResume(){
 		super.onResume();

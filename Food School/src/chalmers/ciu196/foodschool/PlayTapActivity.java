@@ -1,12 +1,9 @@
 package chalmers.ciu196.foodschool;
 
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.app.Activity;
-import android.content.Context;
 import android.view.Menu;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 public class PlayTapActivity extends Activity {
 	GameTimerBar timer; /* timer is the count down timer */
