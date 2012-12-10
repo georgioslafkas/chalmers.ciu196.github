@@ -111,12 +111,13 @@ public class DbManager {
 	    // Fetch a food category by searching using the name of it
 	    public FoodCategory getCategory (String name){  
 	    	FoodCategory cat = new FoodCategory();
-	    	cat.setCatName(name);
-	    	ObjectSet<FoodCategory> result = database().queryByExample(cat);
+	    	FoodCategory catOff = new FoodCategory(); // create to eliminate the null pointer exception if method can't find the category we look for
+	    	cat.setCatName(name);					  // it returns an empty category object
+	    	ObjectSet<FoodCategory> result = database.queryByExample(cat);
 	    	if (result.hasNext()){
 	    		return (FoodCategory)result.next();
 	    	}
-			return null;
+			return catOff;
 	    }
 	    
 	    // Fetch a list with all categories
@@ -151,19 +152,20 @@ public class DbManager {
 	    // Fetch a food by searching using the name of it
 	    public Food getFood (String name){
 	    	Food food = new Food();
-	    	food.setName(name);
-	    	ObjectSet<Food> result = database().queryByExample(food);
+	    	Food foodOff = new Food(); // create to eliminate the null pointer exception if method can't find the food we look for 
+	    	food.setName(name);		   // it returns an empty food object
+	    	ObjectSet<Food> result = database.queryByExample(food);
 	    	if (result.hasNext()){
 	    		return (Food)result.next();
 	    	}
-			return null;
+			return foodOff;
 	    }
 	    
 	 // Fetch a food by searching using the ID of it
 	    public Food getFood (int id){
 	    	Food food = new Food();
 	    	food.setId(id);
-	    	ObjectSet<Food> result = database().queryByExample(food);
+	    	ObjectSet<Food> result = database.queryByExample(food);
 	    	if (result.hasNext()){
 	    		return (Food)result.next();
 	    	}

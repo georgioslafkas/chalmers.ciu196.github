@@ -1,7 +1,5 @@
 package chalmers.ciu196.foodschool;
 
-
-
 import chalmers.ciu196.foodschool.Database.DbManager;
 import android.os.Bundle;
 import android.media.MediaPlayer;
@@ -13,19 +11,9 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 	private MediaPlayer mediaPlayer;
-	private DbManager databaseManager;
 	
 	// Database related variables =============================================
-
-    //Close database before exiting the application
-	
-   @Override
-   protected void onPause() {
-         super.onDestroy();
-         dbManager().close();
-         databaseManager = null;
-     }
-	
+	private DbManager databaseManager;
 	// End of Database related variables ======================================
 	
 	@Override
@@ -34,9 +22,28 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 	// DATABASE related code ==================================================
+	
+	dbManager();
 		
-		
-		
+	FoodCategory fruits = new FoodCategory("test", "test", "imgpath", "soundpath", 1);
+	Food apple = new Food();
+	
+	apple.setName("apple");
+	apple.setDescription("rea fruit");
+	apple.setId(11);
+	apple.setSound_path("path");
+	
+	dbManager().storeFoodCat(fruits);
+	dbManager().storeFood(apple);
+	
+	FoodCategory testLoadCat = new FoodCategory();
+	testLoadCat = dbManager().getCategory(fruits.getCatName());
+	Log.d("Db4o", "Category "+testLoadCat.getCatName()+" was succesfully stored and retrieved from database.");
+	
+	Food testLoadFood = new Food();
+	testLoadFood = dbManager().getFood(apple.getName());
+	Log.d("Db4o", "Food "+testLoadFood.getName()+" was successfully stored and retrieved from database.");
+	
 	// End of database related code ===========================================
 
 	}
@@ -76,6 +83,18 @@ public class MainActivity extends Activity {
 		mediaPlayer.stop();
 	}
 	
+	// Database related variables =============================================
+
+    //Close database before exiting the application
+	
+	@Override
+	protected void onPause() {
+         super.onDestroy();
+         dbManager().close();
+         databaseManager = null;
+     }
+	
+	// End of Database related variables ======================================
 
 	/* Learn button click listener, takes you to the food
 	 * categories, which displays the grid with all the food
