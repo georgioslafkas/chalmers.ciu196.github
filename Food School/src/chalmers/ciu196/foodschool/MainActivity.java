@@ -46,9 +46,6 @@ public class MainActivity extends Activity {
 	foodManager.addCategory(dairy);
 	foodManager.addCategory(cereals);
 	
-	
-	// create two test objects one of class Food and one of class FoodCategory
-	FoodCategory fruits = new FoodCategory("test", "test", "imgpath", "soundpath", 1);
 	Food apple = new Food();
 	Food orange = new Food();
 	Food banana = new Food();
@@ -89,67 +86,67 @@ public class MainActivity extends Activity {
 	apple.setDescription("rea fruit");
 	apple.setId(11);
 
-	apple.setSound_path("path");
+	//apple.setSound_paths("path");
 	orange.setName("orange");
 	orange.setDescription("round fruit");
 	apple.setId(12);
-	orange.setSound_path("path");
+	//orange.setSound_paths("path");
 	banana.setName("banana");
 	banana.setDescription("long fruit");
 	banana.setId(13);
-	banana.setSound_path("path");
+	//banana.setSound_paths("path");
 	
 	tomato.setName("tomato");
 	tomato.setDescription("juicy vegetable");
 	tomato.setId(21);
-	tomato.setSound_path("path");
+	//tomato.setSound_paths("path");
 	cucumber.setName("cucumber");
 	cucumber.setDescription("long vegetable");
 	cucumber.setId(22);
-	cucumber.setSound_path("path");
+	//cucumber.setSound_paths("path");
 	cabbage.setName("cabbage");
 	cabbage.setDescription("leafy vegetable");
 	cabbage.setId(23);
-	cabbage.setSound_path("path");
+	//cabbage.setSound_paths("path");
 	
 	pork.setName("pork");
 	pork.setDescription("red meat");
 	pork.setId(31);
-	pork.setSound_path("path");
+	//pork.setSound_paths("path");
 	salmon.setName("salmon");
 	salmon.setDescription("fish meat");
 	salmon.setId(32);
-	salmon.setSound_path("path");
+	//salmon.setSound_paths("path");
 	chicken.setName("chicken");
 	chicken.setDescription("white meat");
 	chicken.setId(33);
-	chicken.setSound_path("path");
+	//chicken.setSound_paths("path");
 	
 	gouda.setName("gouda");
 	gouda.setDescription("yellow cheese");
 	gouda.setId(41);
-	gouda.setSound_path("path");
+	//gouda.setSound_paths("path");
 	yoghurt.setName("yoghurt");
 	yoghurt.setDescription("creamy dairy");
 	yoghurt.setId(42);
-	yoghurt.setSound_path("path");
+	//yoghurt.setSound_paths("path");
 	milk.setName("milk");
 	milk.setDescription("liquid dairy");
 	milk.setId(43);
-	milk.setSound_path("path");
+	//milk.setSound_paths("path");
 	
 	corn.setName("corn");
 	corn.setDescription("yellow grain");
 	corn.setId(51);
-	corn.setSound_path("path");
+	//corn.setSound_paths("path");
 	oats.setName("oats");
 	oats.setDescription("flakes grain");
 	oats.setId(52);
-	oats.setSound_path("path");
+	//oats.setSound_paths("path");
 	bread.setName("bread");
 	bread.setDescription("mashed grain");
 	corn.setId(53);
-	corn.setSound_path("path");
+	//corn.setSound_paths("path");
 	
 	ArrayList<String> imgpaths = new ArrayList<String>();
 	imgpaths.add("path1");
