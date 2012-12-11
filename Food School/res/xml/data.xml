@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<food>
-    <answers>
-        <string>answer 1</string>
-        <string>answer 2</string>
-    </answers>
-    <description>Description here</description>
-    <sound_path>test_path1</sound_path>
-    <image_paths>
-        <string>test_path2</string>
-        <string>test_path3</string>
-        <string>test_path3</string>
-    </image_paths>
-    <name>apple2</name>
-    <questions>
-        <string>question 1</string>
-        <string>question 2</string>
-    </questions>
-    <foodId>13</foodId>
-</food>
+	<food>
+    	<answers>
+        	<string>path1</string>
+        	<string>path2</string>
+    	</answers>
+    	<description>rea fruit</description>
+    	<sound__paths>
+    	    <string>path1</string>
+    	    <string>path2</string>
+    	</sound__paths>
+    	<image__paths>
+    	    <string>path1</string>
+    	    <string>path2</string>
+    	</image__paths>
+    	<name>apple</name>
+    	<questions>
+    	    <string>path1</string>
+    	    <string>path2</string>
+    	</questions>
+    	<foodId>11</foodId>
+	</food>

@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
 	private DbManager databaseManager;
 	// End of Database related variables ======================================
 	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -147,6 +148,8 @@ public class MainActivity extends Activity {
 	bread.setDescription("mashed grain");
 	corn.setId(53);
 	//corn.setSound_paths("path");
+
+	apple.setCategory(fruits.getCatName());
 	
 	ArrayList<String> imgpaths = new ArrayList<String>();
 	imgpaths.add("path1");
@@ -224,12 +227,9 @@ public class MainActivity extends Activity {
 	
 	
 	
+	
 	// Read the XML file with our resources
-	/*XmlResourceParser stringXmlContent; // create the string that will have the data
-	stringXmlContent = this.getResources().getXml(R.xml.data);
-	Food apple2 = new Food();
-	Log.d("XMLreadfromfile", "The food " + apple2.getName() + " was succesfully read from the xml file and created.");
-	*/
+	
 	// End of code for XML creation
 
 	}
