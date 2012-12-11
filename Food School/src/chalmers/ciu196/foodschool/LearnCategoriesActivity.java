@@ -38,9 +38,6 @@ public class LearnCategoriesActivity extends Activity {
 	{
 		Intent startFood = new Intent(this, LearnFoodActivity.class);
 		startFood.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		/* Find out which button was tapped 
-		 * and store the respective string
-		 */
 		switch (v.getId())
 		{
 			case R.id.btnVegetables:

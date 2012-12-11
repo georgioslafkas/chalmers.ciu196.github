@@ -5,12 +5,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 public class PlayQuizActivity extends Activity {
 	GameTimerBar timer; /* timer is the count down timer */
 	private static final int TOTAL_TIME = 10000; /* 10 seconds count down */
 	private static final int INTERVAL = 500;	/* 0.5 second interval */
+	private final int NOT_FOUND = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class PlayQuizActivity extends Activity {
 		/* Retrieve which category was tapped, by reading the
 		 * string that was sent with
 		 */
-		String categoryToPlay = startedThis.getStringExtra("category");
-		Toast.makeText(this, categoryToPlay, Toast.LENGTH_LONG).show();
+		/* SHOULD BE USED TO LOAD THE QUESTIONS FOR THIS CATEGORY */
+		int categoryToPlay = startedThis.getIntExtra("category", NOT_FOUND);
 		
 		/* Retrieve the progress bar from the UI */
 		ProgressBar quizProgBar = (ProgressBar) findViewById(R.id.progBarQuiz);

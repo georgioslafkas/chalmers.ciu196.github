@@ -58,18 +58,18 @@ public class LearnFoodActivity extends Activity {
 				break;
 			/* VEGETABLES */
 			case 2:
-				btn1_1.setImageResource(R.drawable.img_vegetables_beetroot);
-				btn1_2.setImageResource(R.drawable.img_vegetables_broccoli);
-				btn1_3.setImageResource(R.drawable.img_vegetables_cabbage);
-				btn1_4.setImageResource(R.drawable.img_vegetables_carrot);
-				btn2_1.setImageResource(R.drawable.img_vegetables_celery);
-				btn2_2.setImageResource(R.drawable.img_vegetables_cucumber);
-				btn2_3.setImageResource(R.drawable.img_vegetables_eggplant);
-				btn2_4.setImageResource(R.drawable.img_vegetables_garlic);
-				btn3_1.setImageResource(R.drawable.img_vegetables_green_peas);
-				btn3_2.setImageResource(R.drawable.img_vegetables_lettuce);
-				btn3_3.setImageResource(R.drawable.img_vegetables_mushrooms);
-				btn3_4.setImageResource(R.drawable.img_vegetables_onion);
+				btn1_1.setImageResource(R.drawable.img_vegetables_broccoli);
+				btn1_2.setImageResource(R.drawable.img_vegetables_cabbage);
+				btn1_3.setImageResource(R.drawable.img_vegetables_carrot);
+				btn1_4.setImageResource(R.drawable.img_vegetables_cucumber);
+				btn2_1.setImageResource(R.drawable.img_vegetables_eggplant);
+				btn2_2.setImageResource(R.drawable.img_vegetables_green_peas);
+				btn2_3.setImageResource(R.drawable.img_vegetables_lettuce);
+				btn2_4.setImageResource(R.drawable.img_vegetables_mushrooms);
+				btn3_1.setImageResource(R.drawable.img_vegetables_onion);
+				btn3_2.setImageResource(R.drawable.img_vegetables_pepper);
+				btn3_3.setImageResource(R.drawable.img_vegetables_potato);
+				btn3_4.setImageResource(R.drawable.img_vegetables_tomato);
 				break;
 			/* MEAT */
 			case 3:
