@@ -1,5 +1,7 @@
 package chalmers.ciu196.foodschool;
 
+import java.util.ArrayList;
+
 
 
 public class FoodCategory extends Object{ 
@@ -13,6 +15,7 @@ public class FoodCategory extends Object{
 	
 	private int catId; // Category id
 
+	private ArrayList<Food> foodsContained = new ArrayList<Food>();
 
 	// Constructor
 	public FoodCategory(String catName, String catDesc, String cImagePath, String cSoundPath, int cId){
@@ -82,4 +85,7 @@ public class FoodCategory extends Object{
 		this.soundPath = soundPath;
 	}
 
+	public ArrayList<Food> getFoodsContained() {
+		return foodsContained;
+	}
 }

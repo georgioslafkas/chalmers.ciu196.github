@@ -9,88 +9,106 @@ public class SimpleFoodManager implements FoodManager {
 	private static SimpleFoodManager manager;
 	
 	// Method to retrieve the instance of the class
-		public static synchronized SimpleFoodManager getManager()
+	public static synchronized SimpleFoodManager getManager()
+	{
+		if (manager == null)
 		{
-			if (manager == null)
-			{
-				manager = new SimpleFoodManager();
-			}
-			return manager;
+			manager = new SimpleFoodManager();
 		}
+		return manager;
+	}
 	
+	/* Array list that contains every food */
 	public static ArrayList<Food> FoodCollection = new ArrayList<Food>();
+	/* Array list that contains all the categories */
 	public static ArrayList<FoodCategory> FoodCategoryCollection = new ArrayList<FoodCategory>();
 	
+	/* Private constructor to ensure 
+	 * no multiple instances of the class are created
+	 */
+	private SimpleFoodManager()
+	{	
+	}
 	
-	
-	
-	// private constructor to ensure no multiple instances of the class are created
-		private SimpleFoodManager()
-		{	
-			// create the Food Categories 
-			
-			// add the categories to the category collection
-			
-			
-			// create the Foods 
-			
-			
-			// add the foods to the category collection
-			
-		
+	/* Return number of categories */
+	public int getCatCount() { 
+		return FoodCategoryCollection.size();
+	}
+
+	/* Get the category at position <index> */
+	public FoodCategory getFoodCatAt(int index) {
+		return FoodCategoryCollection.get(index);
+	}
+
+	/* Get the name of every food category */
+	public ArrayList<String> getFoodCatNames() {
+		ArrayList<String> CategoryNames = new ArrayList<String>();
+		for (int i = 0; i < FoodCategoryCollection.size(); i++)
+		{
+			CategoryNames.add(i, FoodCategoryCollection.get(i).getCatName());
 		}
-
-		
-		
-		
-	public int countCat() { // Return number of categories
-		// TODO Auto-generated method stub
-		return 0;
+		return CategoryNames;
 	}
 
-	public FoodCategory getFoodCat(int index) { // Returns category in position <index>
-		// TODO Auto-generated method stub
-		return null;
+	/* Add the category to the collection */
+	public void addCategory(FoodCategory fc) {
+		FoodCategoryCollection.add(fc);
 	}
 
-	public ArrayList<String> getAllFoodCats() { // Retrieve a list with the names of the categories
-		// TODO Auto-generated method stub
-		return null;
+	/* Get all the food categories */
+	public ArrayList<FoodCategory> getAllCategories() {
+		return FoodCategoryCollection;
 	}
 
-	public FoodCategory createCategory() { // Create a new category
-		// TODO Auto-generated method stub
-		return null;
+	/* Get the number of foods in a category */
+	public int getFoodCountFromCat(FoodCategory fc) {
+		return fc.getFoodsContained().size();
 	}
 
-	public ArrayList<FoodCategory> getAllCats() { // Returns the array list with all the different categories
-		// TODO Auto-generated method stub
-		return null;
+	/* Add a food to a category, and also to the collection of all foods */
+	public void addFoodToCategory(Food food, FoodCategory fc) {
+		FoodCollection.add(food);
+		fc.getFoodsContained().add(food);
 	}
 
-	public int countFoodInCat() { // Return number of foods per category
-		// TODO Auto-generated method stub
-		return 0;
+	/* Get the total number of foods */
+	public int getTotalFoodCount() {
+		return FoodCollection.size();
 	}
 
-	public Food getFood(int index) { // Returns food in position <index>
-		// TODO Auto-generated method stub
-		return null;
+	/* Get food from position <index> in category <fc> */
+	public Food getFoodFromCategoryAt(FoodCategory fc, int index) {
+		return fc.getFoodsContained().get(index);
 	}
 
-	public ArrayList<String> getAllFoods() { // Retrieve a list with the names of the foods
-		// TODO Auto-generated method stub
-		return null;
+	/* Get all the foods from category <fc> */
+	public ArrayList<Food> getAllFoodsFromCat(FoodCategory fc) {
+		return fc.getFoodsContained();
 	}
 
-	public ArrayList<String> getAllFoodsInCat(String catName) { // Retrieve a list with the names of the foods that belong in a certain category
-		// TODO Auto-generated method stub
-		return null;
+	/* Get all food names */
+	public ArrayList<String> getAllFoodNames() {
+		ArrayList<String> allFoodNames = new ArrayList<String>();
+		for (int i = 0; i < FoodCollection.size(); i++)
+		{
+			allFoodNames.add(FoodCollection.get(i).getName());
+		}
+		return allFoodNames;
 	}
 
-	public Food createFood() { // Create a new food
-		// TODO Auto-generated method stub
-		return null;
+	/* Get all food names from category <fc> */
+	public ArrayList<String> getAllFoodNamesFromCat(FoodCategory fc) {
+		ArrayList<String> categoryFoodNames = new ArrayList<String>();
+		for (int i = 0; i < fc.getFoodsContained().size(); i++)
+		{
+			categoryFoodNames.add(fc.getFoodsContained().get(i).getName());
+		}
+		return categoryFoodNames;
+	}
+
+	/* Get all the foods that exist */
+	public ArrayList<Food> getAllFoods() {
+		return FoodCollection;
 	}
 
 }

@@ -15,10 +15,6 @@ import com.db4o.ObjectSet;
 import com.db4o.config.AndroidSupport;
 import com.db4o.config.EmbeddedConfiguration;
 
-
-
-
-
 public class DbManager {
 	
 	private static ObjectContainer database = null; // define database as the object container
@@ -32,7 +28,7 @@ public class DbManager {
 
 	public ObjectContainer database(){ // get instance of db or create one if not exists
 		try {
-				if (database == null || database.ext().isClosed()) {  
+				if (database == null || database.ext().isClosed()) {
 					database = Db4oEmbedded.openFile(dbConfig(), db4oDBFullPath(ctx));
 					return database;
 				}
