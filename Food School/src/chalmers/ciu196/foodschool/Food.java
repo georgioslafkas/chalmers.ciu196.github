@@ -9,7 +9,6 @@ public class Food extends Object{
 		
 		private String name, // Name of the food
 		   description, // Description of the food
-		   sound_path, // Path of the sound file for this food
 		   category; // Category indicator where this food belongs
 		private int foodId; // Id of the food
 		
@@ -17,13 +16,12 @@ public class Food extends Object{
 		private ArrayList<String> questions = new ArrayList<String>(); // Array that holds questions
 		private ArrayList<String> answers = new ArrayList<String>();// Array that holds answers
 		 
-		private ArrayList<String> image_paths = new ArrayList<String>(); //Array that holds the paths for the pictures used
-		
+		private ArrayList<String> image_paths = new ArrayList<String>(); // Array that holds the paths for the pictures used
+		private ArrayList<String> sound_paths = new ArrayList<String>(); // Array that holds the paths for the sounds used		
 		
 		// Getters and Setters of the parameters above
 		
 		// id
-		
 		public int getId() {
 			return foodId;
 		}
@@ -47,12 +45,12 @@ public class Food extends Object{
 			this.description = description;
 		}
 		
-		// sound_path
-		public String getSound_path() { // Returns the path of the sound file
-			return sound_path;
+		// sound_paths
+		public ArrayList<String> getSound_paths() {
+			return sound_paths;
 		}
-		public void setSound_path(String sound_path) { // Set the path of the sound file
-			this.sound_path = sound_path;
+		public void setSound_paths(ArrayList<String> sound_paths) {
+			this.sound_paths = sound_paths;
 		}
 		
 		// category
@@ -90,13 +88,15 @@ public class Food extends Object{
 		
 		// Constructor
 		
-		public Food( String fname, String fdescription, String fsound_path, String fcategory , int ID, ArrayList<String> qstns , ArrayList<String> answrs , ArrayList<String> img_paths   ){
+		public Food( String fname, String fdescription, String fcategory , int ID, ArrayList<String> fsound_paths, ArrayList<String> qstns , ArrayList<String> answrs , ArrayList<String> img_paths   ){
 			
 			this.setId(ID);
 			this.setName(fname);
 			this.setDescription(fdescription);
-			this.setSound_path(fsound_path);
+			this.setSound_paths(fsound_paths);
 			this.setCategory(fcategory);
+			this.setAnswers(answrs);
+			this.setQuestions(qstns);
 		}
 		
 		// Default constructor
@@ -104,8 +104,10 @@ public class Food extends Object{
 			this.setId(0);
 			this.setName(null);
 			this.setDescription(null);
-			this.setSound_path(null);
+			this.setSound_paths(null);
 			this.setCategory(null);
+			this.setAnswers(null);
+			this.setQuestions(null);
 		}
 		
 		
