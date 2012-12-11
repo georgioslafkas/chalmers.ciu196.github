@@ -51,176 +51,167 @@
     </TableRow>
         
     <TableRow
-        android:id="@+id/tableRow1"
+        android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <ImageButton
-            android:id="@+id/btnApple"
+            android:id="@+id/btn1_1"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
-            android:scaleType="fitCenter"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:onClick="startDetailActivity"
+            android:scaleType="fitCenter"
             android:src="@drawable/img_fruits_apple" />
         
            	<ImageButton
-            android:id="@+id/btnBanana"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_banana" />
-        
+           	    android:id="@+id/btn1_2"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="120dp"
+           	    android:layout_marginLeft="50dp"
+           	    android:layout_marginTop="70dp"
+           	    android:layout_weight="1"
+           	    android:background="@android:color/transparent"
+           	    android:onClick="startDetailActivity"
+           	    android:scaleType="fitCenter"
+           	    android:src="@drawable/img_fruits_banana" />
                 
            	<ImageButton
-            android:id="@+id/btnCherry"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_cherry" />
-                
+           	    android:id="@+id/btn1_3"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="120dp"
+           	    android:layout_marginLeft="50dp"
+           	    android:layout_marginTop="70dp"
+           	    android:layout_weight="1"
+           	    android:background="@android:color/transparent"
+           	    android:onClick="startDetailActivity"
+           	    android:scaleType="fitCenter"
+           	    android:src="@drawable/img_fruits_cherry" />
                         
             <ImageButton
-            android:id="@+id/btnGrape"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_grapes" />
-                        
+                android:id="@+id/btn1_4"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="startDetailActivity"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_fruits_grapes" />
 
     </TableRow>
     
     <TableRow
-        android:id="@+id/tableRow1"
+        android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <ImageButton
-            android:id="@+id/btnLime"
+            android:id="@+id/btn2_1"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
-            android:scaleType="fitCenter"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:onClick="startDetailActivity"
+            android:scaleType="fitCenter"
             android:src="@drawable/img_fruits_lime" />
         
            	<ImageButton
-            android:id="@+id/btnLemon"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_lemon" />
-        
+           	    android:id="@+id/btn2_2"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="120dp"
+           	    android:layout_marginLeft="50dp"
+           	    android:layout_marginTop="70dp"
+           	    android:layout_weight="1"
+           	    android:background="@android:color/transparent"
+           	    android:onClick="startDetailActivity"
+           	    android:scaleType="fitCenter"
+           	    android:src="@drawable/img_fruits_lemon" />
                 
            	<ImageButton
-            android:id="@+id/btnOrange"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_orange" />
-                
+           	    android:id="@+id/btn2_3"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="120dp"
+           	    android:layout_marginLeft="50dp"
+           	    android:layout_marginTop="70dp"
+           	    android:layout_weight="1"
+           	    android:background="@android:color/transparent"
+           	    android:onClick="startDetailActivity"
+           	    android:scaleType="fitCenter"
+           	    android:src="@drawable/img_fruits_orange" />
                         
             <ImageButton
-            android:id="@+id/btnPeach"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_peach" />
-                        
+                android:id="@+id/btn2_4"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="startDetailActivity"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_fruits_peach" />
 
     </TableRow>
     
     <TableRow
-        android:id="@+id/tableRow1"
+        android:id="@+id/tableRow4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <ImageButton
-            android:id="@+id/btnPear"
+            android:id="@+id/btn3_1"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
-            android:scaleType="fitCenter"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:onClick="startDetailActivity"
+            android:scaleType="fitCenter"
             android:src="@drawable/img_fruits_pear" />
         
            	<ImageButton
-            android:id="@+id/btnPineapple"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_pineapple" />
-        
+           	    android:id="@+id/btn3_2"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="120dp"
+           	    android:layout_marginLeft="50dp"
+           	    android:layout_marginTop="70dp"
+           	    android:layout_weight="1"
+           	    android:background="@android:color/transparent"
+           	    android:onClick="startDetailActivity"
+           	    android:scaleType="fitCenter"
+           	    android:src="@drawable/img_fruits_pineapple" />
                 
            	<ImageButton
-            android:id="@+id/btnStrawberries"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_strawberries" />
-                
+           	    android:id="@+id/btn3_3"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="120dp"
+           	    android:layout_marginLeft="50dp"
+           	    android:layout_marginTop="70dp"
+           	    android:layout_weight="1"
+           	    android:background="@android:color/transparent"
+           	    android:onClick="startDetailActivity"
+           	    android:scaleType="fitCenter"
+           	    android:src="@drawable/img_fruits_strawberries" />
                         
             <ImageButton
-            android:id="@+id/btnWatermelon"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
-            android:src="@drawable/img_fruits_watermelon" />
-                        
+                android:id="@+id/btn3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="startDetailActivity"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_fruits_watermelon" />
 
     </TableRow>
 

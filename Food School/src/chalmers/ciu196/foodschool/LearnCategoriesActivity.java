@@ -8,8 +8,12 @@ import android.view.View;
 
 
 public class LearnCategoriesActivity extends Activity {
-	private String selection = ""; /* This will store what category the user has tapped */
-	
+	private final int FRUITS = 1,
+					  VEGETABLES = 2,
+					  MEAT = 3,
+					  DAIRY = 4,
+					  CEREALS = 5;
+					  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,39 +36,36 @@ public class LearnCategoriesActivity extends Activity {
 	 */
 	public void startLearnFoodActivity(View v)
 	{
+		Intent startFood = new Intent(this, LearnFoodActivity.class);
+		startFood.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		/* Find out which button was tapped 
 		 * and store the respective string
 		 */
 		switch (v.getId())
 		{
 			case R.id.btnVegetables:
-				//Toast.makeText(this, "Vegetables", Toast.LENGTH_LONG).show();
-				selection = "vegetables";
+				/* Send along the category picked, to the next activity */
+				startFood.putExtra("category", VEGETABLES);
 				break;
 			case R.id.btnCereals:
-				//Toast.makeText(this, "Cereals", Toast.LENGTH_LONG).show();
-				selection = "cereals";
+				/* Send along the category picked, to the next activity */
+				startFood.putExtra("category", CEREALS);
 				break;
 			case R.id.btnDairy:
-				//Toast.makeText(this, "Dairy", Toast.LENGTH_LONG).show();
-				selection = "dairy";
+				/* Send along the category picked, to the next activity */
+				startFood.putExtra("category", DAIRY);
 				break;
 			case R.id.btnMeat:
-				//Toast.makeText(this, "Meat", Toast.LENGTH_LONG).show();
-				selection = "meat";
+				/* Send along the category picked, to the next activity */
+				startFood.putExtra("category", MEAT);
 				break;
 			case R.id.btnFruit:
-				//Toast.makeText(this, "Fruit", Toast.LENGTH_LONG).show();
-				selection = "fruit";
+				/* Send along the category picked, to the next activity */
+				startFood.putExtra("category", FRUITS);
 				break;
 			default:
 				break;
 		}
-		Intent startFood = new Intent(this, LearnFoodActivity.class);
-		startFood.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		/* Send along the category picked, to the next activity */
-		startFood.putExtra("category", selection);
 		startActivity(startFood);
-		//finish();
 	}
 }

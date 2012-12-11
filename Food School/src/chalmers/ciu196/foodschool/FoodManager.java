@@ -5,8 +5,6 @@ import java.util.ArrayList;
 
 public interface FoodManager {
 	
-	// PROBABLY NOT ALL THE METHODS WE NEED. NEEDS DISCUSSION BY THE GROUP
-	
 	// Declare methods for manipulation of FoodCategory type objects
 	
 	public int getCatCount(); // Return number of categories
