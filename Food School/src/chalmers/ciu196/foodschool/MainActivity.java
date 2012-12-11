@@ -1,5 +1,11 @@
 package chalmers.ciu196.foodschool;
 
+import java.util.ArrayList;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+
 import chalmers.ciu196.foodschool.Database.DbManager;
 import android.os.Bundle;
 import android.media.MediaPlayer;
@@ -24,27 +30,73 @@ public class MainActivity extends Activity {
 	// DATABASE related code ==================================================
 	
 	dbManager();
-		
+	
+	// create two test objects one of class Food and one of class FoodCategory
 	FoodCategory fruits = new FoodCategory("test", "test", "imgpath", "soundpath", 1);
 	Food apple = new Food();
 	
+	// add values to the apple 
 	apple.setName("apple");
 	apple.setDescription("rea fruit");
 	apple.setId(11);
-	apple.setSound_path("path");
 	
+	ArrayList<String> imgpaths = new ArrayList<String>();
+	imgpaths.add("path1");
+	imgpaths.add("path2");
+	apple.setImage_paths(imgpaths);
+	
+	ArrayList<String> qstns = new ArrayList<String>();
+	qstns.add("path1");
+	qstns.add("path2");
+	apple.setQuestions(qstns);
+	
+	ArrayList<String> answrs = new ArrayList<String>();
+	answrs.add("path1");
+	answrs.add("path2");
+	apple.setAnswers(answrs);
+	
+	ArrayList<String> sndpaths = new ArrayList<String>();
+	sndpaths.add("path1");
+	sndpaths.add("path2");
+	apple.setSound_paths(sndpaths);
+	
+	// end of adding values to the apple
+	
+	// store the objects to the database note that there is a separate method for objects of each class
 	dbManager().storeFoodCat(fruits);
 	dbManager().storeFood(apple);
 	
+	// test object of FoodCategory created to load object from database
 	FoodCategory testLoadCat = new FoodCategory();
 	testLoadCat = dbManager().getCategory(fruits.getCatName());
 	Log.d("Db4o", "Category "+testLoadCat.getCatName()+" was succesfully stored and retrieved from database.");
 	
+	// test object of Food created to load object from database
 	Food testLoadFood = new Food();
 	testLoadFood = dbManager().getFood(apple.getName());
 	Log.d("Db4o", "Food "+testLoadFood.getName()+" was successfully stored and retrieved from database.");
 	
 	// End of database related code ===========================================
+	
+	// Code for XML creation
+	XStream xstream = new XStream(new DomDriver());
+	xstream.alias("food", Food.class);
+	xstream.alias("category", FoodCategory.class);
+	String food = xstream.toXML(apple);
+	Log.d("XStream Food to XML", food);
+	
+	String cat = xstream.toXML(fruits);
+	Log.d("XStream Category to XML", cat);
+	
+	
+	
+	// Read the XML file with our resources
+	/*XmlResourceParser stringXmlContent; // create the string that will have the data
+	stringXmlContent = this.getResources().getXml(R.xml.data);
+	Food apple2 = new Food();
+	Log.d("XMLreadfromfile", "The food " + apple2.getName() + " was succesfully read from the xml file and created.");
+	*/
+	// End of code for XML creation
 
 	}
 	
