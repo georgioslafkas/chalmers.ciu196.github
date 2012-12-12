@@ -255,10 +255,12 @@ public class MainActivity extends Activity {
 	protected void onResume(){
 		super.onResume();
 		mediaPlayer= MediaPlayer.create(this, R.raw.foodschoolbso1);
-
+		mediaPlayer.setLooping(true);
 		Log.d("COsa","COsa");
 		/* Start playing music when this activity starts. */
 		mediaPlayer.start();
+
+
 	}
 
 	@Override
