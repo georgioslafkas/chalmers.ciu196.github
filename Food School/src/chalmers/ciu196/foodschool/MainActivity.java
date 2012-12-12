@@ -86,6 +86,10 @@ public class MainActivity extends Activity {
 	apple.setName("apple");
 	apple.setDescription("rea fruit");
 	apple.setId(11);
+	ArrayList<String> cosa=new ArrayList<String>();
+	cosa.add("url1");
+	cosa.add("url2");	
+	apple.setImage_paths(cosa);
 
 	//apple.setSound_paths("path");
 	orange.setName("orange");
@@ -216,20 +220,23 @@ public class MainActivity extends Activity {
 	// End of database related code ===========================================
 	
 	// Code for XML creation
-	XStream xstream = new XStream(new DomDriver());
-	xstream.alias("food", Food.class);
-	xstream.alias("category", FoodCategory.class);
-	String food = xstream.toXML(apple);
-	Log.d("XStream Food to XML", food);
 	
-	String cat = xstream.toXML(fruits);
-	Log.d("XStream Category to XML", cat);
+	ArrayList<Food> prueba=new ArrayList<Food>();
+	prueba.add(apple);
+	prueba.add(orange);
+	FoodCollection test=new FoodCollection(prueba);
+	XStream xstream = new XStream(new DomDriver());
+	xstream.alias("food", FoodCollection.class);
+	String food = xstream.toXML(test);
+
 	
 	
 	
 	
 	// Read the XML file with our resources
-	
+	xstream.alias("food", FoodCollection.class);
+	FoodCollection product = (FoodCollection)xstream.fromXML(food);
+	Log.d("Fruit",product.getList().get(1).getName());
 	// End of code for XML creation
 
 	}
