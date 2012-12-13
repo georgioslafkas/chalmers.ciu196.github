@@ -1,11 +1,25 @@
 package chalmers.ciu196.foodschool;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
 import java.util.ArrayList;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-
-
 import chalmers.ciu196.foodschool.Database.DbManager;
 import android.os.Bundle;
 import android.media.MediaPlayer;
@@ -15,6 +29,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
+import android.util.Xml;
 import android.view.Menu;
 import android.view.View;
 
@@ -227,26 +242,57 @@ public class MainActivity extends Activity {
 	
 	// Code for XML creation
 	
-	ArrayList<Food> prueba=new ArrayList<Food>();
-	prueba.add(apple);
-	prueba.add(orange);
-	FoodCollection test=new FoodCollection(prueba);
-	XStream xstream = new XStream(new DomDriver());
-	xstream.alias("food", FoodCollection.class);
-	String food = xstream.toXML(test);
-
-	
-	
-	
 	
 	// Read the XML file with our resources
-	xstream.alias("food", FoodCollection.class);
-	FoodCollection product = (FoodCollection)xstream.fromXML(food);
-	Log.d("Fruit",product.getList().get(1).getName());
-	// End of code for XML creation
-
-	}
 	
+	DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+	InputStream is = getApplicationContext().getResources().openRawResource(R.raw.data);
+	DocumentBuilder docBuilder = null;
+	
+	try {
+		docBuilder = docFactory.newDocumentBuilder();
+	} catch (ParserConfigurationException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	Document doc = null;
+	try {
+		doc = docBuilder.parse(is);
+	} catch (SAXException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+	//set up a transformer
+	TransformerFactory transfac = TransformerFactory.newInstance();
+	Transformer trans = null;
+	try {
+		trans = transfac.newTransformer();
+	} catch (TransformerConfigurationException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	trans.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+	trans.setOutputProperty(OutputKeys.INDENT, "yes");
+
+	//create string from xml tree
+	StringWriter sw = new StringWriter();
+	StreamResult result = new StreamResult(sw);
+	DOMSource source = new DOMSource(doc);
+	try {
+		trans.transform(source, result);
+	} catch (TransformerException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	String xmlString = sw.toString();
+	
+	Log.d("XMLtest", xmlString);
+	
+	}
 	// DATABASE related code ==================================================
 	private DbManager dbManager() {
 		if (databaseManager == null) {
