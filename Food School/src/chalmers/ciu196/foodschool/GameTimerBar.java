@@ -22,13 +22,14 @@ public class GameTimerBar extends CountDownTimer {
 		this.progressBar = bar;
 		this.context = appContext;
 	}
-
+	
 	/* Implementing inherited methods */
 	@Override
 	public void onFinish() {
 		/* Set the bar to 0 */
 		progressBar.setProgress(FINISHED);
 		Toast.makeText(context, "Time's up!", Toast.LENGTH_SHORT).show();
+		PlayQuizActivity.cooldownTimer.start();
 	}
 
 	@Override

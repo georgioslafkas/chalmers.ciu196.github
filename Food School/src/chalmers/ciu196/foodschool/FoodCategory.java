@@ -18,13 +18,15 @@ public class FoodCategory extends Object{
 	private ArrayList<Food> foodsContained = new ArrayList<Food>();
 
 	// Constructor
-	public FoodCategory(String catName, String catDesc, String cImagePath, String cSoundPath, int cId){
+	public FoodCategory(String catName, String catDesc, String cImagePath, String cSoundPath, int cId,
+						ArrayList<Food> foodsC){
 			
 		this.setCatName(catName);
 		this.setCatDescription(catDesc);
 		this.setCatImagePath(cImagePath);		
 		this.setCatSoundPath(cSoundPath);
 		this.setCatId(cId);
+		this.setFoodsContained(foodsC);
 	}
 		
 	// Default constructor
@@ -35,6 +37,7 @@ public class FoodCategory extends Object{
 		this.setCatImagePath(null);
 		this.setCatSoundPath(null);
 		this.setCatId(0);
+		this.setFoodsContained(null);
 	}	
 		
 	// Getters and Setters	
@@ -87,5 +90,10 @@ public class FoodCategory extends Object{
 
 	public ArrayList<Food> getFoodsContained() {
 		return foodsContained;
+	}
+	
+	public void setFoodsContained(ArrayList<Food> foods)
+	{
+		this.foodsContained = foods;
 	}
 }

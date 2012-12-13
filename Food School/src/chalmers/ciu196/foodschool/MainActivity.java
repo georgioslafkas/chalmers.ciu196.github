@@ -36,11 +36,11 @@ public class MainActivity extends Activity {
 	FoodManager foodManager = SimpleFoodManager.getManager();
 	
 	/* Temporary variables for testing */
-	FoodCategory fruits = new FoodCategory("Fruits", "Fruit products", "imgpath", "soundpath", 1);
-	FoodCategory vegetables = new FoodCategory("Vegetables", "Vegetable products", "", "", 2);
-	FoodCategory meats = new FoodCategory("Meats", "Meat products", "", "", 3);
-	FoodCategory dairy = new FoodCategory("Dairy", "Dairy products", "", "", 4);
-	FoodCategory cereals = new FoodCategory("Cereals", "Cereal products", "", "", 5);
+	FoodCategory fruits = new FoodCategory("Fruits", "Fruit products", "imgpath", "soundpath", 1, new ArrayList<Food>());
+	FoodCategory vegetables = new FoodCategory("Vegetables", "Vegetable products", "", "", 2, new ArrayList<Food>());
+	FoodCategory meats = new FoodCategory("Meats", "Meat products", "", "", 3, new ArrayList<Food>());
+	FoodCategory dairy = new FoodCategory("Dairy", "Dairy products", "", "", 4, new ArrayList<Food>());
+	FoodCategory cereals = new FoodCategory("Cereals", "Cereal products", "", "", 5, new ArrayList<Food>());
 	foodManager.addCategory(fruits);
 	foodManager.addCategory(vegetables);
 	foodManager.addCategory(meats);
@@ -50,9 +50,11 @@ public class MainActivity extends Activity {
 	Food apple = new Food();
 	Food orange = new Food();
 	Food banana = new Food();
+	Food grapes = new Food();
 	foodManager.addFoodToCategory(apple, fruits);
 	foodManager.addFoodToCategory(orange, fruits);
 	foodManager.addFoodToCategory(banana, fruits);
+	foodManager.addFoodToCategory(grapes, fruits);
 	
 	Food tomato = new Food();
 	Food cucumber = new Food();
@@ -85,7 +87,7 @@ public class MainActivity extends Activity {
 	// add values to the apple 
 	apple.setName("apple");
 	apple.setDescription("rea fruit");
-	apple.setId(11);
+	apple.setId(R.drawable.img_fruits_apple);
 	ArrayList<String> cosa=new ArrayList<String>();
 	cosa.add("url1");
 	cosa.add("url2");	
@@ -94,12 +96,16 @@ public class MainActivity extends Activity {
 	//apple.setSound_paths("path");
 	orange.setName("orange");
 	orange.setDescription("round fruit");
-	apple.setId(12);
+	orange.setId(R.drawable.img_fruits_orange);
 	//orange.setSound_paths("path");
 	banana.setName("banana");
 	banana.setDescription("long fruit");
-	banana.setId(13);
+	banana.setId(R.drawable.img_fruits_banana);
 	//banana.setSound_paths("path");
+	
+	grapes.setName("grapes");
+	grapes.setDescription("little tasties");
+	grapes.setId(R.drawable.img_fruits_grapes);
 	
 	tomato.setName("tomato");
 	tomato.setDescription("juicy vegetable");

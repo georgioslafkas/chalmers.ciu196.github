@@ -13,9 +13,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" >
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
 
        <ImageButton
             android:id="@+id/imageButtonb"
@@ -64,7 +61,7 @@
             android:src="@drawable/play_timer" />
 
         <TextView
-            android:id="@+id/editText1"
+            android:id="@+id/txtQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -86,38 +83,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp" >
+
         <ImageButton
-            android:id="@+id/imageButtonw"
+            android:id="@+id/btnAnswer1"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:scaleType="fitCenter"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
             android:src="@drawable/fruits_detail_apple_applejuice"
-            android:background="@android:color/transparent"/>
+            android:onClick="checkAnswer" />
+
         <ImageButton
-            android:id="@+id/imageButtonx"
+            android:id="@+id/btnAnswer2"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:scaleType="fitCenter"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
             android:src="@drawable/fruits_detail_apple_applebasket"
-            android:background="@android:color/transparent"/>
+            android:onClick="checkAnswer" />
+
          <ImageButton
-            android:id="@+id/imageButtony"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            android:src="@drawable/fruits_detail_apple_appletree"
-            android:background="@android:color/transparent"/>
+             android:id="@+id/btnAnswer3"
+             android:layout_width="wrap_content"
+             android:layout_height="200dp"
+             android:layout_weight="1"
+             android:background="@android:color/transparent"
+             android:scaleType="fitCenter"
+             android:src="@drawable/fruits_detail_apple_appletree"
+             android:onClick="checkAnswer" />
+
          <ImageButton
-            android:id="@+id/imageButtonz"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            android:src="@drawable/fruits_detail_apple_peeledapple"
-            android:background="@android:color/transparent"/>
+             android:id="@+id/btnAnswer4"
+             android:layout_width="wrap_content"
+             android:layout_height="200dp"
+             android:layout_weight="1"
+             android:background="@android:color/transparent"
+             android:scaleType="fitCenter"
+             android:src="@drawable/fruits_detail_apple_peeledapple"
+             android:onClick="checkAnswer" />
+
     </TableRow>
 
 

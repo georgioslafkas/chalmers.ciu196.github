@@ -11,7 +11,8 @@ public class PlayCategoriesActivity extends Activity {
 			  VEGETABLES = 2,
 			  MEAT = 3,
 			  DAIRY = 4,
-			  CEREALS = 5;
+			  CEREALS = 5,
+			  ALL = 6;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,10 @@ public class PlayCategoriesActivity extends Activity {
 			case R.id.btnFruit:
 				/* Send along the category picked, to the next activity */
 				startQuiz.putExtra("category", FRUITS);
+				break;
+			case R.id.btnAll:
+				/* Send along the category picked, to the next activity */
+				startQuiz.putExtra("category", ALL);
 				break;
 			default:
 				break;

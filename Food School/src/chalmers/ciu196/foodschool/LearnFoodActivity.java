@@ -18,7 +18,7 @@ public class LearnFoodActivity extends Activity {
 		/* Get the intent that started this activity */
 		Intent startedThis = getIntent();
 		/* Retrieve which category was tapped, by reading the
-		 * string that was sent with
+		 * information that was sent with
 		 */
 		int categoryToShow = startedThis.getIntExtra("category", NOT_FOUND);
 		
