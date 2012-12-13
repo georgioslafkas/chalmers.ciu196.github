@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+	<foodcollection>
+	    <foodlist>
 	<food>
     	<answers>
         	<string>path1</string>
@@ -20,3 +22,26 @@
     	</questions>
     	<foodId>11</foodId>
 	</food>
+		<food>
+    	<answers>
+        	<string>path1</string>
+        	<string>path2</string>
+    	</answers>
+    	<description>rea fruit</description>
+    	<sound__paths>
+    	    <string>path1</string>
+    	    <string>path2</string>
+    	</sound__paths>
+    	<image__paths>
+    	    <string>path1</string>
+    	    <string>path2</string>
+    	</image__paths>
+    	<name>orange</name>
+    	<questions>
+    	    <string>path1</string>
+    	    <string>path2</string>
+    	</questions>
+    	<foodId>11</foodId>
+	</food>
+	</foodlist>
+</foodcollection>

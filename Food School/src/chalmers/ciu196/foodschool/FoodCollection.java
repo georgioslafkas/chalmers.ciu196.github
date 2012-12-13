@@ -15,19 +15,19 @@ public class FoodCollection extends Object{
 		public ArrayList<Food> getList() {
 			return foodlist;
 		}
-		public void setList(ArrayList<Food> test) {
+		public void setList(ArrayList<Food> inputlist) {
 			foodlist.clear();
-			for (int i=0;i<test.size();i++){
-				this.foodlist.add(test.get(i));
+			for (int i=0;i<inputlist.size();i++){
+				this.foodlist.add(inputlist.get(i));
 			}
 		}
 	
 		
 		// Constructor
 		
-		public FoodCollection( ArrayList<Food> test){			
-			for (int i=0;i<test.size();i++){
-				this.foodlist.add(test.get(i));
+		public FoodCollection( ArrayList<Food> inputlist){			
+			for (int i=0;i<inputlist.size();i++){
+				this.foodlist.add(inputlist.get(i));
 			}
 		}
 		

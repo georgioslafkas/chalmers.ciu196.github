@@ -21,6 +21,7 @@ import org.xml.sax.SAXException;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import chalmers.ciu196.foodschool.Database.DbManager;
+import chalmers.ciu196.foodschool.Database.XmlParser;
 import android.os.Bundle;
 import android.media.MediaPlayer;
 import android.app.Activity;
@@ -240,57 +241,12 @@ public class MainActivity extends Activity {
 	Log.d("Db4o", "Food "+testLoadFood.getName()+" was successfully stored and retrieved from database.");
 	// End of database related code ===========================================
 	
-	// Code for XML creation
+	//Calling the XmlParser
+	XmlParser ains=new XmlParser();
 	
-	
-	// Read the XML file with our resources
-	
-	DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-	InputStream is = getApplicationContext().getResources().openRawResource(R.raw.data);
-	DocumentBuilder docBuilder = null;
-	
-	try {
-		docBuilder = docFactory.newDocumentBuilder();
-	} catch (ParserConfigurationException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	Document doc = null;
-	try {
-		doc = docBuilder.parse(is);
-	} catch (SAXException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-
-	//set up a transformer
-	TransformerFactory transfac = TransformerFactory.newInstance();
-	Transformer trans = null;
-	try {
-		trans = transfac.newTransformer();
-	} catch (TransformerConfigurationException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	trans.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-	trans.setOutputProperty(OutputKeys.INDENT, "yes");
-
-	//create string from xml tree
-	StringWriter sw = new StringWriter();
-	StreamResult result = new StreamResult(sw);
-	DOMSource source = new DOMSource(doc);
-	try {
-		trans.transform(source, result);
-	} catch (TransformerException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	String xmlString = sw.toString();
-	
-	Log.d("XMLtest", xmlString);
+	FoodCollection test=ains.fromXML(R.raw.data, getApplicationContext());
+	Log.d("SOCORRO",test.getList().get(1).getName());
+	//End of the XmlParser call
 	
 	}
 	// DATABASE related code ==================================================
