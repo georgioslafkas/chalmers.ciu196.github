@@ -75,9 +75,11 @@ public class MainActivity extends Activity {
 	Food tomato = new Food();
 	Food cucumber = new Food();
 	Food cabbage = new Food();
+	Food carrot = new Food();
 	foodManager.addFoodToCategory(tomato, vegetables);
 	foodManager.addFoodToCategory(cucumber, vegetables);
 	foodManager.addFoodToCategory(cabbage, vegetables);
+	foodManager.addFoodToCategory(carrot, vegetables);
 	
 	Food pork = new Food();
 	Food salmon = new Food();
@@ -125,16 +127,19 @@ public class MainActivity extends Activity {
 	
 	tomato.setName("tomato");
 	tomato.setDescription("juicy vegetable");
-	tomato.setId(21);
+	tomato.setId(R.drawable.img_vegetables_tomato);
 	//tomato.setSound_paths("path");
 	cucumber.setName("cucumber");
 	cucumber.setDescription("long vegetable");
-	cucumber.setId(22);
+	cucumber.setId(R.drawable.img_vegetables_cucumber);
 	//cucumber.setSound_paths("path");
 	cabbage.setName("cabbage");
 	cabbage.setDescription("leafy vegetable");
-	cabbage.setId(23);
+	cabbage.setId(R.drawable.img_vegetables_cabbage);
 	//cabbage.setSound_paths("path");
+	carrot.setName("carrot");
+	carrot.setDescription("long orange vegetable");
+	carrot.setId(R.drawable.img_vegetables_carrot);
 	
 	pork.setName("pork");
 	pork.setDescription("red meat");

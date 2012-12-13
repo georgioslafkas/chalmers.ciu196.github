@@ -1,12 +1,17 @@
 package chalmers.ciu196.foodschool;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Food extends Object{ 
+public class Food extends Object implements Serializable { 
 	
 	// PROBABLY NEEDS DISCUSSION WITH THE GROUP
 		
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 		private String name, // Name of the food
 		   description, // Description of the food
 		   category; // Category indicator where this food belongs

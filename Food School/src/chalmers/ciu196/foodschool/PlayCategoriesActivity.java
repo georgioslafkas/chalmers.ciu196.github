@@ -7,13 +7,19 @@ import android.view.Menu;
 import android.view.View;
 
 public class PlayCategoriesActivity extends Activity {
+	/* These variables represent the category of food
+	 * the user can choose to play with */
 	private final int FRUITS = 1,
-			  VEGETABLES = 2,
-			  MEAT = 3,
-			  DAIRY = 4,
-			  CEREALS = 5,
-			  ALL = 6;
+					  VEGETABLES = 2,
+					  MEAT = 3,
+					  DAIRY = 4,
+					  CEREALS = 5,
+					  ALL = 6;
 	
+	private final int firstFood = 0;	/* Starting index in food list is always 0 */
+	public static int categoryToPlay = -1; /* Category picked
+											* Static, because we need it
+											* in other activities */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,31 +43,33 @@ public class PlayCategoriesActivity extends Activity {
 	{
 		Intent startQuiz = new Intent(this, PlayQuizActivity.class);
 		startQuiz.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startQuiz.putExtra("currentFood", firstFood); /* Send along the first index */
+		/* Determine which button the user tapped */
 		switch (v.getId())
 		{
+			case R.id.btnFruit:
+				/* Set the respective category */
+				categoryToPlay = FRUITS;
+				break;	
 			case R.id.btnVegetables:
-				/* Send along the category picked, to the next activity */
-				startQuiz.putExtra("category", VEGETABLES);
-				break;
-			case R.id.btnCereals:
-				/* Send along the category picked, to the next activity */
-				startQuiz.putExtra("category", CEREALS);
-				break;
-			case R.id.btnDairy:
-				/* Send along the category picked, to the next activity */
-				startQuiz.putExtra("category", DAIRY);
+				/* Set the respective category */
+				categoryToPlay = VEGETABLES;
 				break;
 			case R.id.btnMeat:
-				/* Send along the category picked, to the next activity */
-				startQuiz.putExtra("category", MEAT);
+				/* Set the respective category */
+				categoryToPlay = MEAT;
 				break;
-			case R.id.btnFruit:
-				/* Send along the category picked, to the next activity */
-				startQuiz.putExtra("category", FRUITS);
+			case R.id.btnDairy:
+				/* Set the respective category */
+				categoryToPlay = DAIRY;
+				break;
+			case R.id.btnCereals:
+				/* Set the respective category */
+				categoryToPlay = CEREALS;
 				break;
 			case R.id.btnAll:
-				/* Send along the category picked, to the next activity */
-				startQuiz.putExtra("category", ALL);
+				/* Set the respective category */
+				categoryToPlay = ALL;
 				break;
 			default:
 				break;

@@ -58,7 +58,6 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_apple" />
         
            	<ImageButton
@@ -70,7 +69,6 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_banana" />
         
                 
@@ -83,7 +81,6 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_cherry" />
                 
                         
@@ -96,7 +93,6 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_grapes" />
                         
 
@@ -116,7 +112,6 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_lime" />
         
            	<ImageButton
@@ -128,7 +123,6 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_lemon" />
         
                 
@@ -141,7 +135,6 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_orange" />
                 
                         
@@ -154,7 +147,6 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:src="@drawable/img_fruits_peach" />
                         
 

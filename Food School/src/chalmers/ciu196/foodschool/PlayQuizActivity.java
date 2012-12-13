@@ -9,12 +9,12 @@ import java.util.Random;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PlayQuizActivity extends Activity {
 	public static GameTimerBar timer; /* timer is the count down timer */
@@ -22,14 +22,15 @@ public class PlayQuizActivity extends Activity {
 	private static final int TOTAL_TIME = 10000; /* 10 seconds count down */
 	private static final int INTERVAL = 500;	/* 0.5 second interval */
 	private static final int COOL_DOWN = 3000; /* time to next question */
-	private final int NOT_FOUND = 0; /* in case a category was not found */
+	private final int NOT_FOUND = -1; /* in case a category was not found */
 	public static Activity activityInstance = null; /* an instance of this activity, 
 													* to be passed to the cool down timer */
 	
-	public int categoryToPlay = -1;
-	public LinkedList<Food> foods; /* the list of foods for a category */
-	public Object correctAnswer = new Object(), wrongAnswer =  new Object(); /* a pointer to the correct answer for a question */
-	public final int POSSIBLE_ANSWERS_NUMBER = 4;
+	Intent goToPlayTap; /* This intent will start the tap game activity */
+	public int currentFood; /* This is the current food index, used to retrieve it from the list */
+	public ArrayList<Food> foods; /* The list of foods for a category */
+	public Object correctAnswer = new Object(), wrongAnswer =  new Object(); /* Just indicators of wrong or right answers */
+	public final int POSSIBLE_ANSWERS_NUMBER = 4; /* We have four possible answers...*/
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +42,9 @@ public class PlayQuizActivity extends Activity {
 		/* Initialize the instance of this activity */
 		PlayQuizActivity.activityInstance = this;
 		/* Set the count down bar and the cool down timer */
-		timer = new GameTimerBar(getApplicationContext(), quizProgBar, TOTAL_TIME, INTERVAL);
-		cooldownTimer = new CoolDownTimer(COOL_DOWN, INTERVAL);
+		timer = new GameTimerBar(getApplicationContext(), quizProgBar, TOTAL_TIME, INTERVAL, 1);
+		cooldownTimer = new CoolDownTimer(COOL_DOWN, INTERVAL, 1);
+		cooldownTimer.setActivityThatUsesMe(1); /* Where this is launched */
 	}
 	
 	@Override
@@ -51,17 +53,38 @@ public class PlayQuizActivity extends Activity {
 		super.onResume();
 		/* Get the intent that started this activity */
 		Intent startedThis = getIntent();
-		/* Retrieve which category was tapped, by reading the
-		 * information that was sent with, NOT_FOUND if it's not set
+		
+		/* Initialize the intent that will start the tap game activity */
+		goToPlayTap = new Intent(this, PlayTapActivity.class);
+		goToPlayTap.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		
+		/* Retrieve the food list from the tap game, if that
+		 * activity has ever been launched
 		 */
-		/* SHOULD BE USED TO LOAD THE foods FOR THIS CATEGORY */
-		categoryToPlay = startedThis.getIntExtra("category", NOT_FOUND);
-		/* Create a list with all the foods for that category */
-		foods = (LinkedList<Food>) makeQuestionList(categoryToPlay);
-		/* Load the first question the first time this activity runs */
-		loadNextQuestion(foods, 0);
-		setPossibleAnswers(categoryToPlay, foods, 0);
-		/* Start the count down */
+		foods = (ArrayList<Food>) startedThis.getSerializableExtra("foodlist");
+		
+		/* Otherwise, it is the first quiz played, so create the list */
+		if (foods == null)
+		{
+			foods = (ArrayList<Food>) makeQuestionList(PlayCategoriesActivity.categoryToPlay);
+		}
+		/* And put it in the extras for the tap activity to receive */
+		goToPlayTap.putExtra("foodlist", foods);
+		
+		/* Retrieve the current food index,
+		 * either from the categories
+		 * or from the tap activity
+		 */
+		currentFood = startedThis.getIntExtra("currentFood", NOT_FOUND);
+		/* Add it to the extras for the tap activity as well */
+		goToPlayTap.putExtra("currentFood", currentFood);
+
+		/* Load a question each time this activity runs 
+		 * and set the answers */
+		loadNextQuestion(foods, currentFood);
+		setPossibleAnswers(PlayCategoriesActivity.categoryToPlay, foods, currentFood);
+
+		/* Start the count down for this quiz */
 		timer.start();
 	}
 	
@@ -100,7 +123,7 @@ public class PlayQuizActivity extends Activity {
 	public List<Food> makeQuestionList(int categoryToPlay)
 	{
 		int upperRange = 0; /* Size of list */
-		List<Food> foods = new LinkedList<Food>(); /* list that will be returned */
+		List<Food> foods = new ArrayList<Food>(); /* list that will be returned */
 
 		switch (categoryToPlay)
 		{
@@ -168,7 +191,7 @@ public class PlayQuizActivity extends Activity {
 		Collections.shuffle(foods);
 		return foods;
 	}//end makeQuestionList
-
+	
 	/* This method simply displays the next question in the list
 	 * inside the text field that exists for that purpose.
 	 * It receives the whole list of foods and an integer
@@ -284,7 +307,7 @@ public class PlayQuizActivity extends Activity {
 	 * answer in the form of an object, for validating
 	 * the user's response.
 	 */
-	public Object setPossibleAnswers(int foodCategory, LinkedList<Food> foods, int currentFood)
+	public Object setPossibleAnswers(int foodCategory, ArrayList<Food> foods, int currentFood)
 	{
 		/* Declare and initialize a list with the images
 		 * for the wrong answers.
@@ -364,39 +387,65 @@ public class PlayQuizActivity extends Activity {
 		ImageButton btnAnswer2 = (ImageButton) findViewById(R.id.btnAnswer2);
 		ImageButton btnAnswer3 = (ImageButton) findViewById(R.id.btnAnswer3);
 		ImageButton btnAnswer4 = (ImageButton) findViewById(R.id.btnAnswer4);
-		/* See which was tapped and then 
+		/* See which button was tapped and then 
 		 * find out whether it is the one
-		 * with the "correct" tag. If it is,
-		 * give feedback to the user. Afterwards
-		 * it should take them to the next question
+		 * with the "correct" tag. Give feedback
+		 * to the user accordingly. Afterwards
+		 * take them to the next question
 		 * or activity.
+		 * Always send along the extra information required
+		 * for the other activity to load the right content.
 		 * */
 		switch (v.getId())
 		{
+			
 			case R.id.btnAnswer1:
 				if (btnAnswer1.getTag().equals(correctAnswer))
-					System.out.println("You answered correctly!!!");
+					Toast.makeText(getApplicationContext(), "You answered " + foods.get(currentFood).getName() + " correctly!!!", Toast.LENGTH_SHORT).show();
 				else
-					System.out.println("You answered wrong...");
+					Toast.makeText(getApplicationContext(), "No, it is " + foods.get(currentFood).getName() + ", better luck next time!", Toast.LENGTH_SHORT).show();
+				goToPlayTap.putExtra("currentFood", currentFood);
+				goToPlayTap.putExtra("foodlist", foods);
+				timer.cancel();
+				cooldownTimer.start();
 				break;
 			case R.id.btnAnswer2:
 				if (btnAnswer2.getTag().equals(correctAnswer))
-					System.out.println("You answered correctly!!!");
+					Toast.makeText(getApplicationContext(), "You answered " + foods.get(currentFood).getName() + " correctly!!!", Toast.LENGTH_SHORT).show();
 				else
-					System.out.println("You answered wrong...");
+					Toast.makeText(getApplicationContext(), "No, it is " + foods.get(currentFood).getName() + ", better luck next time!", Toast.LENGTH_SHORT).show();
+				goToPlayTap.putExtra("currentFood", currentFood);
+				goToPlayTap.putExtra("foodlist", foods);
+				timer.cancel();
+				cooldownTimer.start();
 				break;
 			case R.id.btnAnswer3:
 				if (btnAnswer3.getTag().equals(correctAnswer))
-					System.out.println("You answered correctly!!!");
+					Toast.makeText(getApplicationContext(), "You answered " + foods.get(currentFood).getName() + " correctly!!!", Toast.LENGTH_SHORT).show();
 				else
-					System.out.println("You answered wrong...");
+					Toast.makeText(getApplicationContext(), "No, it is " + foods.get(currentFood).getName() + ", better luck next time!", Toast.LENGTH_SHORT).show();
+				goToPlayTap.putExtra("currentFood", currentFood);
+				goToPlayTap.putExtra("foodlist", foods);
+				timer.cancel();
+				cooldownTimer.start();
 				break;
 			case R.id.btnAnswer4:
 				if (btnAnswer4.getTag().equals(correctAnswer))
-					System.out.println("You answered correctly!!!");
+					Toast.makeText(getApplicationContext(), "You answered " + foods.get(currentFood).getName() + " correctly!!!", Toast.LENGTH_SHORT).show();
 				else
-					System.out.println("You answered wrong...");
+					Toast.makeText(getApplicationContext(), "No, it is " + foods.get(currentFood).getName() + ", better luck next time!", Toast.LENGTH_SHORT).show();
+				goToPlayTap.putExtra("currentFood", currentFood);
+				goToPlayTap.putExtra("foodlist", foods);
+				timer.cancel();
+				cooldownTimer.start();
 				break;
+				default:
+					Toast.makeText(getApplicationContext(), "Correct answer was "+foods.get(currentFood).getName(), Toast.LENGTH_SHORT).show();
+					goToPlayTap.putExtra("currentFood", currentFood);
+					goToPlayTap.putExtra("foodlist", foods);
+					timer.cancel();
+					cooldownTimer.start();
+					break;
 		}//end switch
 	}//end checkAnswer
 }//end class
