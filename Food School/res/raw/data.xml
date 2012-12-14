@@ -21,7 +21,6 @@
         		<string>That's right, it is bread!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>cereals</category>
 			<name>maize</name>
@@ -42,7 +41,6 @@
         		<string>Well done, it is maize!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>cereals</category>
 			<name>pasta</name>
@@ -63,7 +61,6 @@
         		<string>Excellent, it is pasta!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>cereals</category>
 			<name>rice</name>
@@ -84,7 +81,6 @@
         		<string>That's right, it is rice!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>cereals</category>
 			<name>wheat</name>
@@ -105,7 +101,6 @@
         		<string>Well done, it is wheat!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>dairy</category>
 			<name>butter</name>
@@ -126,7 +121,6 @@
         		<string>Excellent, it is butter!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>dairy</category>
 			<name>cheese</name>
@@ -147,7 +141,6 @@
         		<string>Good job, it is cheese!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>dairy</category>
 			<name>milk</name>
@@ -168,7 +161,6 @@
         		<string>You are really good, it is milk!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>dairy</category>
 			<name>yogurt</name>
@@ -189,7 +181,6 @@
         		<string>Well done, it is yogurt!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>apple</name>
@@ -210,7 +201,6 @@
         		<string>That's right, it is an apple!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>banana</name>
@@ -231,7 +221,6 @@
         		<string>Excellent, it is a banana!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>cherries</name>
@@ -252,7 +241,6 @@
         		<string>Well done, cherries are the answer!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>grapes</name>
@@ -274,7 +262,6 @@ The energy you get from grapes lasts longer because it is slowly digested.</desc
         		<string>That's right, it's grapes!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>lemon</name>
@@ -295,7 +282,6 @@ The energy you get from grapes lasts longer because it is slowly digested.</desc
         		<string>Very well, it is a lemon!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>lime</name>
@@ -317,7 +303,6 @@ Its peel and juice are great for flavoring food.</description>
         		<string>Great job, it is a lime!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>orange</name>
@@ -338,7 +323,6 @@ Its peel and juice are great for flavoring food.</description>
         		<string>Excellent, it is an orange!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>peach</name>
@@ -359,7 +343,6 @@ Its peel and juice are great for flavoring food.</description>
         		<string>Very well, it is a peach!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>pear</name>
@@ -380,7 +363,6 @@ Its peel and juice are great for flavoring food.</description>
         		<string>Well done, it is a pear!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>pineapple</name>
@@ -401,7 +383,6 @@ Its peel and juice are great for flavoring food.</description>
         		<string>Your answer is right ! It is a pineapple !</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>strawberries</name>
@@ -423,7 +404,6 @@ They have a high content of vitamin C, which keeps your immune system strong, di
         		<string>That's right, it's strawberries!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>fruits</category>
 			<name>watermelon</name>
@@ -445,7 +425,6 @@ It is a good source of vitamin C, which keeps your immune system strong, and bet
         		<string>Really nice! It is a watermelon!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>protein</category>
 			<name>beef</name>
@@ -467,7 +446,6 @@ Beef is an excellent source of complete protein and vital minerals such as zinc,
         		<string>That's right, it is beef!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>protein</category>
 			<name>chicken</name>
@@ -490,7 +468,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Well done, it is chicken!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>protein</category>
 			<name>eggs</name>
@@ -511,7 +488,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>You are right, it's eggs!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>protein</category>
 			<name>fish</name>
@@ -532,7 +508,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Well done, it is fish!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>protein</category>
 			<name>pork</name>
@@ -553,7 +528,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Excellent, it is pork!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>protein</category>
 			<name>sausage</name>
@@ -574,7 +548,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Good job, it is a susage!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>broccoli</name>
@@ -595,7 +568,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>That's right, it is broccoli!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>cabbage</name>
@@ -616,7 +588,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Off course it is cabbage! Well done!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>carrot</name>
@@ -637,7 +608,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Yes you are right, it is a carrot!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>celery</name>
@@ -658,7 +628,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Excellent, it is celery!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>cucumber</name>
@@ -679,7 +648,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Well done, it is a cucumber!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>eggplant</name>
@@ -700,7 +668,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Very well, it is an eggplant!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>garlic</name>
@@ -721,7 +688,6 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Good job, it is garlic!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>lettuce</name>
@@ -744,7 +710,6 @@ It is a source of vitamin C, dietary fibre, beta carotene and folate. </descript
         		<string>Excellent, it is lettuce!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>onion</name>
@@ -766,7 +731,6 @@ They have no fat, and contain complex sugars that help the 'good' bacteria in yo
         		<string>That's right, it is onion!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>pepper</name>
@@ -787,7 +751,6 @@ They have no fat, and contain complex sugars that help the 'good' bacteria in yo
         		<string>Great, it is pepper!</string>
         	</answers>
 		</food>
-		<! ----------------------------------------------------------------------!>
 		<food>
 			<category>vegetables</category>
 			<name>potato</name>
@@ -809,7 +772,6 @@ Potatoes are carbohydrates and give you energy for physical activities and they 
         		<string>Very nice, it is potatoes!</string>
         	</answers>
 		</food>
-		<! -------------------------------------------------------------------- -->
 		<food>
 			<category>vegetables</category>
 			<name>tomato</name>
@@ -830,6 +792,5 @@ Potatoes are carbohydrates and give you energy for physical activities and they 
         		<string>Well done, it is tomatoes!</string>
         	</answers>
 		</food>
-		<! --------------------------------------------------------------------- -->
 	</foodlist>
 </foodcollection>

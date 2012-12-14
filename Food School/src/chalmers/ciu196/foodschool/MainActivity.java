@@ -227,7 +227,7 @@ public class MainActivity extends Activity {
 	//Calling the XmlParser
 	XmlParser ains=new XmlParser();
 	
-	FoodCollection test=ains.fromXML(R.raw.data, getApplicationContext());
+	FoodCollection test=ains.foodfromXML(R.raw.data, getApplicationContext());
 	Log.d("SOCORRO",test.getList().get(1).getName());
 	//End of the XmlParser call
 	
