@@ -25,7 +25,31 @@ public class PlayCategoriesActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play_categories);
 	}
-
+	
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+	}
+	
+	@Override
+	public void onPause()
+	{
+		super.onPause();
+	}
+	
+	@Override
+	public void onStop()
+	{
+		super.onStop();
+	}
+	
+	@Override
+	public void onRestart()
+	{
+		super.onRestart();
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

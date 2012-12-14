@@ -34,13 +34,11 @@ public class CoolDownTimer extends CountDownTimer {
 		/* Use it to call the loadNextQuestion function inside PlayActivity.
 		 * Increase timesFinished and use it to fetch the next question in the list.
 		 */
-
-		if (this.getActivityThatUsesMe() == 1)
-			quiz.startActivity(quiz.goToPlayTap);
-		else if (this.getActivityThatUsesMe() == 2)
-		{
-			tap.startActivity(tap.goToPlayQuiz);
-		}
+			timesFinished++;
+			if (this.getActivityThatUsesMe() == 1)
+				quiz.startActivity(quiz.goToPlayTap);
+			else if (this.getActivityThatUsesMe() == 2)
+				tap.startActivity(tap.goToPlayQuiz);
 	}
 
 	@Override
@@ -55,6 +53,11 @@ public class CoolDownTimer extends CountDownTimer {
 	public int getActivityThatUsesMe()
 	{
 		return activity;
+	}
+
+
+	public int getTimesFinished() {
+		return timesFinished;
 	}
 }
 
