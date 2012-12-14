@@ -1,13 +1,14 @@
 package chalmers.ciu196.foodschool;
 
-import android.app.Activity;
-import android.content.Intent;
+
+
 import android.os.CountDownTimer;
 
 /* This class implements a timer that counts
  * till the next question will be displayed.
  */
 public class CoolDownTimer extends CountDownTimer {
+	@SuppressWarnings("unused")
 	private int timesFinished = 0; /* how many times this timer has finished,
 									* this will indicate how many questions
 									* have been displayed */

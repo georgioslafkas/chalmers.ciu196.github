@@ -1,9 +1,7 @@
 package chalmers.ciu196.foodschool;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -30,7 +28,9 @@ public class GameTimerBar extends CountDownTimer {
 	/* Implementing inherited methods */
 	@Override
 	public void onFinish() {
+		@SuppressWarnings("unused")
 		PlayQuizActivity quiz = (PlayQuizActivity) PlayQuizActivity.activityInstance;
+		@SuppressWarnings("unused")
 		PlayTapActivity tap = (PlayTapActivity) PlayTapActivity.activityInstance;
 		/* Set the bar to 0 */
 		progressBar.setProgress(FINISHED);

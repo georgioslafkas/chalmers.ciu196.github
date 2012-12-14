@@ -47,6 +47,7 @@ public class PlayQuizActivity extends Activity {
 		cooldownTimer.setActivityThatUsesMe(1); /* Where this is launched */
 	}
 	
+	@SuppressWarnings({ "unchecked" })
 	@Override
 	public void onResume()
 	{

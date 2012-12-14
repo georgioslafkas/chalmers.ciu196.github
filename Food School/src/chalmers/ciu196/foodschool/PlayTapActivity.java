@@ -48,6 +48,7 @@ public class PlayTapActivity extends Activity {
 		 */
 		Intent startedThis = getIntent();
 		/* Retrieve the extra information */
+		@SuppressWarnings("unchecked")
 		ArrayList<Food> foods = (ArrayList<Food>) startedThis.getSerializableExtra("foodlist");
 		currentFood = startedThis.getIntExtra("currentFood", NOT_FOUND);
 		
