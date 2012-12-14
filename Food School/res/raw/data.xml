@@ -109,7 +109,7 @@
 		<food>
 			<category>dairy</category>
 			<name>butter</name>
-			<description>Butter contains "good" fat. It is used as a spread and for cooking and baking. It is rich in vitamin A, which helps your eyes, bones and skin. It also contains vitamin E, K and D. Vitamin D is essential in the absorption of calcium. It is a good source of iodine, which helps regulate the hormones in the body. </description>
+			<description>Butter contains 'good' fat. It is used as a spread and for cooking and baking. It is rich in vitamin A, which helps your eyes, bones and skin. It also contains vitamin E, K and D. Vitamin D is essential in the absorption of calcium. It is a good source of iodine, which helps regulate the hormones in the body. </description>
     		<foodId>R.drawable.img_dairy_butter</foodId>
         	<sound__paths>
 	       		<string>soundpath1</string>
@@ -120,7 +120,7 @@
     	    	<string>imagepath2</string>
     	   	</image__paths>
     	   	<questions>
-    	    	<string>This dairy product is a "good" fat source that is used as a spread and for food preparation. Its vitamins help your eyes, bones and skin. </string>
+    	    	<string>This dairy product is a 'good' fat source that is used as a spread and for food preparation. Its vitamins help your eyes, bones and skin. </string>
     	    </questions>
     	    <answers>
         		<string>Excellent, it is butter!</string>
@@ -571,7 +571,7 @@ Chicken is a good source of protein, calcium and potassium.</description>
     	    	<string>This protein product can be made of different kinds of ground meat in a tight casing. There are a lot of different types depending on the region or country. Its nutritional value depends on the ingredients it is made from.</string>
     	    </questions>
     	    <answers>
-        		<string>Good job, it is a susage!</string>
+        		<string>Good job, it is a sausage!</string>
         	</answers>
 		</food>
 				<!-- ********************************************************************* -->
@@ -830,6 +830,5 @@ Potatoes are carbohydrates and give you energy for physical activities and they 
         		<string>Well done, it is tomatoes!</string>
         	</answers>
 		</food>
-
 	</foodlist>
 </foodcollection>

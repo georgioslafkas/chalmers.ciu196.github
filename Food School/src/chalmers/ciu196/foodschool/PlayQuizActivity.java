@@ -2,7 +2,6 @@ package chalmers.ciu196.foodschool;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -47,6 +46,7 @@ public class PlayQuizActivity extends Activity {
 		cooldownTimer.setActivityThatUsesMe(1); /* Where this is launched */
 	}
 	
+	@SuppressWarnings({ "unchecked" })
 	@Override
 	public void onResume()
 	{

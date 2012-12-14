@@ -1,36 +1,14 @@
 package chalmers.ciu196.foodschool;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringWriter;
+
 import java.util.ArrayList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
 import chalmers.ciu196.foodschool.Database.DbManager;
 import chalmers.ciu196.foodschool.Database.XmlParser;
 import android.os.Bundle;
 import android.media.MediaPlayer;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
-import android.util.Xml;
 import android.view.Menu;
 import android.view.View;
 
@@ -249,8 +227,9 @@ public class MainActivity extends Activity {
 	//Calling the XmlParser
 	/*XmlParser ains=new XmlParser();
 	
-	FoodCollection test=ains.fromXML(R.raw.data, getApplicationContext());
+	FoodCollection test=ains.foodfromXML(R.raw.data, getApplicationContext());
 	Log.d("SOCORRO",test.getList().get(1).getName());*/
+
 	//End of the XmlParser call
 	
 	}

@@ -7,11 +7,9 @@ import java.util.Random;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.ClipData;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.DragShadowBuilder;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -46,6 +44,7 @@ public class PlayTapActivity extends Activity {
 		tapCoolDownTimer.setActivityThatUsesMe(2);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void onResume()
 	{
@@ -61,7 +60,11 @@ public class PlayTapActivity extends Activity {
 		 */
 		Intent startedThis = getIntent();
 		/* Retrieve the extra information */
+
 		foods = (ArrayList<Food>) startedThis.getSerializableExtra("foodlist");
+
+		ArrayList<Food> foods = (ArrayList<Food>) startedThis.getSerializableExtra("foodlist");
+
 		currentFood = startedThis.getIntExtra("currentFood", NOT_FOUND);
 		
 		/* Send the extra information back to quiz,

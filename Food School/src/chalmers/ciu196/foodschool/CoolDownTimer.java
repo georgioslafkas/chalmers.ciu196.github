@@ -1,7 +1,7 @@
 package chalmers.ciu196.foodschool;
 
-import android.app.Activity;
-import android.content.Intent;
+
+
 import android.os.CountDownTimer;
 
 /* This class implements a timer that counts
