@@ -13,28 +13,35 @@ import android.view.Menu;
 import android.view.View;
 
 public class MainActivity extends Activity {
-	private MediaPlayer mediaPlayer;
 	
 	// Database related variables =============================================
 	private DbManager databaseManager;
 	// End of Database related variables ======================================
 	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		stopService(new Intent(this,MediaServiceB.class));
+		startService(new Intent(this,MediaServiceA.class));
+	}
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);		
+		setContentView(R.layout.activity_main);	
+
 	// DATABASE related code ==================================================
 	
 	dbManager();
 	FoodManager foodManager = SimpleFoodManager.getManager();
 	
 	/* Temporary variables for testing */
-	FoodCategory fruits = new FoodCategory("Fruits", "Fruit products", "imgpath", "soundpath", 1, new ArrayList<Food>());
-	FoodCategory vegetables = new FoodCategory("Vegetables", "Vegetable products", "", "", 2, new ArrayList<Food>());
-	FoodCategory meats = new FoodCategory("Meats", "Meat products", "", "", 3, new ArrayList<Food>());
-	FoodCategory dairy = new FoodCategory("Dairy", "Dairy products", "", "", 4, new ArrayList<Food>());
-	FoodCategory cereals = new FoodCategory("Cereals", "Cereal products", "", "", 5, new ArrayList<Food>());
+	FoodCategory fruits = new FoodCategory("Fruits", "Fruit products", "imgpath", "soundpath", new ArrayList<Food>());
+	FoodCategory vegetables = new FoodCategory("Vegetables", "Vegetable products", "", "", new ArrayList<Food>());
+	FoodCategory meats = new FoodCategory("Meats", "Meat products", "", "", new ArrayList<Food>());
+	FoodCategory dairy = new FoodCategory("Dairy", "Dairy products", "", "", new ArrayList<Food>());
+	FoodCategory cereals = new FoodCategory("Cereals", "Cereal products", "", "", new ArrayList<Food>());
 	foodManager.addCategory(fruits);
 	foodManager.addCategory(vegetables);
 	foodManager.addCategory(meats);
@@ -224,13 +231,13 @@ public class MainActivity extends Activity {
 	Log.d("Db4o", "Food "+testLoadFood.getName()+" was successfully stored and retrieved from database.");
 	// End of database related code ===========================================
 	
-	//Calling the XmlParser
-	/*XmlParser ains=new XmlParser();
 	
-	FoodCollection test=ains.foodfromXML(R.raw.data, getApplicationContext());
-	Log.d("SOCORRO",test.getList().get(1).getName());*/
-
-	//End of the XmlParser call
+	XmlParser uf=new XmlParser();
+	CategoryCollection nene=new CategoryCollection();
+	nene=uf.categoryfromXML(R.raw.data, this);
+	Log.d("SOCOOOORRO",String.valueOf(nene.getList().get(0).getFoodsContained().get(0).getId()));
+	Log.d("SOCOOOORRO2",String.valueOf(R.drawable.img_cereals_bread));
+	
 	
 	}
 	// DATABASE related code ==================================================
@@ -242,18 +249,6 @@ public class MainActivity extends Activity {
 		return databaseManager;
 	}
 	// End of database related code ===========================================
-	
-	@Override
-	protected void onResume(){
-		super.onResume();
-		mediaPlayer= MediaPlayer.create(this, R.raw.foodschoolbso1);
-		mediaPlayer.setLooping(true);
-		Log.d("COsa","COsa");
-		/* Start playing music when this activity starts. */
-		mediaPlayer.start();
-
-
-	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -263,11 +258,12 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
+	
+	
 	@Override
-	protected void onStop(){
-		super.onStop();
-		/* Stop playing music when this activity stops. */
-		mediaPlayer.stop();
+	public void onDestroy(){
+		super.onDestroy();
+		stopService(new Intent(this,MediaServiceA.class));
 	}
 	
 	// Database related variables =============================================
@@ -276,7 +272,7 @@ public class MainActivity extends Activity {
 	
 	@Override
 	protected void onPause() {
-         super.onDestroy();
+         super.onPause();
          dbManager().close();
          databaseManager = null;
      }

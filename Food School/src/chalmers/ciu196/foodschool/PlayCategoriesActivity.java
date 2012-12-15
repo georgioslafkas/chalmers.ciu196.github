@@ -27,9 +27,11 @@ public class PlayCategoriesActivity extends Activity {
 	}
 	
 	@Override
-	public void onResume()
-	{
+	public void onResume(){
 		super.onResume();
+		stopService(new Intent(this,MediaServiceB.class));
+		stopService(new Intent(this,MediaServiceA.class));
+
 	}
 	
 	@Override

@@ -21,6 +21,14 @@ public class LearnCategoriesActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_learn_categories);
+
+
+	}
+	@Override
+	public void onResume(){
+		super.onResume();
+		stopService(new Intent(this,MediaServiceA.class));
+
 	}
 
 	@Override

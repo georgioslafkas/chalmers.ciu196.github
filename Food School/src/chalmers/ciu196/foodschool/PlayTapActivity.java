@@ -29,12 +29,14 @@ public class PlayTapActivity extends Activity {
 	Intent goToEndGame; /* the intent that takes us to the end game screen */
 	public static Activity activityInstance = null; /* an instance of this activity, used in the cool down timer */
 	public Object correctAnswer = new Object(), wrongAnswer = new Object();
+
 	public final int POSSIBLE_WRONG_ANSWERS = 3; /* CHANGE THAT TO 7 WHEN DB IS COMPLETE */
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play_tap);
+
 		
 		PlayTapActivity.activityInstance = this;	/* Initialize the instance of this activity */
 		/* Set timers and progress bar */
@@ -49,7 +51,8 @@ public class PlayTapActivity extends Activity {
 	public void onResume()
 	{
 		super.onResume();
-			
+		stopService(new Intent(this,MediaServiceA.class));
+		startService(new Intent(this,MediaServiceB.class));
 		/* Initialize the intent that takes back to the quiz */
 		goToPlayQuiz = new Intent(this, PlayQuizActivity.class);
 		goToPlayQuiz.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -99,6 +102,7 @@ public class PlayTapActivity extends Activity {
 		}
 		finish();
 	}
+	
 	
 	@Override
 	public void onStop()

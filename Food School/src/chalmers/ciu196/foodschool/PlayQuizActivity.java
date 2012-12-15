@@ -35,6 +35,7 @@ public class PlayQuizActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play_quiz);
+
 		
 		/* Retrieve the progress bar from the UI */
 		ProgressBar quizProgBar = (ProgressBar) findViewById(R.id.progBarQuiz);
@@ -51,6 +52,8 @@ public class PlayQuizActivity extends Activity {
 	public void onResume()
 	{
 		super.onResume();
+		stopService(new Intent(this,MediaServiceA.class));
+		startService(new Intent(this,MediaServiceB.class));
 		/* Get the intent that started this activity */
 		Intent startedThis = getIntent();
 		
@@ -97,6 +100,11 @@ public class PlayQuizActivity extends Activity {
 		cooldownTimer.cancel();
 		finish();
 	}
+	
+	@Override
+	public void onDestroy(){
+		super.onDestroy();
+		}
 	
 	@Override
 	public void onStop()

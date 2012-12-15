@@ -16,16 +16,21 @@ public class Food extends Object implements Serializable {
 		   description, // Description of the food
 		   category; // Category indicator where this food belongs
 		private int foodId; // Id of the food
-		
+		private String foodRef;
 
 		private ArrayList<String> questions = new ArrayList<String>(); // Array that holds questions
 		private ArrayList<String> answers = new ArrayList<String>();// Array that holds answers
 		 
 		private ArrayList<String> image_paths = new ArrayList<String>(); // Array that holds the paths for the pictures used
-		private ArrayList<String> sound_paths = new ArrayList<String>(); // Array that holds the paths for the sounds used		
+		private ArrayList<String> sound_paths = new ArrayList<String>(); // Array that holds the paths for the sounds used	
+		
+		private ArrayList<Integer> image_id = new ArrayList<Integer>(); // Array that holds the ids for the pictures used
+		private ArrayList<Integer> sound_id = new ArrayList<Integer>(); // Array that holds the ids for the sounds used
 		
 		// Getters and Setters of the parameters above
-		
+		public String getfoodRef(){
+			return foodRef;
+		}
 		// id
 		public int getId() {
 			return foodId;
@@ -90,6 +95,21 @@ public class Food extends Object implements Serializable {
 			return image_paths;
 		}
 	
+		// image_ids
+		public void setImage_ids(ArrayList<Integer> ids) { // Sets the image id
+			this.image_id = ids;
+		}
+		public ArrayList<Integer> getImage_ids() { // Returns the array with the ids of the images
+			return image_id;
+		}
+		
+		// sound_ids
+		public void setSound_ids(ArrayList<Integer> ids) { // Sets the image id
+			this.sound_id = ids;
+		}
+		public ArrayList<Integer> getSound_ids() { // Returns the array with the ids of the images
+			return sound_id;
+		}
 		
 		// Constructor
 		

@@ -12,20 +12,19 @@ public class FoodCategory extends Object{
 	   description, // Description of the category
 	   imagePath, // Path where the category icon is stored
 	   soundPath; // Path where the sound file of the category is stored
-	
-	private int catId; // Category id
+	private int imageid, //Id of the image resource
+		soundid; //Id of the sound resource
 
 	private ArrayList<Food> foodsContained = new ArrayList<Food>();
 
 	// Constructor
-	public FoodCategory(String catName, String catDesc, String cImagePath, String cSoundPath, int cId,
+	public FoodCategory(String catName, String catDesc, String cImagePath, String cSoundPath,
 						ArrayList<Food> foodsC){
 			
 		this.setCatName(catName);
 		this.setCatDescription(catDesc);
 		this.setCatImagePath(cImagePath);		
 		this.setCatSoundPath(cSoundPath);
-		this.setCatId(cId);
 		this.setFoodsContained(foodsC);
 	}
 		
@@ -36,20 +35,25 @@ public class FoodCategory extends Object{
 		this.setCatDescription(null);
 		this.setCatImagePath(null);
 		this.setCatSoundPath(null);
-		this.setCatId(0);
 		this.setFoodsContained(null);
 	}	
 		
 	// Getters and Setters	
 		
-	// id 
-	
-	public int getCatId() {
-		return catId;
+	public int getImageid(){
+		return imageid;
 	}
-
-	public void setCatId(int catId) {
-		this.catId = catId;
+	
+	public void setImageid(int id){
+		imageid=id;
+	}
+	
+	public int getSoundid(){
+		return soundid;
+	}
+	
+	public void setSoundid(int id){
+		soundid=id;
 	}
 	
 	// name
