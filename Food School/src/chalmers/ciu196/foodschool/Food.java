@@ -16,7 +16,7 @@ public class Food extends Object implements Serializable {
 		   description, // Description of the food
 		   category; // Category indicator where this food belongs
 		private int foodId; // Id of the food
-		
+		private String foodRef;
 
 		private ArrayList<String> questions = new ArrayList<String>(); // Array that holds questions
 		private ArrayList<String> answers = new ArrayList<String>();// Array that holds answers
@@ -25,7 +25,9 @@ public class Food extends Object implements Serializable {
 		private ArrayList<String> sound_paths = new ArrayList<String>(); // Array that holds the paths for the sounds used		
 		
 		// Getters and Setters of the parameters above
-		
+		public String getfoodRef(){
+			return foodRef;
+		}
 		// id
 		public int getId() {
 			return foodId;

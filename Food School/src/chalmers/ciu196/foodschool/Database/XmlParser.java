@@ -89,6 +89,7 @@ public class XmlParser {
 		xstream.alias("food", Food.class);
 		xstream.alias("foodcollection", FoodCollection.class);
 		FoodCollection collection=(FoodCollection)xstream.fromXML(xmlString);
+		collection.setIds(cont);
 
 		return collection;
 	}
