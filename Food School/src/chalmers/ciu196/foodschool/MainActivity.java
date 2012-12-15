@@ -37,11 +37,11 @@ public class MainActivity extends Activity {
 	FoodManager foodManager = SimpleFoodManager.getManager();
 	
 	/* Temporary variables for testing */
-	FoodCategory fruits = new FoodCategory("Fruits", "Fruit products", "imgpath", "soundpath", 1, new ArrayList<Food>());
-	FoodCategory vegetables = new FoodCategory("Vegetables", "Vegetable products", "", "", 2, new ArrayList<Food>());
-	FoodCategory meats = new FoodCategory("Meats", "Meat products", "", "", 3, new ArrayList<Food>());
-	FoodCategory dairy = new FoodCategory("Dairy", "Dairy products", "", "", 4, new ArrayList<Food>());
-	FoodCategory cereals = new FoodCategory("Cereals", "Cereal products", "", "", 5, new ArrayList<Food>());
+	FoodCategory fruits = new FoodCategory("Fruits", "Fruit products", "imgpath", "soundpath", new ArrayList<Food>());
+	FoodCategory vegetables = new FoodCategory("Vegetables", "Vegetable products", "", "", new ArrayList<Food>());
+	FoodCategory meats = new FoodCategory("Meats", "Meat products", "", "", new ArrayList<Food>());
+	FoodCategory dairy = new FoodCategory("Dairy", "Dairy products", "", "", new ArrayList<Food>());
+	FoodCategory cereals = new FoodCategory("Cereals", "Cereal products", "", "", new ArrayList<Food>());
 	foodManager.addCategory(fruits);
 	foodManager.addCategory(vegetables);
 	foodManager.addCategory(meats);

@@ -25,18 +25,51 @@ public class CategoryCollection extends Object{
 		}
 	
 		public void setIds(Context cont){
-			Food aux=new Food();
-			FoodCategory aux2=new FoodCategory();
-			ArrayList<Food> aux3=new ArrayList<Food>();
+			Food auxfood=new Food();
+			FoodCategory auxcat=new FoodCategory();
+			ArrayList<Food> auxfoodlist=new ArrayList<Food>();
+			ArrayList<Integer> auxids=new ArrayList<Integer>();
+			
 			for (int y=0;y<categorylist.size();y++){
-				aux2=categorylist.get(y);
-				aux3=aux2.getFoodsContained();
-				for (int i=0;i<aux3.size();i++){
-					aux=aux3.get(i);
-					aux.setId(cont.getResources().getIdentifier(aux.getfoodRef(),"drawable", "chalmers.ciu196.foodschool"));
-					aux3.set(i, aux);
+				auxcat=categorylist.get(y);
+				auxfoodlist=auxcat.getFoodsContained();
+
+				//Convert the category image paths to image ids
+				auxcat.setImageid(cont.getResources().getIdentifier(auxcat.getCatImagePath(), "drawable", "chalmers.ciu196.foodschool"));
+				
+				//Convert the category sound paths to sound ids
+				auxcat.setSoundid(cont.getResources().getIdentifier(auxcat.getCatSoundPath(), "raw", "chalmers.ciu196.foodschool"));
+				
+				for (int i=0;i<auxfoodlist.size();i++){
+					auxfood=auxfoodlist.get(i);
+					
+					
+					//Convert the food reference to food id
+					auxfood.setId(cont.getResources().getIdentifier(auxfood.getfoodRef(),"drawable", "chalmers.ciu196.foodschool"));
+					
+					//Convert the food image paths to image ids
+					for (int x=0;x<auxfood.getImage_paths().size();i++){
+						auxids.add(cont.getResources().getIdentifier(auxfood.getImage_paths().get(x), "drawable", "chalmers.ciu196.foodschool"));
+					}
+					
+					//Commit the changes
+					auxfood.setImage_ids(auxids);
+					
+					//Coner the food sound paths to sound ids
+					auxids.clear();
+					for (int x=0;x<auxfood.getSound_paths().size();i++){
+						auxids.add(cont.getResources().getIdentifier(auxfood.getSound_paths().get(x), "drawable", "chalmers.ciu196.foodschool"));
+					}
+					
+					//Commit the changes
+					auxfood.setSound_ids(auxids);
+					
+					//Commit the changes
+					auxfoodlist.set(i, auxfood);
 				}
-				categorylist.set(y,aux2);
+				
+				//Commit the changes
+				categorylist.set(y,auxcat);
 			}
 			
 		}
