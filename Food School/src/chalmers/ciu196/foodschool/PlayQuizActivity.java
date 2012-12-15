@@ -2,7 +2,6 @@ package chalmers.ciu196.foodschool;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -25,12 +24,12 @@ public class PlayQuizActivity extends Activity {
 	private final int NOT_FOUND = -1; /* in case a category was not found */
 	public static Activity activityInstance = null; /* an instance of this activity, 
 													* to be passed to the cool down timer */
-	
 	Intent goToPlayTap; /* This intent will start the tap game activity */
 	public int currentFood; /* This is the current food index, used to retrieve it from the list */
 	public ArrayList<Food> foods; /* The list of foods for a category */
 	public Object correctAnswer = new Object(), wrongAnswer =  new Object(); /* Just indicators of wrong or right answers */
-	public final int POSSIBLE_ANSWERS_NUMBER = 4; /* We have four possible answers...*/
+	public final int POSSIBLE_WRONG_ANSWERS = 3; /* We have three wrong answers for this game */
+	private static Random randomNo = new Random();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +72,7 @@ public class PlayQuizActivity extends Activity {
 		goToPlayTap.putExtra("foodlist", foods);
 		
 		/* Retrieve the current food index,
-		 * either from the categories
+		 * either from the categories activity
 		 * or from the tap activity
 		 */
 		currentFood = startedThis.getIntExtra("currentFood", NOT_FOUND);
@@ -96,6 +95,7 @@ public class PlayQuizActivity extends Activity {
 		/* Cancel the timers */
 		timer.cancel();
 		cooldownTimer.cancel();
+		finish();
 	}
 	
 	@Override
@@ -104,6 +104,7 @@ public class PlayQuizActivity extends Activity {
 		super.onStop();
 		timer.cancel();
 		cooldownTimer.cancel();
+		finish();
 	}
 	
 	@Override
@@ -206,10 +207,6 @@ public class PlayQuizActivity extends Activity {
 			TextView txtQuestion = (TextView) findViewById(R.id.txtQuestion);
 			txtQuestion.setText(foods.get(currentFood).getDescription());
 		}
-		else
-		{
-			//This should take you to the other game activity
-		}
 	}
 	
 	/* Random generator between 1-4,
@@ -217,10 +214,42 @@ public class PlayQuizActivity extends Activity {
 	 */
 	public int generateRandomNumber()
 	{
-		Random randomNo = new Random();
 		return randomNo.nextInt(4)+1;
 	}
 	
+	/* This method creates a list with random images.
+	 * Those images are of foods different from the
+	 * food currently in question, and are used on
+	 * the buttons that are the wrong answers for
+	 * the question.
+	 */
+	public ArrayList<Integer> makeWrongImageList(int currentFood, ArrayList<Food> foods)
+	{
+		/* List with the images (ids in the drawable folder) */
+		ArrayList<Integer> wrongAnswerImages = new ArrayList<Integer>();
+		/* A copy of the food list */
+		ArrayList<Food> tempFoodList = new ArrayList<Food>(foods);
+		
+		/* Remove the food in question from this list 
+		 * and shuffle it*/
+		tempFoodList.remove(currentFood);
+		Collections.shuffle(tempFoodList);
+		
+		/* Loop through the copy of the food list
+		 * and add the images of those objects to
+		 * the list with the images
+		 */
+		for (int i = 0; i < POSSIBLE_WRONG_ANSWERS; i++)
+			wrongAnswerImages.add(tempFoodList.get(i).getId());
+		/* Return the list with the 3 wrong images */
+		return wrongAnswerImages;
+	}
+	
+	/* This method sets which will be
+	 * the button for the correct
+	 * answer and sets the image for it
+	 * as well as the wrong ones.
+	 */
 	public void setButtonAnswers(int currentFood, List<Integer> wrongAnswerImages)
 	{
 		ImageButton btnAnswer1 = (ImageButton) findViewById(R.id.btnAnswer1);
@@ -250,7 +279,7 @@ public class PlayQuizActivity extends Activity {
 					btnAnswer2.setTag(wrongAnswer);
 					btnAnswer2.setImageResource(wrongAnswerImages.get(0));
 					btnAnswer3.setTag(wrongAnswer);
-					btnAnswer2.setImageResource(wrongAnswerImages.get(1));
+					btnAnswer3.setImageResource(wrongAnswerImages.get(1));
 					btnAnswer4.setTag(wrongAnswer);
 					btnAnswer4.setImageResource(wrongAnswerImages.get(2));
 					break;
@@ -289,59 +318,14 @@ public class PlayQuizActivity extends Activity {
 					break;
 			}
 		}
-		/* If the current food index is bigger then the
-		 * number of foods for that category, you finished
-		 * that quiz!
-		 */
-		else
-		{
-			/* Just print something for now */
-			System.out.println("finished here, go to next activity");
-		}
 	}
 	
 	/* This method sets the multiple answers
-	 * on the buttons. It is responsible for
-	 * choosing which button will have the correct
-	 * answer, setting the image for that and the other
-	 * buttons. In the end it also returns the correct
-	 * answer in the form of an object, for validating
-	 * the user's response.
+	 * on the buttons for each category. It
+	 * uses the above method to do so. 
 	 */
-	public Object setPossibleAnswers(int foodCategory, ArrayList<Food> foods, int currentFood)
+	public void setPossibleAnswers(int foodCategory, ArrayList<Food> foods, int currentFood)
 	{
-		/* Declare and initialize a list with the images
-		 * for the wrong answers.
-		 */
-		List<Integer> wrongAnswerImages = new LinkedList<Integer>();
-		
-		/* Put every image of a wrong answer in 
-		 * the list, so that we can use it later
-		 * with the buttons that are not the correct
-		 * answer.
-		 */
-		for (int i = 0; i < foods.size(); i++)
-		{
-			/* Avoid NullPointerException by checking whether
-			 * the current food index is smaller then the number
-			 * of foods in the list for the current category
-			 */
-			if (currentFood < foods.size())
-			{
-				/* If the id of a food is not the same as the id of
-				 * the food that is the correct answer,
-				 * add it to the list of wrong answer images. */
-				if (foods.get(i).getId() != foods.get(currentFood).getId())
-					wrongAnswerImages.add(foods.get(i).getId());
-			}
-			/* Otherwise just print something for now */
-			else
-				System.out.println("Done here!!!");
-		}
-		
-		/* Randomize the order of the wrong images */
-		Collections.shuffle(wrongAnswerImages);
-		
 		/* Once again, determine which category we're in.
 		 * After that, call the setButtons method
 		 * to assign images to buttons etc. (see comments) */
@@ -349,33 +333,33 @@ public class PlayQuizActivity extends Activity {
 		{
 			/* FRUIT */
 			case 1:
-				setButtonAnswers(currentFood, wrongAnswerImages);
+				setButtonAnswers(currentFood, makeWrongImageList(currentFood, foods));
 				break;
 			/* VEGETABLES */
 			case 2:
-				setButtonAnswers(currentFood, wrongAnswerImages);
+				setButtonAnswers(currentFood, makeWrongImageList(currentFood, foods));
 				break;
 			/* MEAT */
 			case 3:
-				setButtonAnswers(currentFood, wrongAnswerImages);
+				setButtonAnswers(currentFood, makeWrongImageList(currentFood, foods));
 				break;
 			/* DAIRY */
 			case 4:
-				setButtonAnswers(currentFood, wrongAnswerImages);
+				setButtonAnswers(currentFood, makeWrongImageList(currentFood, foods));
 				break;
 			/* CEREALS */
 			case 5:
-				setButtonAnswers(currentFood, wrongAnswerImages);
+				setButtonAnswers(currentFood, makeWrongImageList(currentFood, foods));
 				break;
 			/* ALL */
 			case 6:
-				setButtonAnswers(currentFood, wrongAnswerImages);
+				setButtonAnswers(currentFood, makeWrongImageList(currentFood, foods));
 				break;
 			default:
 				break;
 		}//end switch
-		return correctAnswer;
 	}// end setPossibleAnswers
+
 	
 	/* This method checks whether the
 	 * button tapped is the one

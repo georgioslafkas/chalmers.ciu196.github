@@ -50,7 +50,7 @@
         android:layout_height="wrap_content" >
 
         <ImageButton
-            android:id="@+id/btnApple"
+            android:id="@+id/btnTap1"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -58,10 +58,11 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_apple" />
+            android:src="@drawable/img_fruits_apple"
+            android:onClick = "checkAnswer" />
         
            	<ImageButton
-            android:id="@+id/btnBanana"
+            android:id="@+id/btnTap2"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -69,11 +70,12 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_banana" />
+            android:src="@drawable/img_fruits_banana"
+            android:onClick = "checkAnswer" />
         
                 
            	<ImageButton
-            android:id="@+id/btnCherry"
+            android:id="@+id/btnTap3"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -81,11 +83,12 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_cherry" />
+            android:src="@drawable/img_fruits_cherry"
+            android:onClick = "checkAnswer" />
                 
                         
             <ImageButton
-            android:id="@+id/btnGrape"
+            android:id="@+id/btnTap4"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -93,7 +96,8 @@
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_grapes" />
+            android:src="@drawable/img_fruits_grapes"
+            android:onClick = "checkAnswer" />
                         
 
     </TableRow>
@@ -104,7 +108,7 @@
         android:layout_height="wrap_content" >
 
         <ImageButton
-            android:id="@+id/btnLime"
+            android:id="@+id/btnTap5"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -112,10 +116,11 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_lime" />
+            android:src="@drawable/img_fruits_lime"
+            android:onClick = "checkAnswer" />
         
            	<ImageButton
-            android:id="@+id/btnLemon"
+            android:id="@+id/btnTap6"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -123,11 +128,12 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_lemon" />
+            android:src="@drawable/img_fruits_lemon"
+            android:onClick = "checkAnswer" />
         
                 
            	<ImageButton
-            android:id="@+id/btnOrange"
+            android:id="@+id/btnTap7"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -135,11 +141,12 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_orange" />
+            android:src="@drawable/img_fruits_orange"
+            android:onClick = "checkAnswer" />
                 
                         
             <ImageButton
-            android:id="@+id/btnPeach"
+            android:id="@+id/btnTap8"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:scaleType="fitCenter"
@@ -147,7 +154,8 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_fruits_peach" />
+            android:src="@drawable/img_fruits_peach"
+            android:onClick = "checkAnswer" />
                         
 
     </TableRow>
@@ -167,14 +175,15 @@
             android:layout_weight="1"
             android:src="@drawable/play_timer"
             android:background="@android:color/transparent"/>
+
         <ImageButton
-            android:id="@+id/imageButtonx"
+            android:id="@+id/btnLookFor"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:src="@drawable/img_fruits_apple"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_fruits_apple" />
 
          <ImageButton
             android:id="@+id/imageButtonz"

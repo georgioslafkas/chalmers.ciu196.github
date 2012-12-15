@@ -18,5 +18,23 @@ public class PlayEndActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_play_end, menu);
 		return true;
 	}
-
+	
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+	}
+	
+	@Override
+	public void onPause()
+	{
+		super.onPause();
+	}
+	
+	@Override
+	public void onStop()
+	{
+		super.onStop();
+		finish();
+	}
 }
