@@ -2,6 +2,10 @@ package chalmers.ciu196.foodschool;
 
 import java.util.ArrayList;
 
+import android.content.Context;
+
+import chalmers.ciu196.foodschool.Database.XmlParser;
+
 
 public class SimpleFoodManager implements FoodManager {
 	
@@ -23,11 +27,28 @@ public class SimpleFoodManager implements FoodManager {
 	/* Array list that contains all the categories */
 	public static ArrayList<FoodCategory> FoodCategoryCollection = new ArrayList<FoodCategory>();
 	
+	/* Array list that contains every food */
+	public static ArrayList<Food> FoodCollectionB = new ArrayList<Food>();
+	/* Array list that contains all the categories */
+	public static ArrayList<FoodCategory> FoodCategoryCollectionB = new ArrayList<FoodCategory>();
+	
 	/* Private constructor to ensure 
 	 * no multiple instances of the class are created
 	 */
 	private SimpleFoodManager()
-	{	
+	{
+	}
+	
+	public void initialize(Context cont){
+		XmlParser ains=new XmlParser();
+		CategoryCollection test=ains.categoryfromXML(R.raw.data, cont);
+		FoodCategoryCollectionB=test.getList();
+		for (int i=0;i<FoodCategoryCollectionB.size();i++){
+			for (int y=0;y<FoodCategoryCollectionB.get(i).getFoodsContained().size();y++){
+				FoodCollectionB.add(FoodCategoryCollectionB.get(i).getFoodsContained().get(y));
+			}
+		}
+		
 	}
 	
 	/* Return number of categories */

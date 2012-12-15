@@ -224,14 +224,6 @@ public class MainActivity extends Activity {
 	Log.d("Db4o", "Food "+testLoadFood.getName()+" was successfully stored and retrieved from database.");
 	// End of database related code ===========================================
 	
-	//Calling the XmlParser
-	XmlParser ains=new XmlParser();
-	CategoryCollection test=ains.categoryfromXML(R.raw.data, getApplicationContext());
-	Log.d("SOCORRO",String.valueOf((test.getList().get(1).getFoodsContained().get(1).getId())));
-	Log.d("SOCORRO2",String.valueOf(R.drawable.img_cereals_bread));
-
-	//End of the XmlParser call
-	
 	}
 	// DATABASE related code ==================================================
 	private DbManager dbManager() {
