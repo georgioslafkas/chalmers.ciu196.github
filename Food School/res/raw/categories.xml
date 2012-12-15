@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categorycollection>
+	<categorylist>
+        <category>
+           <name>cereals</name>
+		   <description>Cereals / Grains</description>
+		   <imagePath>img_category_cereals</imagePath>
+		   <soundPath>categories_cereals</soundPath>
+ 	    </category>
+    <!-- ********************************************************************************************************************** -->
+        <category>
+           <name>dairy</name>
+		   <description>Dairy products</description>
+		   <imagePath>img_category_dairy</imagePath>
+		   <soundPath>categories_dairy</soundPath>
+ 	    </category>
+	<!-- ********************************************************************************************************************** -->
+        <category>
+           <name>fruits</name>
+           <description>Fruits</description>
+		   <imagePath>img_category_fruits</imagePath>
+           <soundPath>categories_fruits</soundPath>
+ 	    </category>
+    <!-- ********************************************************************************************************************** -->
+        <category>
+           <name>protein</name>
+		   <description>All kinds of proteins, meat, fish, eggs etc.</description>
+		   <imagePath>img_category_protein</imagePath>
+           <soundPath>categories_protein</soundPath>
+ 	    </category>
+	<!-- ********************************************************************************************************************** -->
+        <category>
+		   <name>vegetables</name>
+		   <description>Vegetables</description>
+		   <imagePath>img_category_vegetables</imagePath>
+           <soundPath>categories_vegetables</soundPath>
+ 	    </category>
+    <!-- ********************************************************************************************************************** -->
+	</categorylist>
+</categorycollection>
