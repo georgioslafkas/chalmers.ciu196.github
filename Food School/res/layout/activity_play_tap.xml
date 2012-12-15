@@ -15,13 +15,15 @@
         android:layout_marginRight="20dp" >
 
        <ImageButton
-            android:id="@+id/imageButtonb"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:scaleType="fitStart"
-            android:layout_weight="1"
-            android:src="@drawable/img_navigation_grid_button"
-            android:background="@android:color/transparent"/>
+           android:id="@+id/btnShowCategories"
+           android:layout_width="wrap_content"
+           android:layout_height="80dp"
+           android:layout_weight="1"
+           android:background="@android:color/transparent"
+           android:scaleType="fitStart"
+           android:src="@drawable/img_navigation_grid_button"
+           android:onClick="goToCategories" />
+
             <ProgressBar
         android:id="@+id/progBarTap"
         style="?android:attr/progressBarStyleHorizontal"
@@ -33,15 +35,16 @@
         android:max="10"
         android:progress="10"/>
        
-
         <ImageButton
-            android:id="@+id/imageButtond"
+            android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:scaleType="fitEnd"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitEnd"
             android:src="@drawable/img_navigation_home_english"
-            android:background="@android:color/transparent"/>        
+            android:onClick="goHome" />
+        
     </TableRow>
 
    <TableRow

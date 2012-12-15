@@ -100,4 +100,12 @@ public class PlayCategoriesActivity extends Activity {
 		}
 		startActivity(startQuiz);
 	}
+	
+	/* Home button listener */
+	public void goHome(View v)
+	{
+		Intent goHome = new Intent(this, MainActivity.class);
+		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goHome);
+	}
 }

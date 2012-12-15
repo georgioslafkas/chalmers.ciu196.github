@@ -29,7 +29,7 @@ public class PlayTapActivity extends Activity {
 	Intent goToEndGame; /* the intent that takes us to the end game screen */
 	public static Activity activityInstance = null; /* an instance of this activity, used in the cool down timer */
 	public Object correctAnswer = new Object(), wrongAnswer = new Object();
-	public final int POSSIBLE_WRONG_ANSWERS = 7;
+	public final int POSSIBLE_WRONG_ANSWERS = 3; /* CHANGE THAT TO 7 WHEN DB IS COMPLETE */
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -96,8 +96,8 @@ public class PlayTapActivity extends Activity {
 			goToEndGame = new Intent(this, PlayEndActivity.class);
 			goToEndGame.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(goToEndGame);
-			finish();
 		}
+		finish();
 	}
 	
 	@Override
@@ -111,8 +111,8 @@ public class PlayTapActivity extends Activity {
 			goToEndGame = new Intent(this, PlayEndActivity.class);
 			goToEndGame.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(goToEndGame);
-			finish();
 		};
+		finish();
 	}
 	
 	@Override
@@ -161,9 +161,9 @@ public class PlayTapActivity extends Activity {
 		 * and add the images of those objects to
 		 * the list with the images
 		 */
-		/* **************** UNCOMMENT THE LOOP WHEN DATABASE IS COMPLETE ************************* */
-		/*for (int i = 0; i < POSSIBLE_WRONG_ANSWERS; i++)
-			wrongAnswerImages.add(tempFoodList.get(i).getId()); */
+		/* **************** CHANGE POSSIBLE ANSWERS (SEE ABOVE CLASS DECLARATION) ************************* */
+		for (int i = 0; i < POSSIBLE_WRONG_ANSWERS; i++)
+			wrongAnswerImages.add(tempFoodList.get(i).getId());
 		
 		/* Return the list with the 3 wrong images */
 		return wrongAnswerImages;
@@ -384,4 +384,18 @@ public class PlayTapActivity extends Activity {
 					break;
 		}//end switch
 	}//end checkAnswer
+	
+	/* Home button listener */
+	public void goHome(View v)
+	{
+		Intent goHome = new Intent(this, MainActivity.class);
+		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goHome);
+	}
+	public void goToCategories(View v)
+	{
+		Intent goToCategories = new Intent(this, PlayCategoriesActivity.class);
+		goToCategories.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goToCategories);
+	}
 }//end class

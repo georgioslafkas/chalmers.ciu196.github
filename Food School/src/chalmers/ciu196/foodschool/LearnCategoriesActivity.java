@@ -13,7 +13,10 @@ public class LearnCategoriesActivity extends Activity {
 					  MEAT = 3,
 					  DAIRY = 4,
 					  CEREALS = 5;
-					  
+	
+	private final int firstFood = 0;
+	public static int categoryToLearn = -1;				  
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,31 +41,40 @@ public class LearnCategoriesActivity extends Activity {
 	{
 		Intent startFood = new Intent(this, LearnFoodActivity.class);
 		startFood.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startFood.putExtra("currentFood", firstFood); /* Send along the first index */
+		/* Determine which button the user tapped */
 		switch (v.getId())
 		{
+			case R.id.btnFruit:
+				/* Set the respective category */
+				categoryToLearn = FRUITS;
+				break;	
 			case R.id.btnVegetables:
-				/* Send along the category picked, to the next activity */
-				startFood.putExtra("category", VEGETABLES);
-				break;
-			case R.id.btnCereals:
-				/* Send along the category picked, to the next activity */
-				startFood.putExtra("category", CEREALS);
-				break;
-			case R.id.btnDairy:
-				/* Send along the category picked, to the next activity */
-				startFood.putExtra("category", DAIRY);
+				/* Set the respective category */
+				categoryToLearn = VEGETABLES;
 				break;
 			case R.id.btnMeat:
-				/* Send along the category picked, to the next activity */
-				startFood.putExtra("category", MEAT);
+				/* Set the respective category */
+				categoryToLearn = MEAT;
 				break;
-			case R.id.btnFruit:
-				/* Send along the category picked, to the next activity */
-				startFood.putExtra("category", FRUITS);
+			case R.id.btnDairy:
+				/* Set the respective category */
+				categoryToLearn = DAIRY;
+				break;
+			case R.id.btnCereals:
+				/* Set the respective category */
+				categoryToLearn = CEREALS;
 				break;
 			default:
 				break;
 		}
 		startActivity(startFood);
+	}
+	/* Home button listener */
+	public void goHome(View v)
+	{
+		Intent goHome = new Intent(this, MainActivity.class);
+		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goHome);
 	}
 }

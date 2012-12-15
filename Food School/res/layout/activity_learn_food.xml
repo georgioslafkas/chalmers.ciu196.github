@@ -23,14 +23,16 @@
             android:layout_weight="10"
             android:src="@drawable/img_navigation_back_english"
             android:background="@android:color/transparent"/>
+
        <ImageButton
-            android:id="@+id/imageButtonb"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="4"
-            android:src="@drawable/img_navigation_grid_button"
-            android:background="@android:color/transparent"/>
+           android:id="@+id/btnShowCategories"
+           android:layout_width="wrap_content"
+           android:layout_height="80dp"
+           android:layout_weight="4"
+           android:background="@android:color/transparent"
+           android:scaleType="fitCenter"
+           android:src="@drawable/img_navigation_grid_button"
+           android:onClick="goToCategories" />
         
         <ImageButton
             android:id="@+id/imageButtonc"
@@ -40,14 +42,17 @@
             android:layout_weight="2"
             android:src="@drawable/img_navigation_next_english"
             android:background="@android:color/transparent"/>
+
         <ImageButton
-            android:id="@+id/imageButtond"
+            android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:scaleType="fitEnd"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitEnd"
             android:src="@drawable/img_navigation_home_english"
-            android:background="@android:color/transparent"/>        
+            android:onClick="goHome" />
+        
     </TableRow>
         
     <TableRow
@@ -63,9 +68,9 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
             android:scaleType="fitCenter"
-            android:src="@drawable/img_fruits_apple" />
+            android:src="@drawable/img_fruits_apple"
+            android:onClick="pickFoodToShow" />
         
            	<ImageButton
            	    android:id="@+id/btn1_2"
@@ -75,9 +80,9 @@
            	    android:layout_marginTop="70dp"
            	    android:layout_weight="1"
            	    android:background="@android:color/transparent"
-           	    android:onClick="startDetailActivity"
            	    android:scaleType="fitCenter"
-           	    android:src="@drawable/img_fruits_banana" />
+           	    android:src="@drawable/img_fruits_banana" 
+           	    android:onClick="pickFoodToShow"/>
                 
            	<ImageButton
            	    android:id="@+id/btn1_3"
@@ -87,7 +92,7 @@
            	    android:layout_marginTop="70dp"
            	    android:layout_weight="1"
            	    android:background="@android:color/transparent"
-           	    android:onClick="startDetailActivity"
+           	    android:onClick="pickFoodToShow"
            	    android:scaleType="fitCenter"
            	    android:src="@drawable/img_fruits_cherry" />
                         
@@ -99,7 +104,7 @@
                 android:layout_marginTop="70dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:onClick="startDetailActivity"
+                android:onClick="pickFoodToShow"
                 android:scaleType="fitCenter"
                 android:src="@drawable/img_fruits_grapes" />
 
@@ -118,7 +123,7 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
+            android:onClick="pickFoodToShow"
             android:scaleType="fitCenter"
             android:src="@drawable/img_fruits_lime" />
         
@@ -130,7 +135,7 @@
            	    android:layout_marginTop="70dp"
            	    android:layout_weight="1"
            	    android:background="@android:color/transparent"
-           	    android:onClick="startDetailActivity"
+           	    android:onClick="pickFoodToShow"
            	    android:scaleType="fitCenter"
            	    android:src="@drawable/img_fruits_lemon" />
                 
@@ -142,7 +147,7 @@
            	    android:layout_marginTop="70dp"
            	    android:layout_weight="1"
            	    android:background="@android:color/transparent"
-           	    android:onClick="startDetailActivity"
+           	    android:onClick="pickFoodToShow"
            	    android:scaleType="fitCenter"
            	    android:src="@drawable/img_fruits_orange" />
                         
@@ -154,7 +159,7 @@
                 android:layout_marginTop="70dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:onClick="startDetailActivity"
+                android:onClick="pickFoodToShow"
                 android:scaleType="fitCenter"
                 android:src="@drawable/img_fruits_peach" />
 
@@ -173,7 +178,7 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="startDetailActivity"
+            android:onClick="pickFoodToShow"
             android:scaleType="fitCenter"
             android:src="@drawable/img_fruits_pear" />
         
@@ -185,7 +190,7 @@
            	    android:layout_marginTop="70dp"
            	    android:layout_weight="1"
            	    android:background="@android:color/transparent"
-           	    android:onClick="startDetailActivity"
+           	    android:onClick="pickFoodToShow"
            	    android:scaleType="fitCenter"
            	    android:src="@drawable/img_fruits_pineapple" />
                 
@@ -197,7 +202,7 @@
            	    android:layout_marginTop="70dp"
            	    android:layout_weight="1"
            	    android:background="@android:color/transparent"
-           	    android:onClick="startDetailActivity"
+           	    android:onClick="pickFoodToShow"
            	    android:scaleType="fitCenter"
            	    android:src="@drawable/img_fruits_strawberries" />
                         
@@ -209,7 +214,7 @@
                 android:layout_marginTop="70dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:onClick="startDetailActivity"
+                android:onClick="pickFoodToShow"
                 android:scaleType="fitCenter"
                 android:src="@drawable/img_fruits_watermelon" />
 

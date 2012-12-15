@@ -433,4 +433,18 @@ public class PlayQuizActivity extends Activity {
 					break;
 		}//end switch
 	}//end checkAnswer
+	
+	/* Listener for the home button */
+	public void goHome(View v)
+	{
+		Intent goHome = new Intent(this, MainActivity.class);
+		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goHome);
+	}
+	public void goToCategories(View v)
+	{
+		Intent goToCategories = new Intent(this, PlayCategoriesActivity.class);
+		goToCategories.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goToCategories);
+	}
 }//end class

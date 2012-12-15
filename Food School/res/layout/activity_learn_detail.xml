@@ -13,39 +13,47 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" >
+
        <ImageButton
-            android:id="@+id/imageButtona"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:scaleType="fitStart"
-            android:layout_weight="10"
-            android:src="@drawable/img_navigation_back_english"
-            android:background="@android:color/transparent"/>
+           android:id="@+id/btnPreviousFood"
+           android:layout_width="wrap_content"
+           android:layout_height="80dp"
+           android:layout_weight="10"
+           android:background="@android:color/transparent"
+           android:scaleType="fitStart"
+           android:src="@drawable/img_navigation_back_english"
+           android:onClick = "goToPreviousFood" />
+
        <ImageButton
-            android:id="@+id/imageButtonb"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="4"
-            android:src="@drawable/img_navigation_grid_button"
-            android:background="@android:color/transparent"/>
+           android:id="@+id/btnShowCategories"
+           android:layout_width="wrap_content"
+           android:layout_height="80dp"
+           android:layout_weight="4"
+           android:background="@android:color/transparent"
+           android:scaleType="fitCenter"
+           android:src="@drawable/img_navigation_grid_button"
+           android:onClick = "goToCategories" />
         
         <ImageButton
-            android:id="@+id/imageButtonc"
+            android:id="@+id/btnNextFood"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:scaleType="fitStart"
             android:layout_weight="2"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
             android:src="@drawable/img_navigation_next_english"
-            android:background="@android:color/transparent"/>
+            android:onClick="goToNextFood" />
+
         <ImageButton
-            android:id="@+id/imageButtond"
+            android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:scaleType="fitEnd"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitEnd"
             android:src="@drawable/img_navigation_home_english"
-            android:background="@android:color/transparent"/>        
+            android:onClick = "goHome" />
+        
     </TableRow>
 
     <TableRow
@@ -53,29 +61,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
         android:layout_marginTop="20dp">
+
         <ImageButton
-            android:id="@+id/imageButton1"
+            android:id="@+id/btnMainFoodImg"
             android:layout_width="wrap_content"
             android:layout_height="350dp"
-            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:src="@drawable/fruits_detail_apple_large"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fruits_detail_apple_large" />
+
         <TextView
-            android:id="@+id/editText1"
+            android:id="@+id/txtDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:text="There are more than 7000 varieties of apples grown worldwide. " />
+
         <ImageButton
-            android:id="@+id/imageButton1"
+            android:id="@+id/btnReadDescription"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/fruits_detail_detail_playdescription"
-            android:background="@android:color/transparent"/>
+            android:src="@drawable/fruits_detail_detail_playdescription" />
         
     </TableRow>
 

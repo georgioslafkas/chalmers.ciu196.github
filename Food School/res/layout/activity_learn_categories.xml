@@ -22,7 +22,7 @@
            	android:layout_weight="1"
             android:src="@drawable/img_navigation_home_english"
             android:background="@android:color/transparent"
-            android:onClick="startMainActivity" />
+            android:onClick="goHome" />
     </TableRow>
     
     <TableRow
