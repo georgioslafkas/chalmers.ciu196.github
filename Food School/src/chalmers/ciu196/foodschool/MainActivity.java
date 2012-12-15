@@ -225,10 +225,10 @@ public class MainActivity extends Activity {
 	// End of database related code ===========================================
 	
 	//Calling the XmlParser
-	/*XmlParser ains=new XmlParser();
-	
-	FoodCollection test=ains.foodfromXML(R.raw.data, getApplicationContext());
-	Log.d("SOCORRO",test.getList().get(1).getName());*/
+	XmlParser ains=new XmlParser();
+	CategoryCollection test=ains.categoryfromXML(R.raw.data, getApplicationContext());
+	Log.d("SOCORRO",String.valueOf((test.getList().get(1).getFoodsContained().get(1).getId())));
+	Log.d("SOCORRO2",String.valueOf(R.drawable.img_cereals_bread));
 
 	//End of the XmlParser call
 	

@@ -2,6 +2,8 @@ package chalmers.ciu196.foodschool;
 
 import java.util.ArrayList;
 
+import android.content.Context;
+
 
 public class CategoryCollection extends Object{ 
 	
@@ -22,6 +24,22 @@ public class CategoryCollection extends Object{
 			}
 		}
 	
+		public void setIds(Context cont){
+			Food aux=new Food();
+			FoodCategory aux2=new FoodCategory();
+			ArrayList<Food> aux3=new ArrayList<Food>();
+			for (int y=0;y<categorylist.size();y++){
+				aux2=categorylist.get(y);
+				aux3=aux2.getFoodsContained();
+				for (int i=0;i<aux3.size();i++){
+					aux=aux3.get(i);
+					aux.setId(cont.getResources().getIdentifier(aux.getfoodRef(),"drawable", "chalmers.ciu196.foodschool"));
+					aux3.set(i, aux);
+				}
+				categorylist.set(y,aux2);
+			}
+			
+		}
 		
 		// Constructor
 		

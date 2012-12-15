@@ -26,72 +26,12 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import chalmers.ciu196.foodschool.CategoryCollection;
 import chalmers.ciu196.foodschool.Food;
 import chalmers.ciu196.foodschool.FoodCategory;
-import chalmers.ciu196.foodschool.FoodCollection;
-
 
 
 public class XmlParser {
 	
 	public XmlParser (){
 	
-	}
-	public FoodCollection foodfromXML(int id, Context cont){
-
-		// Read the XML file with our resources
-		
-		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-		InputStream is = cont.getResources().openRawResource(id);
-		DocumentBuilder docBuilder = null;
-		
-		try {
-			docBuilder = docFactory.newDocumentBuilder();
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Document doc = null;
-		try {
-			doc = docBuilder.parse(is);
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		//set up a transformer
-		TransformerFactory transfac = TransformerFactory.newInstance();
-		Transformer trans = null;
-		try {
-			trans = transfac.newTransformer();
-		} catch (TransformerConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		trans.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-		trans.setOutputProperty(OutputKeys.INDENT, "yes");
-
-		//create string from xml tree
-		StringWriter sw = new StringWriter();
-		StreamResult result = new StreamResult(sw);
-		DOMSource source = new DOMSource(doc);
-		try {
-			trans.transform(source, result);
-		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String xmlString = sw.toString();
-		
-
-		XStream xstream = new XStream(new DomDriver());
-		xstream.alias("food", Food.class);
-		xstream.alias("foodcollection", FoodCollection.class);
-		FoodCollection collection=(FoodCollection)xstream.fromXML(xmlString);
-		collection.setIds(cont);
-
-		return collection;
 	}
 
 	public CategoryCollection categoryfromXML(int id, Context cont){
@@ -148,7 +88,7 @@ public class XmlParser {
 		xstream.alias("foodcategory", FoodCategory.class);
 		xstream.alias("categorycollection",CategoryCollection.class);
 		CategoryCollection collection=(CategoryCollection)xstream.fromXML(xmlString);
-
+		collection.setIds(cont);
 		return collection;
 	}	
 }
