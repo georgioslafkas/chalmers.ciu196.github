@@ -1,713 +1,789 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<foodcollection>
-	<foodlist>
-		<food>
+<categorycollection>
+	<categorylist>
+            <category>
+                <name>cereals</name>
+		<description>Cereals / Grains</description>
+		<foodsContained>
+                    <food>
 			<category>cereals</category>
 			<name>bread</name>
 			<description>Bread is prepared by cooking a dough of flour and other ingredients. There are hundreds of types of bread made from different types of flours and with different ingredients. The nutritional content varies depending on the ingredients used.</description>
-    		<foodId>R.drawable.img_cereals_bread</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_detail_bread_braidedbread</string>
-    	    	<string>R.drawable.cereals_detail_bread_large</string>
-    	    	<string>R.drawable.cereals_detail_bread_sandwich</string>
-    	    	<string>R.drawable.cereals_detail_bread_slicedbread</string>
-    	    	<string>R.drawable.cereals_img_cereals_bread</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This cereal product is made from flour and other ingredients. There are hundreds of types made from different kinds of flour. </string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it is bread!</string>
-        	</answers>
-		</food>
+                        <foodId>img_cereals_bread</foodId>
+                        <sound__paths>
+                            <string>bread</string>
+                            <string>description_cereals_bread</string>
+                            <string>quiz_cereals_bread</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_cereals_bread</string>
+                            <string>cereals_detail_bread_large</string>
+                            <string>cereals_detail_bread_braidedbread</string>
+                            <string>cereals_detail_bread_sandwich</string>
+                            <string>cereals_detail_bread_slicedbread</string>
+                        </image__paths>
+                        <questions>
+                            <string>This cereal product is made from flour and other ingredients. There are hundreds of types made from different kinds of flour. </string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it is bread!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>cereals</category>
 			<name>maize</name>
 			<description>Maize (also known as corn) is one of the world’s major cereal crops and it is used as flour to make bread, breakfast cereal, popcorn and a variety of meals. Sweet maize is grown and sold as a vegetable. It is a great source of dietary fibre and contains vitamin C, niacin, folate and potassium, which helps balancing the body's fluids.</description>
-    		<foodId>R.drawable.img_cereals_maize</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_detail_corn_corngrains</string>
-    	    	<string>R.drawable.cereals_detail_corn_cornplant</string>
-    	    	<string>R.drawable.cereals_detail_corn_large</string>
-    	    	<string>R.drawable.cereals_detail_corn_popcorn</string>
-    	    	<string>R.drawable.cereals_img_cereals_corn</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This cereal crop is used as flour to make bread, breakfast cereal, popcorn and a variety of meals. It also grown as sweet corn to be sold as a vegetable. It contains dietary fibre, vitamin C and potassium, among others.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is maize!</string>
-        	</answers>
-		</food>
+                        <foodId>img_cereals_maize</foodId>
+                        <sound__paths>
+                            <string>maize</string>
+                            <string>description_cereals_maize</string>
+                            <string>quiz_cereals_maize</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_cereals_corn</string>
+                            <string>cereals_detail_corn_large</string>
+                            <string>cereals_detail_corn_corngrains</string>
+                            <string>cereals_detail_corn_cornplant</string>
+                            <string>cereals_detail_corn_popcorn</string>
+                        </image__paths>
+                        <questions>
+                            <string>This cereal crop is used as flour to make bread, breakfast cereal, popcorn and a variety of meals. It also grown as sweet corn to be sold as a vegetable. It contains dietary fibre, vitamin C and potassium, among others.</string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is maize!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>cereals</category>
 			<name>pasta</name>
 			<description>Pasta comes in many shapes and it is usually made from wheat flour. Pasta contains complex carbohydrates which release energy slowly compared to sugar, providing energy for a longer time. It is also a source of iron and vitamin B.</description>
-    		<foodId>R.drawable.img_cereals_pasta</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_detail_pasta_large</string>
-    	    	<string>R.drawable.cereals_detail_pasta_lasagna</string>
-    	    	<string>R.drawable.cereals_detail_pasta_ravioli</string>
-    	    	<string>R.drawable.cereals_detail_pasta_spaghetti</string>
-    	    	<string>R.drawable.cereals_img_cereals_pasta</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This cereal product is usually made from wheat flour and can be found in many shapes. It provides you with energy for a long time because of its complex carbohydrates.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Excellent, it is pasta!</string>
-        	</answers>
-		</food>
+                        <foodId>img_cereals_pasta</foodId>
+                        <sound__paths>
+                            <string>pasta</string>
+                            <string>description_cereals_pasta</string>
+                            <string>quiz_cereals_pasta</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_cereals_pasta</string>
+                            <string>cereals_detail_pasta_large</string>
+                            <string>cereals_detail_pasta_lasagna</string>
+                            <string>cereals_detail_pasta_ravioli</string>
+                            <string>cereals_detail_pasta_spaghetti</string>
+                        </image__paths>
+                        <questions>
+                            <string>This cereal product is usually made from wheat flour and can be found in many shapes. It provides you with energy for a long time because of its complex carbohydrates.</string>
+                        </questions>
+                        <answers>
+                            <string>Excellent, it is pasta!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>cereals</category>
 			<name>rice</name>
 			<description>Rice is an excellent source of energy. In fact, it is the main source of energy for a lot of countries around the world. It is packed with vitamins and minerals like vitamin E, B and potassium. It is also low in fat.</description>
-    		<foodId>R.drawable.img_cereals_rice</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_detail_rice_large</string>
-    	    	<string>R.drawable.cereals_detail_rice_ricebag</string>
-    	    	<string>R.drawable.cereals_detail_rice_riceplant</string>
-    	    	<string>R.drawable.cereals_img_cereals_rice</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This cereal crop is the main source of energy for a lot of countries around the world. It is packed with vitamins and minerals, and it is also low in fat.</string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it is rice!</string>
-        	</answers>
-		</food>
+                        <foodId>img_cereals_rice</foodId>
+                        <sound__paths>
+                            <string>rice</string>
+                            <string>description_cereals_rice</string>
+                            <string>quiz_cereals_rice</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_cereals_rice</string>
+                            <string>cereals_detail_rice_large</string>
+                            <string>cereals_detail_rice_ricebag</string>
+                            <string>cereals_detail_rice_riceplant</string>
+                        </image__paths>
+                        <questions>
+                            <string>This cereal crop is the main source of energy for a lot of countries around the world. It is packed with vitamins and minerals, and it is also low in fat.</string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it is rice!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>cereals</category>
 			<name>wheat</name>
 			<description>Wheat is the leading source of vegetable protein in human food. It has a valuable content of protein. It contains iron which is an important component of blood. It is mostly used to make flour for a variety of food products like bread, cereal and pasta.</description>
-    		<foodId>R.drawable.img_cereals_wheat</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_detail_wheat_flour</string>
-    	    	<string>R.drawable.cereals_detail_wheat_large</string>
-    	    	<string>R.drawable.cereals_detail_wheat_wheatbread</string>
-    	    	<string>R.drawable.cereals_detail_wheat_wheatplant</string>
-    	    	<string>R.drawable.cereals_img_cereals_wheat</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This cereal crop is the leading source of vegetable protein in human food. It contains iron, which is an important component of blood. It is used to make flour for a variety of products like bread and pasta.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is wheat!</string>
-        	</answers>
-		</food>
-		<!-- ********************************************************************* -->
-		<food>
+                        <foodId>img_cereals_wheat</foodId>
+                        <sound__paths>
+                            <string>wheat</string>
+                            <string>description_cereals_wheat</string>
+                            <string>quiz_cereals_wheat</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_cereals_wheat</string>
+                            <string>cereals_detail_wheat_large</string>
+                            <string>cereals_detail_wheat_wheatbread</string>
+                            <string>cereals_detail_wheat_flour</string>
+                            <string>cereals_detail_wheat_wheatplant</string>
+                        </image__paths>
+                        <questions>
+                            <string>This cereal crop is the leading source of vegetable protein in human food. It contains iron, which is an important component of blood. It is used to make flour for a variety of products like bread and pasta.</string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is wheat!</string>
+                        </answers>
+                    </food>
+                </foodsContained>
+		<imagePath>img_category_cereals</imagePath>
+		<soundPath>categories_cereals</soundPath>
+ 	    </category>
+            <!-- ********************************************************************************************************************** -->
+            <!-- ********************************************************************************************************************** -->
+            <!-- ********************************************************************************************************************** -->
+            <category>
+                <name>dairy</name>
+		<description>Dairy products</description>
+		<foodsContained>
+                    <food>
 			<category>dairy</category>
 			<name>butter</name>
 			<description>Butter contains 'good' fat. It is used as a spread and for cooking and baking. It is rich in vitamin A, which helps your eyes, bones and skin. It also contains vitamin E, K and D. Vitamin D is essential in the absorption of calcium. It is a good source of iodine, which helps regulate the hormones in the body. </description>
-    		<foodId>R.drawable.img_dairy_butter</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.dairy_detail_butter_breadbutter</string>
-    	    	<string>R.drawable.dairy_detail_butter_cake</string>
-    	    	<string>R.drawable.dairy_detail_butter_croissant</string>
-    	    	<string>R.drawable.dairy_detail_butter_large</string>
-    	    	<string>R.drawable.cereals_img_dairy_butter</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This dairy product is a 'good' fat source that is used as a spread and for food preparation. Its vitamins help your eyes, bones and skin. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Excellent, it is butter!</string>
-        	</answers>
-		</food>
+                        <foodId>img_dairy_butter</foodId>
+                        <sound__paths>
+                            <string>butter</string>
+                            <string>description_dairy_butter</string>
+                            <string>quiz_dairy_butter</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_dairy_butter</string>
+                            <string>dairy_detail_butter_large</string>
+                            <string>dairy_detail_butter_breadbutter</string>
+                            <string>dairy_detail_butter_cake</string>
+                            <string>dairy_detail_butter_croissant</string>
+                        </image__paths>
+                        <questions>
+                            <string>This dairy product is a 'good' fat source that is used as a spread and for food preparation. Its vitamins help your eyes, bones and skin. </string>
+                        </questions>
+                        <answers>
+                            <string>Excellent, it is butter!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>dairy</category>
 			<name>cheese</name>
 			<description>There are hundreds of types of cheese made from milk from different animals, not only cows' milk. Cheese is valued for its portability, long life, and high content of fat, protein, calcium, and phosphorus. Calcium makes it good for your teeth and bones. </description>
-    		<foodId>R.drawable.img_dairy_cheese</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.dairy_detail_cheese_cheeseblock</string>
-    	    	<string>R.drawable.dairy_detail_cheese_cheeseslice</string>
-    	    	<string>R.drawable.dairy_detail_cheese_large</string>
-    	    	<string>R.drawable.dairy_detail_cheese_sandwich</string>
-    	    	<string>R.drawable.cereals_img_dairy_cheese</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>There are hundreds of types of this dairy product, coming from different animals. Its high content of calcium means that it is good for your teeth and bones. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Good job, it is cheese!</string>
-        	</answers>
-		</food>
+                        <foodId>img_dairy_cheese</foodId>
+                        <sound__paths>
+                            <string>cheese</string>
+                            <string>description_dairy_cheese</string>
+                            <string>quiz_dairy_cheese</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_dairy_cheese</string>
+                            <string>dairy_detail_cheese_large</string>
+                            <string>dairy_detail_cheese_cheeseblock</string>
+                            <string>dairy_detail_cheese_cheeseslice</string>
+                            <string>dairy_detail_cheese_sandwich</string>
+                        </image__paths>
+                        <questions>
+                            <string>There are hundreds of types of this dairy product, coming from different animals. Its high content of calcium means that it is good for your teeth and bones. </string>
+                        </questions>
+                        <answers>
+                            <string>Good job, it is cheese!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>dairy</category>
 			<name>milk</name>
 			<description>Milk is the base for all dairy products. It is collected from many kinds of livestock, for example cattle, goats and sheep. It is a great source of calcium, which helps keep your bones and teeth strong. It is also a good source of protein. </description>
-    		<foodId>R.drawable.img_dairy_milk</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.dairy_detail_milk_cereal</string>
-    	    	<string>R.drawable.dairy_detail_milk_cow</string>
-    	    	<string>R.drawable.dairy_detail_milk_frozenyogurt</string>
-    	    	<string>R.drawable.dairy_detail_milk_icecream</string>
-    	    	<string>R.drawable.dairy_detail_milk_large</string>
-    	    	<string>R.drawable.dairy_detail_milk_milkcarton</string>
-    	    	<string>R.drawable.dairy_detail_milk_yogurtpack</string>
-    	    	<string>R.drawable.cereals_img_dairy_milk</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This white liquid is the base for all dairy products. It is collected from many kinds of livestock, and it is a great source of calcium, keeping your bones and teeth strong. </string>
-    	    </questions>
-    	    <answers>
-        		<string>You are really good, it is milk!</string>
-        	</answers>
-		</food>
+                        <foodId>img_dairy_milk</foodId>
+                        <sound__paths>
+                            <string>milk</string>
+                            <string>description_dairy_milk</string>
+                            <string>quiz_dairy_milk</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_dairy_milk</string>
+                            <string>dairy_detail_milk_large</string>
+                            <string>dairy_detail_milk_cereal</string>
+                            <string>dairy_detail_milk_cow</string>
+                            <string>dairy_detail_milk_icecream</string>
+                            <string>dairy_detail_milk_milkcarton</string>
+                        </image__paths>
+                        <questions>
+                            <string>This white liquid is the base for all dairy products. It is collected from many kinds of livestock, and it is a great source of calcium, keeping your bones and teeth strong. </string>
+                        </questions>
+                        <answers>
+                            <string>You are really good, it is milk!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>dairy</category>
 			<name>yogurt</name>
 			<description>Yogurt is made from milk using 'good' bacteria. It is a good regulator of the functions of your digestive system. It is rich in calcium, which helps keep you bones and teeth strong and healthy.</description>
-			<foodId>R.drawable.img_dairy_yogurt</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.dairy_detail_yogurt_large</string>
-    	    	<string>R.drawable.cereals_img_dairy_yogurt</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This dairy product is made from milk and using 'good' bacteria. It is good for your digestive system, your bones and your teeth. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is yogurt!</string>
-        	</answers>
-		</food>
-		<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_dairy_yogurt</foodId>
+                        <sound__paths>
+                            <string>yogurt</string>
+                            <string>description_dairy_yogurt</string>
+                            <string>quiz_dairy_yogurt</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_dairy_yogurt</string>
+                            <string>dairy_detail_yogurt_large</string>
+                            <string>dairy_detail_yogurt_frozenyogurt</string>
+                            <string>dairy_detail_yogurt_yogurtpack</string>
+                        </image__paths>
+                        <questions>
+                            <string>This dairy product is made from milk and using 'good' bacteria. It is good for your digestive system, your bones and your teeth. </string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is yogurt!</string>
+                        </answers>
+                    </food>
+                </foodsContained>
+		<imagePath>img_category_dairy</imagePath>
+		<soundPath>categories_dairy</soundPath>
+ 	    </category>
+	<!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+            <category>
+                <name>fruits</name>
+                <description>Fruits</description>
+		<foodsContained>
+                    <food>
 			<category>fruits</category>
 			<name>apple</name>
 			<description>Apples are sweet, delicious, and good for you. They contain vitamin C, which helps keep your immune system strong. They also protect your heart, brain, lungs and other vital organs. </description>
-			<foodId>R.drawable.img_fruits_apple</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_apple_applebasket</string>
-    	    	<string>R.drawable.fruits_detail_apple_applejuice</string>
-    	    	<string>R.drawable.fruits_detail_apple_appletree</string>
-    	    	<string>R.drawable.fruits_detail_apple_large</string>
-    	    	<string>R.drawable.fruits_detail_apple_peeledapple</string>
-    	    	<string>R.drawable.cereals_img_fruits_apple</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This sweet fruit helps keep you immune system strong, and protect your heart, brain, lungs and other vital organs. </string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it is an apple!</string>
-        	</answers>
-		</food>
+			<foodId>img_fruits_apple</foodId>
+                        <sound__paths>
+                            <string>apple</string>
+                            <string>description_fruits_apple</string>
+                            <string>quiz_fruits_apple</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_apple</string>
+                            <string>fruits_detail_apple_large</string>
+                            <string>fruits_detail_apple_applebasket</string>
+                            <string>fruits_detail_apple_applejuice</string>
+                            <string>fruits_detail_apple_appletree</string>
+                            <string>fruits_detail_apple_peeledapple</string>
+                        </image__paths>
+                        <questions>
+                            <string>This sweet fruit helps keep you immune system strong, and protect your heart, brain, lungs and other vital organs. </string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it is an apple!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>fruits</category>
 			<name>banana</name>
 			<description>Bananas are a great snack. They are high in natural sugar and fibre, and they keep you full for a long time. They have a lot of potassium, which helps keep your heart, nervous system and kidneys healthy. </description>
-			<foodId>R.drawable.img_fruits_banana</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_banana_peeledbanana</string>
-    	    	<string>R.drawable.fruits_detail_banana_large</string>
-    	    	<string>R.drawable.fruits_detail_banana_bananatree</string>
-    	    	<string>R.drawable.fruits_detail_banana_bananasplit</string>
-    	    	<string>R.drawable.cereals_img_fruits_banana</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This sugary fruit is a great snack because it keeps you full for a long time. Thanks to potassium, it helps keep your  heart, brain and kidneys healthy. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Excellent, it is a banana!</string>
-        	</answers>
-		</food>
+			<foodId>img_fruits_banana</foodId>
+                        <sound__paths>
+                            <string>banana</string>
+                            <string>description_fruits_banana</string>
+                            <string>quiz_fruits_banana</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_banana</string>
+                            <string>fruits_detail_banana_large</string>
+                            <string>fruits_detail_banana_bananasplit</string>
+                            <string>fruits_detail_banana_bananatree</string>
+                            <string>fruits_detail_banana_peeledbanana</string>
+                        </image__paths>
+                        <questions>
+                            <string>This sugary fruit is a great snack because it keeps you full for a long time. Thanks to potassium, it helps keep your  heart, brain and kidneys healthy. </string>
+                        </questions>
+                        <answers>
+                            <string>Excellent, it is a banana!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>fruits</category>
 			<name>cherries</name>
 			<description>Cherries are small fruits that contain antioxidants, which are good for the body in many different ways. They can help reduce headaches, improve your sleep and prevent cancer.</description>
-			<foodId>R.drawable.img_fruits_cherries</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_cherry_cannedcherries</string>
-    	    	<string>R.drawable.fruits_detail_cherry_cherrydrink</string>
-    	    	<string>R.drawable.fruits_detail_cherry_large</string>
-    	    	<string>R.drawable.cereals_img_fruits_cherry</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>These small fruits contain antioxidants that can help your body reduce headaches, improve your sleep and prevent cancer. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, cherries are the answer!</string>
-        	</answers>
-		</food>
+			<foodId>img_fruits_cherries</foodId>
+                        <sound__paths>
+                            <string>cherry</string>
+                            <string>description_fruits_cherries</string>
+                            <string>quiz_fruits_cherries</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_cherry</string>
+                            <string>fruits_detail_cherry_large</string>
+                            <string>fruits_detail_cherry_cannedcherries</string>
+                            <string>fruits_detail_cherry_cherrydrink</string>
+                        </image__paths>
+                        <questions>
+                            <string>These small fruits contain antioxidants that can help your body reduce headaches, improve your sleep and prevent cancer. </string>
+                        </questions>
+                        <answers>
+                            <string>Well done, cherries are the answer!</string>
+                        </answers>
+                    </food>
 		<!-- ********************************************************************* -->
-		<food>
+                    <food>
 			<category>fruits</category>
 			<name>grapes</name>
-			<description>Grapes are sweet, juicy and packed with essential vitamins and minerals. They provide dietary fibre, vitamin C and potassium. 
-The energy you get from grapes lasts longer because it is slowly digested.</description>
-			<foodId>R.drawable.img_fruits_grapes</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_grapes_grapejuice</string>
-    	    	<string>R.drawable.fruits_detail_grapes_large</string>
-    	    	<string>R.drawable.fruits_detail_grapes_raisins</string>
-    	    	<string>R.drawable.fruits_detail_grapes_wine</string>
-    	    	<string>R.drawable.cereals_img_fruits_grapes</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>These sweet and juicy fruits are great for the body because they contain essential vitamins and minerals, including vitamin C and potassium. </string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it's grapes!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Grapes are sweet, juicy and packed with essential vitamins and minerals. They provide dietary fibre, vitamin C and potassium. The energy you get from grapes lasts longer because it is slowly digested.</description>
+			<foodId>img_fruits_grapes</foodId>
+                        <sound__paths>
+                            <string>grapes</string>
+                            <string>description_fruits_grapes</string>
+                            <string>quiz_fruits_grapes</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_grapes</string>
+                            <string>fruits_detail_grapes_large</string>
+                            <string>fruits_detail_grapes_grapejuice</string>
+                            <string>fruits_detail_grapes_raisins</string>
+                            <string>fruits_detail_grapes_wine</string>
+                        </image__paths>
+                        <questions>
+                            <string>These sweet and juicy fruits are great for the body because they contain essential vitamins and minerals, including vitamin C and potassium. </string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it's grapes!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>lemon</name>
 			<description>Lemons are sour, citrus fruits, so you probably will not eat one by itself. It is rich in vitamin C, which helps keep your immune system strong and prevent diseases. Its juice can be combined with sugar or honey to make delicious drinks or cure your sore throat. It is also great for improving the taste of other foods.</description>
-			<foodId>R.drawable.img_fruits_lemon</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_lemon_large</string>
-    	    	<string>R.drawable.fruits_detail_lemon_lemonade</string>
-    	    	<string>R.drawable.fruits_detail_lemon_lemonjam</string>
-    	    	<string>R.drawable.fruits_detail_lemon_lemontea</string>
-    	    	<string>R.drawable.fruits_detail_lemon_pressedlemon</string>
-    	    	<string>R.drawable.cereals_img_fruits_lemon</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This sour, citrus fruit might not be good to eat by itself, but its juice combines with sugar or honey to make delicious drinks. Its high content of vitamin C helps your immune system stay strong and fight diseases. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Very well, it is a lemon!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_fruits_lemon</foodId>
+                        <sound__paths>
+                            <string>lemon</string>
+                            <string>description_fruits_lemon</string>
+                            <string>quiz_fruits_lemon</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_lemon</string>
+                            <string>fruits_detail_lemon_large</string>
+                            <string>fruits_detail_lemon_lemonade</string>
+                            <string>fruits_detail_lemon_lemonjam</string>
+                            <string>fruits_detail_lemon_lemontea</string>
+                            <string>fruits_detail_lemon_pressedlemon</string>
+                        </image__paths>
+                        <questions>
+                            <string>This sour, citrus fruit might not be good to eat by itself, but its juice combines with sugar or honey to make delicious drinks. Its high content of vitamin C helps your immune system stay strong and fight diseases. </string>
+                        </questions>
+                        <answers>
+                            <string>Very well, it is a lemon!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>lime</name>
-			<description>Limes have a sour taste because they are very low in sugars. They are rich in vitamin C, which helps keep away diseases. Its juice is also good for your skin.
-Its peel and juice are great for flavoring food.</description>
-			<foodId>R.drawable.img_fruits_lime</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_lime_large</string>
-    	    	<string>R.drawable.fruits_detail_lime_limepeel</string>
-    	    	<string>R.drawable.fruits_detail_lime_pressedlime</string>
-    	    	<string>R.drawable.cereals_img_fruits_lime</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This sour fruit is very low in sugar but rich in vitamin C, which helps your body fight diseases. Its juice is good for your skin, also. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Great job, it is a lime!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Limes have a sour taste because they are very low in sugars. They are rich in vitamin C, which helps keep away diseases. Its juice is also good for your skin. Its peel and juice are great for flavoring food.</description>
+			<foodId>img_fruits_lime</foodId>
+                        <sound__paths>
+                            <string>lime</string>
+                            <string>description_fruits_lime</string>
+                            <string>quiz_fruits_lime</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_lime</string>
+                            <string>fruits_detail_lime_large</string>
+                            <string>fruits_detail_lime_limepeel</string>
+                            <string>fruits_detail_lime_pressedlime</string>
+                        </image__paths>
+                        <questions>
+                            <string>This sour fruit is very low in sugar but rich in vitamin C, which helps your body fight diseases. Its juice is good for your skin, also. </string>
+                        </questions>
+                        <answers>
+                            <string>Great job, it is a lime!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>orange</name>
 			<description>Oranges are citrus fruits. They can be sweet or sour, depending on the variety. One orange contains enough vitamin C for two days, which help keep you immune system protecting your body from diseases. They also contain fibre and beta carotene, which is converted to vitamin A by the body and is good for your eyes.</description>
-			<foodId>R.drawable.img_fruits_orange</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_orange_large</string>
-    	    	<string>R.drawable.fruits_detail_orange_orangejuice</string>
-    	    	<string>R.drawable.fruits_detail_orange_orangetree</string>
-    	    	<string>R.drawable.fruits_detail_orange_pressedorange</string>
-    	    	<string>R.drawable.cereals_img_fruits_orange</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This citrus fruit can be found in many varieties, sweet or sour. One of them has enough vitamin C for two days, which is great for your immune system. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Excellent, it is an orange!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_fruits_orange</foodId>
+                        <sound__paths>
+                            <string>orange</string>
+                            <string>description_fruits_orange</string>
+                            <string>quiz_fruits_orange</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_orange</string>
+                            <string>fruits_detail_orange_large</string>
+                            <string>fruits_detail_orange_orangejuice</string>
+                            <string>fruits_detail_orange_orangetree</string>
+                            <string>fruits_detail_orange_pressedorange</string>
+                        </image__paths>
+                        <questions>
+                            <string>This citrus fruit can be found in many varieties, sweet or sour. One of them has enough vitamin C for two days, which is great for your immune system. </string>
+                        </questions>
+                        <answers>
+                            <string>Excellent, it is an orange!</string>
+                        </answers>
+                        </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>peach</name>
 			<description>Peaches are juicy, sweet and nutritious. They are a good source of vitamin C, which helps your immune system, dietary fibre, which keeps your digestive system healthy, and beta carotene, which helps your skin and eyes stay healthy. They also contain small amounts of other vitamins and minerals.</description>
-			<foodId>R.drawable.img_fruits_peach</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_peach_cannedpeaches</string>
-    	    	<string>R.drawable.fruits_detail_peach_large</string>
-    	    	<string>R.drawable.fruits_detail_peach_peachjuice</string>
-    	    	<string>R.drawable.fruits_detail_peach_peachseed</string>
-    	    	<string>R.drawable.cereals_img_fruits_peach</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This juicy and sweet fruit is good for your immune system, your digestive system, your skin and your eyes. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Very well, it is a peach!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_fruits_peach</foodId>
+                        <sound__paths>
+                            <string>peach</string>
+                            <string>description_fruits_peach</string>
+                            <string>quiz_fruits_peach</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_peach</string>
+                            <string>fruits_detail_peach_large</string>
+                            <string>fruits_detail_peach_cannedpeaches</string>
+                            <string>fruits_detail_peach_peachjuice</string>
+                            <string>fruits_detail_peach_peachseed</string>
+                        </image__paths>
+                        <questions>
+                            <string>This juicy and sweet fruit is good for your immune system, your digestive system, your skin and your eyes. </string>
+                        </questions>
+                        <answers>
+                            <string>Very well, it is a peach!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>pear</name>
 			<description>Pears are sweet and juicy. They are digested slowly, meaning that they provide energy for a longer time than other types of food. They contain vitamin C, which helps your immune system, copper, which helps your brain learn and remember, and dietary fibre, which keeps your digestive system healthy.</description>
-			<foodId>R.drawable.img_fruits_pear</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_pear_large</string>
-    	    	<string>R.drawable.fruits_detail_pear_pearjuice</string>
-    	    	<string>R.drawable.fruits_detail_pear_peartree</string>
-    	    	<string>R.drawable.cereals_img_fruits_pear</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This fruit is digested slowly and provides your body with energy for a long time. It contains substances that help your immune system, your brain and your digestive system. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is a pear!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_fruits_pear</foodId>
+                        <sound__paths>
+                            <string>pear</string>
+                            <string>description_fruits_pear</string>
+                            <string>quiz_fruits_pear</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_pear</string>
+                            <string>fruits_detail_pear_large</string>
+                            <string>fruits_detail_pear_pearjuice</string>
+                            <string>fruits_detail_pear_peartree</string>
+                        </image__paths>
+                        <questions>
+                            <string>This fruit is digested slowly and provides your body with energy for a long time. It contains substances that help your immune system, your brain and your digestive system. </string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is a pear!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>pineapple</name>
 			<description>Pineapple is tropical fruit with high levels of vitamin C, which helps your immune system stay strong. It also contains high levels of the mineral manganese. Manganese helps your body produce energy, keeps your bones strong and helps your body digest fat.</description>
-			<foodId>R.drawable.img_fruits_pineapple</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_pineapple_drypineapple</string>
-    	    	<string>R.drawable.fruits_detail_pineapple_large</string>
-    	    	<string>R.drawable.fruits_detail_pineapple_pineapplejuice</string>
-    	    	<string>R.drawable.fruits_detail_pineapple_pineappleplant</string>
-    	    	<string>R.drawable.fruits_detail_pineapple_slicedpineapple</string>
-    	    	<string>R.drawable.cereals_img_fruits_pineapple</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This tropical fruit contains high amounts of vitamin C and manganese. It helps keep your body healthy by keeping your immune system strong, helping your body produce energy and digest fat, and keeping your bones strong. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Your answer is right ! It is a pineapple !</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_fruits_pineapple</foodId>
+                        <sound__paths>
+                            <string>pineapple</string>
+                            <string>description_fruits_pineapple</string>
+                            <string>quiz_fruits_pineapple</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_pineapple</string>
+                            <string>fruits_detail_pineapple_large</string>
+                            <string>fruits_detail_pineapple_drypineapple</string>
+                            <string>fruits_detail_pineapple_pineapplejuice</string>
+                            <string>fruits_detail_pineapple_pineappleplant</string>
+                            <string>fruits_detail_pineapple_slicedpineapple</string>
+                        </image__paths>
+                        <questions>
+                            <string>This tropical fruit contains high amounts of vitamin C and manganese. It helps keep your body healthy by keeping your immune system strong, helping your body produce energy and digest fat, and keeping your bones strong. </string>
+                        </questions>
+                        <answers>
+                            <string>Your answer is right ! It is a pineapple !</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>strawberries</name>
-			<description>Strawberries are part of the berry family, like raspberries and blackberries.
-They have a high content of vitamin C, which keeps your immune system strong, dietary fibre, which is good for your digestive system, folate, which is essential to keep the body functioning.</description>
-			<foodId>R.drawable.img_fruits_strawberries</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_strawberries_cannedstrawberries</string>
-    	    	<string>R.drawable.fruits_detail_strawberries_drystrawberries</string>
-    	    	<string>R.drawable.fruits_detail_strawberries_large</string>
-    	    	<string>R.drawable.fruits_detail_strawberries_strawberryicecream</string>
-    	    	<string>R.drawable.fruits_detail_strawberries_strawberryjam</string>
-    	    	<string>R.drawable.cereals_img_fruits_strawberries</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>These members for the berry family have a high content of vitamin C, dietary fibre and folate. Which means they contain elements that keep your immune system, digestive system and other functions in your body working properly. </string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it's strawberries!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Strawberries are part of the berry family, like raspberries and blackberries. They have a high content of vitamin C, which keeps your immune system strong, dietary fibre, which is good for your digestive system, folate, which is essential to keep the body functioning.</description>
+			<foodId>img_fruits_strawberries</foodId>
+                        <sound__paths>
+                            <string>strawberries</string>
+                            <string>description_fruits_strawberries</string>
+                            <string>quiz_fruits_strawberries</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_strawberries</string>
+                            <string>fruits_detail_strawberries_large</string>
+                            <string>fruits_detail_strawberries_cannedstrawberries</string>
+                            <string>fruits_detail_strawberries_drystrawberries</string>
+                            <string>fruits_detail_strawberries_strawberryicecream</string>
+                            <string>fruits_detail_strawberries_strawberryjam</string>
+                        </image__paths>
+                        <questions>
+                            <string>These members for the berry family have a high content of vitamin C, dietary fibre and folate. Which means they contain elements that keep your immune system, digestive system and other functions in your body working properly. </string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it's strawberries!</string>
+                        </answers>
+                    </food>
+                <!-- ********************************************************************* -->
+                    <food>
 			<category>fruits</category>
 			<name>watermelon</name>
-			<description>Watermelon is the refreshing fruit by excellence due to it being mostly water.
-It is a good source of vitamin C, which keeps your immune system strong, and beta carotene which, when transformed into vitamin A, is good for your eyes.</description>
-			<foodId>R.drawable.img_fruits_watermelon</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.fruits_detail_watermelon_large</string>
-    	    	<string>R.drawable.fruits_detail_watermelon_slicedwatermelon</string>
-    	    	<string>R.drawable.fruits_detail_watermelon_watermelonjuice</string>
-    	    	<string>R.drawable.fruits_detail_watermelon_watermelonsherbet</string>
-    	    	<string>R.drawable.cereals_img_fruits_watermelon</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This refreshing fruit is a good source of vitamin C and beta carotene. These two substances help your body fight diseases and your eyes stay strong. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Really nice! It is a watermelon!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Watermelon is the refreshing fruit by excellence due to it being mostly water. It is a good source of vitamin C, which keeps your immune system strong, and beta carotene which, when transformed into vitamin A, is good for your eyes.</description>
+			<foodId>img_fruits_watermelon</foodId>
+                        <sound__paths>
+                            <string>watermelon</string>
+                            <string>description_fruits_watermelon</string>
+                            <string>quiz_fruits_watermelon</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_fruits_watermelon</string>
+                            <string>fruits_detail_watermelon_large</string>
+                            <string>fruits_detail_watermelon_slicedwatermelon</string>
+                            <string>fruits_detail_watermelon_watermelonjuice</string>
+                            <string>fruits_detail_watermelon_watermelonsherbet</string>
+                        </image__paths>
+                        <questions>
+                            <string>This refreshing fruit is a good source of vitamin C and beta carotene. These two substances help your body fight diseases and your eyes stay strong. </string>
+                        </questions>
+                        <answers>
+                            <string>Really nice! It is a watermelon!</string>
+                        </answers>
+                    </food>
+                </foodsContained>
+		<imagePath>img_category_fruits</imagePath>
+                <soundPath>categories_fruits</soundPath>
+ 	    </category>
+        <!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+            <category>
+                <name>protein</name>
+		<description>All kinds of proteins, meat, fish, eggs etc.</description>
+		<foodsContained>
+                    <food>
 			<category>protein</category>
 			<name>beef</name>
-			<description>Beef is the name of meat from cattle. A variety of products come from beef.
-Beef is an excellent source of complete protein and vital minerals such as zinc, selenium, phosphorus and iron, and B vitamins.</description>
-			<foodId>R.drawable.img_protein_beef</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_protein_beef</string>
-    	    	<string>R.drawable.protein_detail_beef_cow</string>
-    	    	<string>R.drawable.protein_detail_beef_large</string>
-    	    	<string>R.drawable.protein_detail_beef_meatballs</string>
-    	    	<string>R.drawable.protein_detail_beef_skeweredmeat</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This meat comes from cattle and it is used for a variety of products. As all types of meat, it is a source of protein. It also contains several vital minerals, such as iron. </string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it is beef!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Beef is the name of meat from cattle. A variety of products come from beef. Beef is an excellent source of complete protein and vital minerals such as zinc, selenium, phosphorus and iron, and B vitamins.</description>
+			<foodId>img_protein_beef</foodId>
+                        <sound__paths>
+                            <string>beef</string>
+                            <string>description_protein_beef</string>
+                            <string>quiz_protein_beef</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_protein_beef</string>
+                            <string>protein_detail_beef_large</string>
+                            <string>protein_detail_beef_cow</string>
+                            <string>protein_detail_beef_meatballs</string>
+                            <string>protein_detail_beef_skeweredmeat</string>
+                        </image__paths>
+                        <questions>
+                            <string>This meat comes from cattle and it is used for a variety of products. As all types of meat, it is a source of protein. It also contains several vital minerals, such as iron. </string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it is beef!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>protein</category>
 			<name>chicken</name>
-			<description>Poultry is the second most widely eaten meat in the world. Most commonly, it refers to chicken but it also comes from duck and turkey, among others.
-You must cook chicken before you eat it because it could contain salmonella. 
-Chicken is a good source of protein, calcium and potassium.</description>
-			<foodId>R.drawable.img_protein_chicken</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_protein_chicken</string>
-    	    	<string>R.drawable.protein_detail_chicken_bakedchicken</string>
-    	    	<string>R.drawable.protein_detail_chicken_chicken</string>
-    	    	<string>R.drawable.protein_detail_chicken_chickensoup</string>
-    	    	<string>R.drawable.protein_detail_chicken_large</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This is the second most widely eaten meat in the world. You must always cook it carefully because you might get sick otherwise. It is a good source of protein, calcium and potassium. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is chicken!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Poultry is the second most widely eaten meat in the world. Most commonly, it refers to chicken but it also comes from duck and turkey, among others. You must cook chicken before you eat it because it could contain salmonella. Chicken is a good source of protein, calcium and potassium.</description>
+			<foodId>img_protein_chicken</foodId>
+                        <sound__paths>
+                            <string>chicken</string>
+                            <string>description_protein_chicken</string>
+                            <string>quiz_protein_chicken</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_protein_chicken</string>
+                            <string>protein_detail_chicken_large</string>
+                            <string>protein_detail_chicken_bakedchicken</string>
+                            <string>protein_detail_chicken_chicken</string>
+                            <string>protein_detail_chicken_chickensoup</string>
+                        </image__paths>
+                        <questions>
+                            <string>This is the second most widely eaten meat in the world. You must always cook it carefully because you might get sick otherwise. It is a good source of protein, calcium and potassium. </string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is chicken!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>protein</category>
 			<name>eggs</name>
 			<description>Chicken eggs are the most commonly eaten eggs. They supply all essential amino acids for humans and provide several vitamins and minerals, like choline, which helps regulate the brain, nervous system, and cardiovascular system.</description>
-			<foodId>R.drawable.img_protein_eggs</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_protein_egg</string>
-    	    	<string>R.drawable.protein_detail_egg_large</string>
-    	    	<string>R.drawable.protein_detail_egg_boiledegg</string>
-    	    	<string>R.drawable.protein_detail_egg_friedegg</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This protein source supply all essential amino acids for humans and provides several vitamins and minerals. Choline, for example, helps regulate the brain, nervous system, and cardiovascular system. </string>
-    	    </questions>
-    	    <answers>
-        		<string>You are right, it's eggs!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_protein_eggs</foodId>
+                        <sound__paths>
+                            <string>eggs</string>
+                            <string>description_protein_eggs</string>
+                            <string>quiz_protein_eggs</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_protein_egg</string>
+                            <string>protein_detail_egg_large</string>
+                            <string>protein_detail_egg_boiledegg</string>
+                            <string>protein_detail_egg_friedegg</string>
+                        </image__paths>
+                        <questions>
+                            <string>This protein source supply all essential amino acids for humans and provides several vitamins and minerals. Choline, for example, helps regulate the brain, nervous system, and cardiovascular system. </string>
+                        </questions>
+                        <answers>
+                            <string>You are right, it's eggs!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>protein</category>
 			<name>fish</name>
 			<description>Fish provides a good source of high quality protein and contains many vitamins and minerals. Some types of fish are good for your heart and brain because they contain omega 3 fatty acids.</description>
-			<foodId>R.drawable.img_protein_fish</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_protein_fish</string>
-    	    	<string>R.drawable.protein_detail_fish_cookedfish</string>
-    	    	<string>R.drawable.protein_detail_fish_friedfish</string>
-    	    	<string>R.drawable.protein_detail_fish_large</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This protein source provides high quality protein and contains many vitamins and mineral. It also contains Omega 3, which is good for your heart and brain.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is fish!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_protein_fish</foodId>
+                        <sound__paths>
+                            <string>fish</string>
+                            <string>description_protein_fish</string>
+                            <string>quiz_protein_fish</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_protein_fish</string>
+                            <string>protein_detail_fish_large</string>
+                            <string>protein_detail_fish_cookedfish</string>
+                            <string>protein_detail_fish_friedfish</string>
+                        </image__paths>
+                        <questions>
+                            <string>This protein source provides high quality protein and contains many vitamins and mineral. It also contains Omega 3, which is good for your heart and brain.</string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is fish!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>protein</category>
 			<name>pork</name>
 			<description>Pork is the name for meat from domestic pig. It is mostly eaten cooked and often cured into ham and similar products. Pork should be eaten with moderation because of its high content of 'bad' fat.</description>
-			<foodId>R.drawable.img_protein_pork</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_protein_pork</string>
-    	    	<string>R.drawable.protein_detail_pork_large</string>
-    	    	<string>R.drawable.protein_detail_pork_bacon</string>
-    	    	<string>R.drawable.protein_detail_pork_pig</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This protein source should be eaten with moderation, due to its high content of 'bad' fat. It is should be eaten cooked and it is often cured into ham and similar products.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Excellent, it is pork!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_protein_pork</foodId>
+                        <sound__paths>
+                            <string>pork</string>
+                            <string>description_protein_pork</string>
+                            <string>quiz_protein_pork</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_protein_pork</string>
+                            <string>protein_detail_pork_large</string>
+                            <string>protein_detail_pork_bacon</string>
+                            <string>protein_detail_pork_pig</string>
+                        </image__paths>
+                        <questions>
+                            <string>This protein source should be eaten with moderation, due to its high content of 'bad' fat. It is should be eaten cooked and it is often cured into ham and similar products.</string>
+                        </questions>
+                        <answers>
+                            <string>Excellent, it is pork!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>protein</category>
 			<name>sausage</name>
 			<description>Sausages are usually made of different kinds of ground meat, either beef, pork or poultry, in a tight casing. There are a lot of different kinds depending on the region or country. Its nutritional value depends on what it is made from. It usually contains other ingredients along with meat.</description>
-			<foodId>R.drawable.img_protein_sausage</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_protein_sausage</string>
-    	    	<string>R.drawable.protein_detail_sausage_hotdog</string>
-    	    	<string>R.drawable.protein_detail_sausage_large</string>
-    	    	<string>R.drawable.protein_detail_sausage_sausage1</string>
-    	    	<string>R.drawable.protein_detail_sausage_sausage2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This protein product can be made of different kinds of ground meat in a tight casing. There are a lot of different types depending on the region or country. Its nutritional value depends on the ingredients it is made from.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Good job, it is a sausage!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_protein_sausage</foodId>
+                        <sound__paths>
+                            <string>sausage</string>
+                            <string>description_protein_sausage</string>
+                            <string>quiz_protein_sausage</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_protein_sausage</string>
+                            <string>protein_detail_sausage_large</string>
+                            <string>protein_detail_sausage_hotdog</string>
+                            <string>protein_detail_sausage_sausage1</string>
+                            <string>protein_detail_sausage_sausage2</string>
+                        </image__paths>
+                        <questions>
+                            <string>This protein product can be made of different kinds of ground meat in a tight casing. There are a lot of different types depending on the region or country. Its nutritional value depends on the ingredients it is made from.</string>
+                        </questions>
+                        <answers>
+                            <string>Good job, it is a sausage!</string>
+                        </answers>
+                    </food>
+                </foodsContained>
+		<imagePath>img_category_protein</imagePath>
+                <soundPath>categories_protein</soundPath>
+ 	    </category>
+	<!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+            <category>
+		<name>vegetables</name>
+		<description>Vegetables</description>
+		<foodsContained>
+                    <food>
 			<category>vegetables</category>
 			<name>broccoli</name>
 			<description>Broccoli is a bush-shaped vegetable that contains a lot of nutritious substances. It is a rich source of vitamin C, which keeps your immune system strong and might help prevent cancer. Broccoli is also good for your heart, skin, bones and respiratory system.</description>
-			<foodId>R.drawable.img_vegetables_broccoli</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_broccoli</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This bush-shaped vegetable contains a lot of nutrients, like vitamin C, which helps your immune system and might help prevent cancer. It is also good for your heart, skin, bones and respiratory system.</string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it is broccoli!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_vegetables_broccoli</foodId>
+                        <sound__paths>
+                            <string>broccoli</string>
+                            <string>description_vegetables_broccoli</string>
+                            <string>quiz_vegetables_broccoli</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>img_vegetables_broccoli</string>
+                            <string>vegetables_detail_broccoli_large</string>
+                            <string>vegetables_detail_broccoli_broccoliplant</string>
+                            <string>vegetables_detail_broccoli_broccolisalad</string>
+                            <string>vegetables_detail_broccoli_broccolisoup</string>
+                        </image__paths>
+                        <questions>
+                            <string>This bush-shaped vegetable contains a lot of nutrients, like vitamin C, which helps your immune system and might help prevent cancer. It is also good for your heart, skin, bones and respiratory system.</string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it is broccoli!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>cabbage</name>
 			<description>Cabbage is a leafy vegetable. It contains vitamins and minerals, which help your digestive system, immune system, eyes, skin, and heart. It contains vitamin C, sulphur, iodine, and it is rich in fibre.</description>
-			<foodId>R.drawable.img_vegetables_cabbage</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_cabbage</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This leafy vegetable is good for your digestive system, immune system, eyes, skin and heart.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Off course it is cabbage! Well done!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_vegetables_cabbage</foodId>
+                        <sound__paths>
+                            <string>cabbage</string>
+                            <string>description_vegetables_cabbage</string>
+                            <string>quiz_vegetables_cabbage</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_cabbage</string>
+                            <string>vegetables_detail_cabbage_large</string>
+                            <string>vegetables_detail_cabbage_cabbageinside</string>
+                            <string>vegetables_detail_cabbage_redcabbage</string>
+                            <string>vegetables_detail_cabbage_shreddedcabbage</string>
+                        </image__paths>
+                        <questions>
+                            <string>This leafy vegetable is good for your digestive system, immune system, eyes, skin and heart.</string>
+                        </questions>
+                        <answers>
+                            <string>Off course it is cabbage! Well done!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>carrot</name>
 			<description>Carrots are a rich source of beta carotene, which the body converts to vitamin A. Vitamin A helps with night vision. They are a good source of dietary fibre, which helps your heart and your digestive system. </description>
-			<foodId>R.drawable.img_vegetables_carrot</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_carrot</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
+			<foodId>img_vegetables_carrot</foodId>
+                        <sound__paths>
+                            <string>carrot</string>
+                            <string>description_vegetables_carrot</string>
+                            <string>quiz_vegetables_carrot</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_carrot</string>
+                            <string>vegetables_detail_carrot_large</string>
+                            <string>vegetables_detail_carrot_carrotcake</string>
+                            <string>vegetables_detail_carrot_carrotstick</string>
+                            <string>vegetables_detail_carrot_shreddedcarrot</string>
+                        </image__paths>
     	   	<questions>
     	    	<string>This vegetable is a rich source of beta carotene, which turns in to vitamin A and helps your vision. It is also good for your heart and your digestive system.</string>
     	    </questions>
@@ -715,198 +791,233 @@ Chicken is a good source of protein, calcium and potassium.</description>
         		<string>Yes you are right, it is a carrot!</string>
         	</answers>
 		</food>
-				<!-- ********************************************************************* -->
-		<food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>celery</name>
 			<description>Eating celery helps clean your mouth and teeth. Celery contains vitamins, minerals and dietary fibre, which help regulte bowel movement, and relief anxiety.</description>
-			<foodId>R.drawable.img_vegetables_celery</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_celery</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This vegetable helps clear your mouth and teeth. It also regulates bowel movement and reliefs anxiety.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Excellent, it is celery!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_vegetables_celery</foodId>
+                        <sound__paths>
+                            <string>celery</string>
+                            <string>description_vegetables_celery</string>
+                            <string>quiz_vegetables_celery</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_celery</string>
+                            <string>vegetables_detail_celery_large</string>
+                            <string>vegetables_detail_celery_celerystem</string>
+                            <string>vegetables_detail_celery_celerysticks</string>
+                        </image__paths>
+                        <questions>
+                            <string>This vegetable helps clear your mouth and teeth. It also regulates bowel movement and reliefs anxiety.</string>
+                        </questions>
+                        <answers>
+                            <string>Excellent, it is celery!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>cucumber</name>
 			<description>Cucumbers are mostly water, which is the reason they are so refreshing. They have small amounts of vitamins, like vitamins K and C, and minerals, like calcium, iron and potassium. </description>
-			<foodId>R.drawable.img_vegetables_cucumber</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_cucumber</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This refreshing vegetable is mostly water. It contains small amounts of vtamins and minerals, like vitamin K, vitamin C, iron, calcium and potassium.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is a cucumber!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_vegetables_cucumber</foodId>
+                        <sound__paths>
+                            <string>cucumber</string>
+                            <string>description_vegetables_cucumber</string>
+                            <string>quiz_vegetables_cucumber</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_cucumber</string>
+                            <string>vegetables_detail_cucumber_large</string>
+                            <string>vegetables_detail_cucumber_cucumberplant</string>
+                            <string>vegetables_detail_cucumber_slicedcucumber</string>
+                        </image__paths>
+                        <questions>
+                            <string>This refreshing vegetable is mostly water. It contains small amounts of vtamins and minerals, like vitamin K, vitamin C, iron, calcium and potassium.</string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is a cucumber!</string>
+                        </answers>
+                    </food>
+                <!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>eggplant</name>
 			<description>Eggplant is a top source of vitamin B6, which is important for your blood, brain and other tissues in your body. It is also a good source of dietary fibre and antioxidants. </description>
-			<foodId>R.drawable.img_vegetables_eggplant</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_eggplant</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This vegetable is a top source of vitamin B6, which is important for your blood, brain and other tissues in your body.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Very well, it is an eggplant!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_vegetables_eggplant</foodId>
+                        <sound__paths>
+                            <string>eggplant</string>
+                            <string>description_vegetables_eggplant</string>
+                            <string>quiz_vegetables_eggplant</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_eggplant</string>
+                            <string>vegetables_detail_eggplant_large</string>
+                            <string>vegetables_detail_eggplant_eggplantplant</string>
+                            <string>vegetables_detail_eggplant_slicedeggplant</string>
+                        </image__paths>
+                        <questions>
+                            <string>This vegetable is a top source of vitamin B6, which is important for your blood, brain and other tissues in your body.</string>
+                        </questions>
+                        <answers>
+                            <string>Very well, it is an eggplant!</string>
+                        </answers>
+                    </food>
+                <!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>garlic</name>
 			<description>In high quantities, garlic is a good source of dietary fibre, potassium, iron, zinc and vitamin C. They are rarely eaten in high quantities but are often use to add taste to other foods. </description>
-			<foodId>R.drawable.img_vegetables_garlic</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_garlic</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This vegetable is a good source of dietary fibre, potassium, vitamin C, and other nutrients. It is rarely eaten in high quantities, though, and it is often use to add taste to other foods.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Good job, it is garlic!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_vegetables_garlic</foodId>
+                        <sound__paths>
+                            <string>garlic</string>
+                            <string>description_vegetables_garlic</string>
+                            <string>quiz_vegetables_garlic</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_garlic</string>
+                            <string>vegetables_detail_garlic_large</string>
+                            <string>vegetables_detail_garlic_garlicclove</string>
+                            <string>vegetables_detail_garlic_garlicplant</string>
+                        </image__paths>
+                        <questions>
+                            <string>This vegetable is a good source of dietary fibre, potassium, vitamin C, and other nutrients. It is rarely eaten in high quantities, though, and it is often use to add taste to other foods.</string>
+                        </questions>
+                        <answers>
+                            <string>Good job, it is garlic!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>lettuce</name>
-			<description>Lettuce is one of the most popular salad vegetables. The darker the lettuce leaf the more nutritious it is. 
-Lettuce is mostly made of water which is why it is so refreshing.
-It is a source of vitamin C, dietary fibre, beta carotene and folate. </description>
-			<foodId>R.drawable.img_vegetables_lettuce</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_lettuce</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This leafy vegetable is one of the most popular salad vegetables. The darkness of the leaf indicates how nutritious it is. It is a source of vitamin C, dietary fibre, beta carotene and folate.</string>
-    	    </questions>
-    	    <answers>
-        		<string>Excellent, it is lettuce!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Lettuce is one of the most popular salad vegetables. The darker the lettuce leaf the more nutritious it is. Lettuce is mostly made of water which is why it is so refreshing.It is a source of vitamin C, dietary fibre, beta carotene and folate. </description>
+			<foodId>img_vegetables_lettuce</foodId>
+                        <sound__paths>
+                            <string>lettuce</string>
+                            <string>description_vegetables_lettuce</string>
+                            <string>quiz_vegetables_lettuce</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_lettuce</string>
+                            <string>vegetables_detail_lettuce_large</string>
+                            <string>vegetables_detail_lettuce_lettuceplant</string>
+                            <string>vegetables_detail_lettuce_lettucesalad</string>
+                        </image__paths>
+                        <questions>
+                            <string>This leafy vegetable is one of the most popular salad vegetables. The darkness of the leaf indicates how nutritious it is. It is a source of vitamin C, dietary fibre, beta carotene and folate.</string>
+                        </questions>
+                        <answers>
+                            <string>Excellent, it is lettuce!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>onion</name>
-			<description>Onions are an excellent source of vitamin C and their green tops contain beta carotene, which is made into vitamin A in the body, and folate.
-They have no fat, and contain complex sugars that help the 'good' bacteria in your body. </description>
-			<foodId>R.drawable.img_vegetables_onion</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_onion</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This vegetable is an excellent source of vitamin C, beta carotene and folate. It has no fat, and contains complex sugars that help the 'good' bacteria in your body.</string>
-    	    </questions>
-    	    <answers>
-        		<string>That's right, it is onion!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Onions are an excellent source of vitamin C and their green tops contain beta carotene, which is made into vitamin A in the body, and folate. They have no fat, and contain complex sugars that help the 'good' bacteria in your body. </description>
+			<foodId>img_vegetables_onion</foodId>
+                        <sound__paths>
+                            <string>onion</string>
+                            <string>description_vegetables_onion</string>
+                            <string>quiz_vegetables_onion</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_onion</string>
+                            <string>vegetables_detail_onion_onionplant</string>
+                            <string>vegetables_detail_onion_redonion</string>
+                            <string>vegetables_detail_onion_slicedonion</string>
+                        </image__paths>
+                        <questions>
+                            <string>This vegetable is an excellent source of vitamin C, beta carotene and folate. It has no fat, and contains complex sugars that help the 'good' bacteria in your body.</string>
+                        </questions>
+                        <answers>
+                            <string>That's right, it is onion!</string>
+                        </answers>
+                    </food>
+                <!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>pepper</name>
 			<description>Bell peppers  is a colorful vegetable with high levels of vitamin C, beta carotene, which is turned to vitamin A by the body, vitamin E and folate. They help your immune system stay healthy, protect your bones, improve your vision, and regulate bowel movement. </description>
-			<foodId>R.drawable.img_vegetables_pepper</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_pepper</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>These colorful vegetables contains high levels of vitamin C, beta carotene, vitamin E and folate. These components help your immune system, bones, vision, and bowel movement. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Great, it is pepper!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<foodId>img_vegetables_pepper</foodId>
+                        <sound__paths>
+                            <string>pepper</string>
+                            <string>description_vegetables_pepper</string>
+                            <string>quiz_vegetables_pepper</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_pepper</string>
+                            <string>vegetables_detail_pepper_large</string>
+                            <string>vegetables_detail_pepper_pepperplant</string>
+                            <string>vegetables_detail_pepper_pepperseeds</string>
+                            <string>vegetables_detail_pepper_slicedpepper</string>
+                        </image__paths>
+                        <questions>
+                            <string>These colorful vegetables contains high levels of vitamin C, beta carotene, vitamin E and folate. These components help your immune system, bones, vision, and bowel movement. </string>
+                        </questions>
+                        <answers>
+                            <string>Great, it is pepper!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>potato</name>
-			<description>Potatoes are a good source of vitamin C, potassium, dietary fibre and vitamin B3. Potassium assists in nerve and muscle function.
-Potatoes are carbohydrates and give you energy for physical activities and they contain very little fat. </description>
-			<foodId>R.drawable.img_vegetables_potato</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_potato</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>These vegetables are carbohydrate which give you energy for physical activities. They are a good source of  potassium, which assists in nerve and muscle function. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Very nice, it is potatoes!</string>
-        	</answers>
-		</food>
-				<!-- ********************************************************************* -->
-		<food>
+			<description>Potatoes are a good source of vitamin C, potassium, dietary fibre and vitamin B3. Potassium assists in nerve and muscle function. Potatoes are carbohydrates and give you energy for physical activities and they contain very little fat. </description>
+			<foodId>img_vegetables_potato</foodId>
+                        <sound__paths>
+                            <string>potato</string>
+                            <string>description_vegetables_potato</string>
+                            <string>quiz_vegetables_potato</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_potato</string>
+                            <string>vegetables_detail_potato</string>
+                            <string>vegetables_detail_potato_fries</string>
+                            <string>vegetables_detail_potato_mashedpotatoes</string>
+                            <string>vegetables_detail_potato_potatochips</string>
+                            <string>vegetables_detail_potato_potatoplant</string>
+                            
+                        </image__paths>
+                        <questions>
+                            <string>These vegetables are carbohydrate which give you energy for physical activities. They are a good source of  potassium, which assists in nerve and muscle function. </string>
+                        </questions>
+                        <answers>
+                            <string>Very nice, it is potatoes!</string>
+                        </answers>
+                    </food>
+		<!-- ********************************************************************* -->
+                    <food>
 			<category>vegetables</category>
 			<name>tomato</name>
 			<description>Tomatoes are the richest source of lycopene, which helps prevent cancer, and a good source of vitamin C, vitamin E, folate and dietary fibre. The deeper the red, the higher the amount of beta carotene in a tomato. </description>
-			<foodId>R.drawable.img_vegetables_tomato</foodId>
-        	<sound__paths>
-	       		<string>soundpath1</string>
-	       		<string>soundpath2</string>
-	       	</sound__paths>
-	       	<image__paths>
-    	    	<string>R.drawable.cereals_img_vegetables_tomato</string>
-    	    	<string>imagepath2</string>
-    	   	</image__paths>
-    	   	<questions>
-    	    	<string>This vegetable is the richest source of lycopene, a substance that helps prevent cancer. It also contains vitamin C, vitamin E, folate and dietary fibre. </string>
-    	    </questions>
-    	    <answers>
-        		<string>Well done, it is tomatoes!</string>
-        	</answers>
-		</food>
-	</foodlist>
-</foodcollection>
+			<foodId>img_vegetables_tomato</foodId>
+                        <sound__paths>
+                            <string>tomato</string>
+                            <string>description_vegetables_tomato</string>
+                            <string>quiz_vegetables_tomato</string>
+                        </sound__paths>
+                        <image__paths>
+                            <string>cereals_img_vegetables_tomato</string>
+                            <string>vegetables_detail_tomato_large</string>
+                            <string>vegetables_detail_tomato_salad</string>
+                            <string>vegetables_detail_tomato_tomatojuice</string>
+                            <string>vegetables_detail_tomato_tomatopant</string>
+                        </image__paths>
+                        <questions>
+                            <string>This vegetable is the richest source of lycopene, a substance that helps prevent cancer. It also contains vitamin C, vitamin E, folate and dietary fibre. </string>
+                        </questions>
+                        <answers>
+                            <string>Well done, it is tomatoes!</string>
+                        </answers>
+                    </food>
+                </foodsContained>
+		<imagePath>img_category_vegetables</imagePath>
+                <soundPath>categories_vegetables</soundPath>
+ 	    </category>
+        <!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+        <!-- ********************************************************************************************************************** -->
+	</categorylist>
+</categorycollection>
