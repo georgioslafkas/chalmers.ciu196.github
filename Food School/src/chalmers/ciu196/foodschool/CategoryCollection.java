@@ -52,14 +52,16 @@ public class CategoryCollection extends Object{
 						auxids.add(cont.getResources().getIdentifier(auxfood.getImage_paths().get(x), "drawable", "chalmers.ciu196.foodschool"));
 					}
 					
+					//Coner the food sound paths to sound ids
+					auxids.clear();
+					for (int z=0;z<auxfood.getSound_paths().size();i++){
+						auxids.add(cont.getResources().getIdentifier(auxfood.getSound_paths().get(z), "drawable", "chalmers.ciu196.foodschool"));
+					}
+					
 					//Commit the changes
 					auxfood.setImage_ids(auxids);
 					
-					//Coner the food sound paths to sound ids
-					auxids.clear();
-					for (int x=0;x<auxfood.getSound_paths().size();i++){
-						auxids.add(cont.getResources().getIdentifier(auxfood.getSound_paths().get(x), "drawable", "chalmers.ciu196.foodschool"));
-					}
+
 					
 					//Commit the changes
 					auxfood.setSound_ids(auxids);

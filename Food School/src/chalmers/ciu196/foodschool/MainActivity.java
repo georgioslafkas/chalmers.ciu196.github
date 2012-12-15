@@ -231,6 +231,14 @@ public class MainActivity extends Activity {
 	Log.d("Db4o", "Food "+testLoadFood.getName()+" was successfully stored and retrieved from database.");
 	// End of database related code ===========================================
 	
+	
+	XmlParser uf=new XmlParser();
+	CategoryCollection nene=new CategoryCollection();
+	nene=uf.categoryfromXML(R.raw.data, this);
+	Log.d("SOCOOOORRO",String.valueOf(nene.getList().get(0).getFoodsContained().get(0).getId()));
+	Log.d("SOCOOOORRO2",String.valueOf(R.drawable.img_cereals_bread));
+	
+	
 	}
 	// DATABASE related code ==================================================
 	private DbManager dbManager() {

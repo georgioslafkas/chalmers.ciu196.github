@@ -85,10 +85,11 @@ public class XmlParser {
 		
 
 		XStream xstream = new XStream(new DomDriver());
-		xstream.alias("foodcategory", FoodCategory.class);
+		xstream.alias("category", FoodCategory.class);
 		xstream.alias("categorycollection",CategoryCollection.class);
+		xstream.alias("food",Food.class);
+		
 		CategoryCollection collection=(CategoryCollection)xstream.fromXML(xmlString);
-		collection.setIds(cont);
 		return collection;
 	}	
 }

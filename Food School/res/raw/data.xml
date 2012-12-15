@@ -9,7 +9,7 @@
 			<category>cereals</category>
 			<name>bread</name>
 			<description>Bread is prepared by cooking a dough of flour and other ingredients. There are hundreds of types of bread made from different types of flours and with different ingredients. The nutritional content varies depending on the ingredients used.</description>
-                        <foodId>img_cereals_bread</foodId>
+                        <foodRef>img_cereals_bread</foodRef>
                         <sound__paths>
                             <string>bread</string>
                             <string>description_cereals_bread</string>
@@ -34,7 +34,7 @@
 			<category>cereals</category>
 			<name>maize</name>
 			<description>Maize (also known as corn) is one of the world’s major cereal crops and it is used as flour to make bread, breakfast cereal, popcorn and a variety of meals. Sweet maize is grown and sold as a vegetable. It is a great source of dietary fibre and contains vitamin C, niacin, folate and potassium, which helps balancing the body's fluids.</description>
-                        <foodId>img_cereals_maize</foodId>
+                        <foodRef>img_cereals_maize</foodRef>
                         <sound__paths>
                             <string>maize</string>
                             <string>description_cereals_maize</string>
@@ -59,7 +59,7 @@
 			<category>cereals</category>
 			<name>pasta</name>
 			<description>Pasta comes in many shapes and it is usually made from wheat flour. Pasta contains complex carbohydrates which release energy slowly compared to sugar, providing energy for a longer time. It is also a source of iron and vitamin B.</description>
-                        <foodId>img_cereals_pasta</foodId>
+                        <foodRef>img_cereals_pasta</foodRef>
                         <sound__paths>
                             <string>pasta</string>
                             <string>description_cereals_pasta</string>
@@ -84,7 +84,7 @@
 			<category>cereals</category>
 			<name>rice</name>
 			<description>Rice is an excellent source of energy. In fact, it is the main source of energy for a lot of countries around the world. It is packed with vitamins and minerals like vitamin E, B and potassium. It is also low in fat.</description>
-                        <foodId>img_cereals_rice</foodId>
+                        <foodRef>img_cereals_rice</foodRef>
                         <sound__paths>
                             <string>rice</string>
                             <string>description_cereals_rice</string>
@@ -108,7 +108,7 @@
 			<category>cereals</category>
 			<name>wheat</name>
 			<description>Wheat is the leading source of vegetable protein in human food. It has a valuable content of protein. It contains iron which is an important component of blood. It is mostly used to make flour for a variety of food products like bread, cereal and pasta.</description>
-                        <foodId>img_cereals_wheat</foodId>
+                        <foodRef>img_cereals_wheat</foodRef>
                         <sound__paths>
                             <string>wheat</string>
                             <string>description_cereals_wheat</string>
@@ -143,7 +143,7 @@
 			<category>dairy</category>
 			<name>butter</name>
 			<description>Butter contains 'good' fat. It is used as a spread and for cooking and baking. It is rich in vitamin A, which helps your eyes, bones and skin. It also contains vitamin E, K and D. Vitamin D is essential in the absorption of calcium. It is a good source of iodine, which helps regulate the hormones in the body. </description>
-                        <foodId>img_dairy_butter</foodId>
+                        <foodRef>img_dairy_butter</foodRef>
                         <sound__paths>
                             <string>butter</string>
                             <string>description_dairy_butter</string>
@@ -168,7 +168,7 @@
 			<category>dairy</category>
 			<name>cheese</name>
 			<description>There are hundreds of types of cheese made from milk from different animals, not only cows' milk. Cheese is valued for its portability, long life, and high content of fat, protein, calcium, and phosphorus. Calcium makes it good for your teeth and bones. </description>
-                        <foodId>img_dairy_cheese</foodId>
+                        <foodRef>img_dairy_cheese</foodRef>
                         <sound__paths>
                             <string>cheese</string>
                             <string>description_dairy_cheese</string>
@@ -193,7 +193,7 @@
 			<category>dairy</category>
 			<name>milk</name>
 			<description>Milk is the base for all dairy products. It is collected from many kinds of livestock, for example cattle, goats and sheep. It is a great source of calcium, which helps keep your bones and teeth strong. It is also a good source of protein. </description>
-                        <foodId>img_dairy_milk</foodId>
+                        <foodRef>img_dairy_milk</foodRef>
                         <sound__paths>
                             <string>milk</string>
                             <string>description_dairy_milk</string>
@@ -219,7 +219,7 @@
 			<category>dairy</category>
 			<name>yogurt</name>
 			<description>Yogurt is made from milk using 'good' bacteria. It is a good regulator of the functions of your digestive system. It is rich in calcium, which helps keep you bones and teeth strong and healthy.</description>
-			<foodId>img_dairy_yogurt</foodId>
+			<foodRef>img_dairy_yogurt</foodRef>
                         <sound__paths>
                             <string>yogurt</string>
                             <string>description_dairy_yogurt</string>
@@ -253,7 +253,7 @@
 			<category>fruits</category>
 			<name>apple</name>
 			<description>Apples are sweet, delicious, and good for you. They contain vitamin C, which helps keep your immune system strong. They also protect your heart, brain, lungs and other vital organs. </description>
-			<foodId>img_fruits_apple</foodId>
+			<foodRef>img_fruits_apple</foodRef>
                         <sound__paths>
                             <string>apple</string>
                             <string>description_fruits_apple</string>
@@ -279,7 +279,7 @@
 			<category>fruits</category>
 			<name>banana</name>
 			<description>Bananas are a great snack. They are high in natural sugar and fibre, and they keep you full for a long time. They have a lot of potassium, which helps keep your heart, nervous system and kidneys healthy. </description>
-			<foodId>img_fruits_banana</foodId>
+			<foodRef>img_fruits_banana</foodRef>
                         <sound__paths>
                             <string>banana</string>
                             <string>description_fruits_banana</string>
@@ -304,7 +304,7 @@
 			<category>fruits</category>
 			<name>cherries</name>
 			<description>Cherries are small fruits that contain antioxidants, which are good for the body in many different ways. They can help reduce headaches, improve your sleep and prevent cancer.</description>
-			<foodId>img_fruits_cherries</foodId>
+			<foodRef>img_fruits_cherries</foodRef>
                         <sound__paths>
                             <string>cherry</string>
                             <string>description_fruits_cherries</string>
@@ -328,7 +328,7 @@
 			<category>fruits</category>
 			<name>grapes</name>
 			<description>Grapes are sweet, juicy and packed with essential vitamins and minerals. They provide dietary fibre, vitamin C and potassium. The energy you get from grapes lasts longer because it is slowly digested.</description>
-			<foodId>img_fruits_grapes</foodId>
+			<foodRef>img_fruits_grapes</foodRef>
                         <sound__paths>
                             <string>grapes</string>
                             <string>description_fruits_grapes</string>
@@ -353,7 +353,7 @@
 			<category>fruits</category>
 			<name>lemon</name>
 			<description>Lemons are sour, citrus fruits, so you probably will not eat one by itself. It is rich in vitamin C, which helps keep your immune system strong and prevent diseases. Its juice can be combined with sugar or honey to make delicious drinks or cure your sore throat. It is also great for improving the taste of other foods.</description>
-			<foodId>img_fruits_lemon</foodId>
+			<foodRef>img_fruits_lemon</foodRef>
                         <sound__paths>
                             <string>lemon</string>
                             <string>description_fruits_lemon</string>
@@ -379,7 +379,7 @@
 			<category>fruits</category>
 			<name>lime</name>
 			<description>Limes have a sour taste because they are very low in sugars. They are rich in vitamin C, which helps keep away diseases. Its juice is also good for your skin. Its peel and juice are great for flavoring food.</description>
-			<foodId>img_fruits_lime</foodId>
+			<foodRef>img_fruits_lime</foodRef>
                         <sound__paths>
                             <string>lime</string>
                             <string>description_fruits_lime</string>
@@ -403,7 +403,7 @@
 			<category>fruits</category>
 			<name>orange</name>
 			<description>Oranges are citrus fruits. They can be sweet or sour, depending on the variety. One orange contains enough vitamin C for two days, which help keep you immune system protecting your body from diseases. They also contain fibre and beta carotene, which is converted to vitamin A by the body and is good for your eyes.</description>
-			<foodId>img_fruits_orange</foodId>
+			<foodRef>img_fruits_orange</foodRef>
                         <sound__paths>
                             <string>orange</string>
                             <string>description_fruits_orange</string>
@@ -428,7 +428,7 @@
 			<category>fruits</category>
 			<name>peach</name>
 			<description>Peaches are juicy, sweet and nutritious. They are a good source of vitamin C, which helps your immune system, dietary fibre, which keeps your digestive system healthy, and beta carotene, which helps your skin and eyes stay healthy. They also contain small amounts of other vitamins and minerals.</description>
-			<foodId>img_fruits_peach</foodId>
+			<foodRef>img_fruits_peach</foodRef>
                         <sound__paths>
                             <string>peach</string>
                             <string>description_fruits_peach</string>
@@ -453,7 +453,7 @@
 			<category>fruits</category>
 			<name>pear</name>
 			<description>Pears are sweet and juicy. They are digested slowly, meaning that they provide energy for a longer time than other types of food. They contain vitamin C, which helps your immune system, copper, which helps your brain learn and remember, and dietary fibre, which keeps your digestive system healthy.</description>
-			<foodId>img_fruits_pear</foodId>
+			<foodRef>img_fruits_pear</foodRef>
                         <sound__paths>
                             <string>pear</string>
                             <string>description_fruits_pear</string>
@@ -477,7 +477,7 @@
 			<category>fruits</category>
 			<name>pineapple</name>
 			<description>Pineapple is tropical fruit with high levels of vitamin C, which helps your immune system stay strong. It also contains high levels of the mineral manganese. Manganese helps your body produce energy, keeps your bones strong and helps your body digest fat.</description>
-			<foodId>img_fruits_pineapple</foodId>
+			<foodRef>img_fruits_pineapple</foodRef>
                         <sound__paths>
                             <string>pineapple</string>
                             <string>description_fruits_pineapple</string>
@@ -503,7 +503,7 @@
 			<category>fruits</category>
 			<name>strawberries</name>
 			<description>Strawberries are part of the berry family, like raspberries and blackberries. They have a high content of vitamin C, which keeps your immune system strong, dietary fibre, which is good for your digestive system, folate, which is essential to keep the body functioning.</description>
-			<foodId>img_fruits_strawberries</foodId>
+			<foodRef>img_fruits_strawberries</foodRef>
                         <sound__paths>
                             <string>strawberries</string>
                             <string>description_fruits_strawberries</string>
@@ -529,7 +529,7 @@
 			<category>fruits</category>
 			<name>watermelon</name>
 			<description>Watermelon is the refreshing fruit by excellence due to it being mostly water. It is a good source of vitamin C, which keeps your immune system strong, and beta carotene which, when transformed into vitamin A, is good for your eyes.</description>
-			<foodId>img_fruits_watermelon</foodId>
+			<foodRef>img_fruits_watermelon</foodRef>
                         <sound__paths>
                             <string>watermelon</string>
                             <string>description_fruits_watermelon</string>
@@ -564,7 +564,7 @@
 			<category>protein</category>
 			<name>beef</name>
 			<description>Beef is the name of meat from cattle. A variety of products come from beef. Beef is an excellent source of complete protein and vital minerals such as zinc, selenium, phosphorus and iron, and B vitamins.</description>
-			<foodId>img_protein_beef</foodId>
+			<foodRef>img_protein_beef</foodRef>
                         <sound__paths>
                             <string>beef</string>
                             <string>description_protein_beef</string>
@@ -589,7 +589,7 @@
 			<category>protein</category>
 			<name>chicken</name>
 			<description>Poultry is the second most widely eaten meat in the world. Most commonly, it refers to chicken but it also comes from duck and turkey, among others. You must cook chicken before you eat it because it could contain salmonella. Chicken is a good source of protein, calcium and potassium.</description>
-			<foodId>img_protein_chicken</foodId>
+			<foodRef>img_protein_chicken</foodRef>
                         <sound__paths>
                             <string>chicken</string>
                             <string>description_protein_chicken</string>
@@ -614,7 +614,7 @@
 			<category>protein</category>
 			<name>eggs</name>
 			<description>Chicken eggs are the most commonly eaten eggs. They supply all essential amino acids for humans and provide several vitamins and minerals, like choline, which helps regulate the brain, nervous system, and cardiovascular system.</description>
-			<foodId>img_protein_eggs</foodId>
+			<foodRef>img_protein_eggs</foodRef>
                         <sound__paths>
                             <string>eggs</string>
                             <string>description_protein_eggs</string>
@@ -638,7 +638,7 @@
 			<category>protein</category>
 			<name>fish</name>
 			<description>Fish provides a good source of high quality protein and contains many vitamins and minerals. Some types of fish are good for your heart and brain because they contain omega 3 fatty acids.</description>
-			<foodId>img_protein_fish</foodId>
+			<foodRef>img_protein_fish</foodRef>
                         <sound__paths>
                             <string>fish</string>
                             <string>description_protein_fish</string>
@@ -662,7 +662,7 @@
 			<category>protein</category>
 			<name>pork</name>
 			<description>Pork is the name for meat from domestic pig. It is mostly eaten cooked and often cured into ham and similar products. Pork should be eaten with moderation because of its high content of 'bad' fat.</description>
-			<foodId>img_protein_pork</foodId>
+			<foodRef>img_protein_pork</foodRef>
                         <sound__paths>
                             <string>pork</string>
                             <string>description_protein_pork</string>
@@ -686,7 +686,7 @@
 			<category>protein</category>
 			<name>sausage</name>
 			<description>Sausages are usually made of different kinds of ground meat, either beef, pork or poultry, in a tight casing. There are a lot of different kinds depending on the region or country. Its nutritional value depends on what it is made from. It usually contains other ingredients along with meat.</description>
-			<foodId>img_protein_sausage</foodId>
+			<foodRef>img_protein_sausage</foodRef>
                         <sound__paths>
                             <string>sausage</string>
                             <string>description_protein_sausage</string>
@@ -721,7 +721,7 @@
 			<category>vegetables</category>
 			<name>broccoli</name>
 			<description>Broccoli is a bush-shaped vegetable that contains a lot of nutritious substances. It is a rich source of vitamin C, which keeps your immune system strong and might help prevent cancer. Broccoli is also good for your heart, skin, bones and respiratory system.</description>
-			<foodId>img_vegetables_broccoli</foodId>
+			<foodRef>img_vegetables_broccoli</foodRef>
                         <sound__paths>
                             <string>broccoli</string>
                             <string>description_vegetables_broccoli</string>
@@ -746,7 +746,7 @@
 			<category>vegetables</category>
 			<name>cabbage</name>
 			<description>Cabbage is a leafy vegetable. It contains vitamins and minerals, which help your digestive system, immune system, eyes, skin, and heart. It contains vitamin C, sulphur, iodine, and it is rich in fibre.</description>
-			<foodId>img_vegetables_cabbage</foodId>
+			<foodRef>img_vegetables_cabbage</foodRef>
                         <sound__paths>
                             <string>cabbage</string>
                             <string>description_vegetables_cabbage</string>
@@ -771,7 +771,7 @@
 			<category>vegetables</category>
 			<name>carrot</name>
 			<description>Carrots are a rich source of beta carotene, which the body converts to vitamin A. Vitamin A helps with night vision. They are a good source of dietary fibre, which helps your heart and your digestive system. </description>
-			<foodId>img_vegetables_carrot</foodId>
+			<foodRef>img_vegetables_carrot</foodRef>
                         <sound__paths>
                             <string>carrot</string>
                             <string>description_vegetables_carrot</string>
@@ -796,7 +796,7 @@
 			<category>vegetables</category>
 			<name>celery</name>
 			<description>Eating celery helps clean your mouth and teeth. Celery contains vitamins, minerals and dietary fibre, which help regulte bowel movement, and relief anxiety.</description>
-			<foodId>img_vegetables_celery</foodId>
+			<foodRef>img_vegetables_celery</foodRef>
                         <sound__paths>
                             <string>celery</string>
                             <string>description_vegetables_celery</string>
@@ -820,7 +820,7 @@
 			<category>vegetables</category>
 			<name>cucumber</name>
 			<description>Cucumbers are mostly water, which is the reason they are so refreshing. They have small amounts of vitamins, like vitamins K and C, and minerals, like calcium, iron and potassium. </description>
-			<foodId>img_vegetables_cucumber</foodId>
+			<foodRef>img_vegetables_cucumber</foodRef>
                         <sound__paths>
                             <string>cucumber</string>
                             <string>description_vegetables_cucumber</string>
@@ -844,7 +844,7 @@
 			<category>vegetables</category>
 			<name>eggplant</name>
 			<description>Eggplant is a top source of vitamin B6, which is important for your blood, brain and other tissues in your body. It is also a good source of dietary fibre and antioxidants. </description>
-			<foodId>img_vegetables_eggplant</foodId>
+			<foodRef>img_vegetables_eggplant</foodRef>
                         <sound__paths>
                             <string>eggplant</string>
                             <string>description_vegetables_eggplant</string>
@@ -868,7 +868,7 @@
 			<category>vegetables</category>
 			<name>garlic</name>
 			<description>In high quantities, garlic is a good source of dietary fibre, potassium, iron, zinc and vitamin C. They are rarely eaten in high quantities but are often use to add taste to other foods. </description>
-			<foodId>img_vegetables_garlic</foodId>
+			<foodRef>img_vegetables_garlic</foodRef>
                         <sound__paths>
                             <string>garlic</string>
                             <string>description_vegetables_garlic</string>
@@ -892,7 +892,7 @@
 			<category>vegetables</category>
 			<name>lettuce</name>
 			<description>Lettuce is one of the most popular salad vegetables. The darker the lettuce leaf the more nutritious it is. Lettuce is mostly made of water which is why it is so refreshing.It is a source of vitamin C, dietary fibre, beta carotene and folate. </description>
-			<foodId>img_vegetables_lettuce</foodId>
+			<foodRef>img_vegetables_lettuce</foodRef>
                         <sound__paths>
                             <string>lettuce</string>
                             <string>description_vegetables_lettuce</string>
@@ -916,7 +916,7 @@
 			<category>vegetables</category>
 			<name>onion</name>
 			<description>Onions are an excellent source of vitamin C and their green tops contain beta carotene, which is made into vitamin A in the body, and folate. They have no fat, and contain complex sugars that help the 'good' bacteria in your body. </description>
-			<foodId>img_vegetables_onion</foodId>
+			<foodRef>img_vegetables_onion</foodRef>
                         <sound__paths>
                             <string>onion</string>
                             <string>description_vegetables_onion</string>
@@ -940,7 +940,7 @@
 			<category>vegetables</category>
 			<name>pepper</name>
 			<description>Bell peppers  is a colorful vegetable with high levels of vitamin C, beta carotene, which is turned to vitamin A by the body, vitamin E and folate. They help your immune system stay healthy, protect your bones, improve your vision, and regulate bowel movement. </description>
-			<foodId>img_vegetables_pepper</foodId>
+			<foodRef>img_vegetables_pepper</foodRef>
                         <sound__paths>
                             <string>pepper</string>
                             <string>description_vegetables_pepper</string>
@@ -965,7 +965,7 @@
 			<category>vegetables</category>
 			<name>potato</name>
 			<description>Potatoes are a good source of vitamin C, potassium, dietary fibre and vitamin B3. Potassium assists in nerve and muscle function. Potatoes are carbohydrates and give you energy for physical activities and they contain very little fat. </description>
-			<foodId>img_vegetables_potato</foodId>
+			<foodRef>img_vegetables_potato</foodRef>
                         <sound__paths>
                             <string>potato</string>
                             <string>description_vegetables_potato</string>
@@ -992,7 +992,7 @@
 			<category>vegetables</category>
 			<name>tomato</name>
 			<description>Tomatoes are the richest source of lycopene, which helps prevent cancer, and a good source of vitamin C, vitamin E, folate and dietary fibre. The deeper the red, the higher the amount of beta carotene in a tomato. </description>
-			<foodId>img_vegetables_tomato</foodId>
+			<foodRef>img_vegetables_tomato</foodRef>
                         <sound__paths>
                             <string>tomato</string>
                             <string>description_vegetables_tomato</string>
