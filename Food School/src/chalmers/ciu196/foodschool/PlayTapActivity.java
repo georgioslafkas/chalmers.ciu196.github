@@ -29,12 +29,13 @@ public class PlayTapActivity extends Activity {
 	Intent goToEndGame; /* the intent that takes us to the end game screen */
 	public static Activity activityInstance = null; /* an instance of this activity, used in the cool down timer */
 	public Object correctAnswer = new Object(), wrongAnswer = new Object();
-	public final int POSSIBLE_WRONG_ANSWERS = 7;
+	public final int POSSIBLE_WRONG_ANSWERS = 3;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play_tap);
+
 		
 		PlayTapActivity.activityInstance = this;	/* Initialize the instance of this activity */
 		/* Set timers and progress bar */
@@ -49,7 +50,8 @@ public class PlayTapActivity extends Activity {
 	public void onResume()
 	{
 		super.onResume();
-			
+		stopService(new Intent(this,MediaServiceA.class));
+		startService(new Intent(this,MediaServiceB.class));
 		/* Initialize the intent that takes back to the quiz */
 		goToPlayQuiz = new Intent(this, PlayQuizActivity.class);
 		goToPlayQuiz.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -99,6 +101,7 @@ public class PlayTapActivity extends Activity {
 			finish();
 		}
 	}
+	
 	
 	@Override
 	public void onStop()
@@ -162,8 +165,8 @@ public class PlayTapActivity extends Activity {
 		 * the list with the images
 		 */
 		/* **************** UNCOMMENT THE LOOP WHEN DATABASE IS COMPLETE ************************* */
-		/*for (int i = 0; i < POSSIBLE_WRONG_ANSWERS; i++)
-			wrongAnswerImages.add(tempFoodList.get(i).getId()); */
+		for (int i = 0; i < POSSIBLE_WRONG_ANSWERS; i++)
+			wrongAnswerImages.add(tempFoodList.get(i).getId()); 
 		
 		/* Return the list with the 3 wrong images */
 		return wrongAnswerImages;

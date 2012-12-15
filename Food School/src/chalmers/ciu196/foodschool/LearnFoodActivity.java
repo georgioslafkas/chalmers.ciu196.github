@@ -14,7 +14,7 @@ public class LearnFoodActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_learn_food);
-		
+
 		/* Get the intent that started this activity */
 		Intent startedThis = getIntent();
 		/* Retrieve which category was tapped, by reading the
@@ -129,6 +129,7 @@ public class LearnFoodActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_learn_food, menu);
 		return true;
 	}
+
 	
 	/* Click handler that takes you to the detail
 	 * activity for a specific food.

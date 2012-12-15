@@ -26,7 +26,9 @@ public class MediaServiceB extends Service {
 	
 	@Override
 	public void onStart(Intent inten, int startid){
+		if (!player.isPlaying()){
 		player.start();
+		}
 		}
 
 }

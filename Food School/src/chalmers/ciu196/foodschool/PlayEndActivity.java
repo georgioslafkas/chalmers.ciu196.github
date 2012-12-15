@@ -2,6 +2,7 @@ package chalmers.ciu196.foodschool;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 
 public class PlayEndActivity extends Activity {
@@ -23,6 +24,7 @@ public class PlayEndActivity extends Activity {
 	public void onResume()
 	{
 		super.onResume();
+		stopService(new Intent(this,MediaServiceB.class));
 	}
 	
 	@Override

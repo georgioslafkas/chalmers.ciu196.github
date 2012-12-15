@@ -13,17 +13,24 @@ import android.view.Menu;
 import android.view.View;
 
 public class MainActivity extends Activity {
-	private MediaPlayer mediaPlayer;
 	
 	// Database related variables =============================================
 	private DbManager databaseManager;
 	// End of Database related variables ======================================
 	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		stopService(new Intent(this,MediaServiceB.class));
+		startService(new Intent(this,MediaServiceA.class));
+	}
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);		
+		setContentView(R.layout.activity_main);	
+
 	// DATABASE related code ==================================================
 	
 	dbManager();
@@ -234,18 +241,6 @@ public class MainActivity extends Activity {
 		return databaseManager;
 	}
 	// End of database related code ===========================================
-	
-	@Override
-	protected void onResume(){
-		super.onResume();
-		mediaPlayer= MediaPlayer.create(this, R.raw.foodschoolbso1);
-		mediaPlayer.setLooping(true);
-		Log.d("COsa","COsa");
-		/* Start playing music when this activity starts. */
-		mediaPlayer.start();
-
-
-	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -255,11 +250,12 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
+	
+	
 	@Override
-	protected void onStop(){
-		super.onStop();
-		/* Stop playing music when this activity stops. */
-		mediaPlayer.stop();
+	public void onDestroy(){
+		super.onDestroy();
+		stopService(new Intent(this,MediaServiceA.class));
 	}
 	
 	// Database related variables =============================================
@@ -268,7 +264,7 @@ public class MainActivity extends Activity {
 	
 	@Override
 	protected void onPause() {
-         super.onDestroy();
+         super.onPause();
          dbManager().close();
          databaseManager = null;
      }
