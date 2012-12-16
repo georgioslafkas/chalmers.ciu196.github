@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -30,6 +32,7 @@ public class PlayQuizActivity extends Activity {
 	public Object correctAnswer = new Object(), wrongAnswer =  new Object(); /* Just indicators of wrong or right answers */
 	public final int POSSIBLE_WRONG_ANSWERS = 3; /* We have three wrong answers for this game */
 	private static Random randomNo = new Random();
+	private MediaPlayer mediaPlayer = new MediaPlayer();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +101,7 @@ public class PlayQuizActivity extends Activity {
 		/* Cancel the timers */
 		timer.cancel();
 		cooldownTimer.cancel();
+		mediaPlayer.release();
 		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
@@ -114,6 +118,7 @@ public class PlayQuizActivity extends Activity {
 		super.onStop();
 		timer.cancel();
 		cooldownTimer.cancel();
+		mediaPlayer.release();
 		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
@@ -476,5 +481,37 @@ public class PlayQuizActivity extends Activity {
 		Intent goToCategories = new Intent(this, PlayCategoriesActivity.class);
 		goToCategories.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(goToCategories);
+	}
+	
+	/* This method works similar to the one
+	 * in LearnFoodActivity. Instead of reading
+	 * the name of the food however, it retrieves
+	 * the quiz description. It also makes use of the
+	 * random list created for the games instead of
+	 * the initial list created for the category in
+	 * MainActivity, and of the currentFood index for
+	 * that list instead of the food's ID.
+	 */
+	public void playFoodQuiz(int currentFood)
+	{
+		int descriptionToPlay = foods.get(currentFood).getSound_ids().get(2);
+		mediaPlayer = MediaPlayer.create(this, descriptionToPlay);
+		mediaPlayer.setOnCompletionListener(new OnCompletionListener()
+		{
+
+			public void onCompletion(MediaPlayer mediaPlayer) {
+				mediaPlayer.release();
+			}
+		});
+		mediaPlayer.start();
+	}
+	
+	/* Used as a handler for the readQuiz button.
+	 * Simply invokes playFoodDescription() with the right
+	 * argument (current food id).
+	 */
+	public void playQuiz(View v)
+	{
+		playFoodQuiz(currentFood);
 	}
 }//end class

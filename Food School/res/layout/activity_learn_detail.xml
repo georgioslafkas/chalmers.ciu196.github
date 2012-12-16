@@ -86,7 +86,8 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/fruits_detail_detail_playdescription" />
+            android:src="@drawable/fruits_detail_detail_playdescription"
+            android:onClick="playDescription" />
         
     </TableRow>
 

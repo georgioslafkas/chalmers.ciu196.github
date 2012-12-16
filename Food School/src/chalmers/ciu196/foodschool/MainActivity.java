@@ -24,7 +24,6 @@ public class MainActivity extends Activity {
 		stopService(new Intent(this,MediaServiceB.class));
 		startService(new Intent(this,MediaServiceA.class));
 	}
-
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -88,40 +87,81 @@ public class MainActivity extends Activity {
 	foodManager.addFoodToCategory(bread, cereals);
 	
 	// add values to the apple 
+	ArrayList<Integer> appleSounds = new ArrayList<Integer>();
+	appleSounds.add(R.raw.apple);
+	appleSounds.add(R.raw.description_fruits_apple);
+	appleSounds.add(R.raw.quiz_fruits_apple);
+	apple.setSound_ids(appleSounds);
 	apple.setName("apple");
-	apple.setDescription("rea fruit");
+	apple.setDescription("red fruit");
 	apple.setId(R.drawable.img_fruits_apple);
 	ArrayList<String> cosa=new ArrayList<String>();
 	cosa.add("url1");
 	cosa.add("url2");	
 	apple.setImage_paths(cosa);
-
 	//apple.setSound_paths("path");
+	
+	ArrayList<Integer> orangeSounds = new ArrayList<Integer>();
+	orangeSounds.add(R.raw.orange);
+	orangeSounds.add(R.raw.description_fruits_orange);
+	orangeSounds.add(R.raw.quiz_fruits_orange);
+	orange.setSound_ids(orangeSounds);
 	orange.setName("orange");
 	orange.setDescription("round fruit");
 	orange.setId(R.drawable.img_fruits_orange);
-	//orange.setSound_paths("path");
+	
+	ArrayList<Integer> bananaSounds = new ArrayList<Integer>();
+	bananaSounds.add(R.raw.banana);
+	bananaSounds.add(R.raw.description_fruits_banana);
+	bananaSounds.add(R.raw.quiz_fruits_banana);
+	System.out.println("R.raw.banana is "+R.raw.quiz_fruits_banana);
+	banana.setSound_ids(bananaSounds);
 	banana.setName("banana");
 	banana.setDescription("long fruit");
 	banana.setId(R.drawable.img_fruits_banana);
 	//banana.setSound_paths("path");
 	
+	ArrayList<Integer> grapesSounds = new ArrayList<Integer>();
+	grapesSounds.add(R.raw.grapes);
+	grapesSounds.add(R.raw.description_fruits_grapes);
+	grapesSounds.add(R.raw.quiz_fruits_grapes);
+	grapes.setSound_ids(grapesSounds);
 	grapes.setName("grapes");
 	grapes.setDescription("little tasties");
 	grapes.setId(R.drawable.img_fruits_grapes);
 	
+	ArrayList<Integer> tomatoSounds = new ArrayList<Integer>();
+	tomatoSounds.add(R.raw.tomato);
+	tomatoSounds.add(R.raw.description_vegetables_tomato);
+	tomatoSounds.add(R.raw.quiz_vegetables_tomato);
+	tomato.setSound_ids(tomatoSounds);
 	tomato.setName("tomato");
 	tomato.setDescription("juicy vegetable");
 	tomato.setId(R.drawable.img_vegetables_tomato);
-	//tomato.setSound_paths("path");
+	
+	ArrayList<Integer> cucumberSounds = new ArrayList<Integer>();
+	cucumberSounds.add(R.raw.cucumber);
+	cucumberSounds.add(R.raw.description_vegetables_cucumber);
+	cucumberSounds.add(R.raw.quiz_vegetables_cucumber);
+	cucumber.setSound_ids(cucumberSounds);
 	cucumber.setName("cucumber");
 	cucumber.setDescription("long vegetable");
 	cucumber.setId(R.drawable.img_vegetables_cucumber);
-	//cucumber.setSound_paths("path");
+
+	ArrayList<Integer> cabbageSounds = new ArrayList<Integer>();
+	cabbageSounds.add(R.raw.cabbage);
+	cabbageSounds.add(R.raw.description_vegetables_cabbage);
+	cabbageSounds.add(R.raw.quiz_vegetables_cabbage);
+	cabbage.setSound_ids(cabbageSounds);
 	cabbage.setName("cabbage");
 	cabbage.setDescription("leafy vegetable");
 	cabbage.setId(R.drawable.img_vegetables_cabbage);
-	//cabbage.setSound_paths("path");
+
+	ArrayList<Integer> carrotSounds = new ArrayList<Integer>();
+	carrotSounds.add(R.raw.carrot);
+	carrotSounds.add(R.raw.description_vegetables_carrot);
+	carrotSounds.add(R.raw.quiz_vegetables_carrot);
+	carrot.setSound_ids(carrotSounds);
 	carrot.setName("carrot");
 	carrot.setDescription("long orange vegetable");
 	carrot.setId(R.drawable.img_vegetables_carrot);

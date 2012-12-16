@@ -131,5 +131,4 @@ public class SimpleFoodManager implements FoodManager {
 	public ArrayList<Food> getAllFoods() {
 		return FoodCollection;
 	}
-
 }

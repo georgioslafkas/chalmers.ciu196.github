@@ -104,10 +104,10 @@ public class Food extends Object implements Serializable {
 		}
 		
 		// sound_ids
-		public void setSound_ids(ArrayList<Integer> ids) { // Sets the image id
+		public void setSound_ids(ArrayList<Integer> ids) { // Sets the sound id
 			this.sound_id = ids;
 		}
-		public ArrayList<Integer> getSound_ids() { // Returns the array with the ids of the images
+		public ArrayList<Integer> getSound_ids() { // Returns the array with the ids of the sounds
 			return sound_id;
 		}
 		

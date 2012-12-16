@@ -2,6 +2,8 @@ package chalmers.ciu196.foodschool;
 
 import java.util.ArrayList;
 
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -16,12 +18,15 @@ public class LearnDetailActivity extends Activity {
 	int foodToShow;
 	Intent startedThis;
 	
+	private MediaPlayer mediaPlayer = new MediaPlayer();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_learn_detail);
 
 	}
+
 
 	public void onResume()
 	{
@@ -33,6 +38,20 @@ public class LearnDetailActivity extends Activity {
 		loadFoodContent(foodToShow);
 		System.out.println(foodToShow);
 		//getNextFoodIndex(foodToShow);
+	}
+	
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		mediaPlayer.release();
+	}
+	
+	@Override
+	protected void onStop()
+	{
+		super.onStop();
+		mediaPlayer.release();
 	}
 	
 	@Override
@@ -70,6 +89,40 @@ public class LearnDetailActivity extends Activity {
 				btnMainImage.setImageResource(foodToShow);
 				txtDescription.setText(currentCat.get(i).getDescription());
 			}
+	}
+	
+	/* This method works similar to the one
+	 * in LearnFoodActivity. Instead of reading
+	 * the name of the food however, it retrieves
+	 * the description.
+	 */
+	public void playFoodDescription(int foodId)
+	{
+		int descriptionToPlay = 0;
+		ArrayList<Food> tempFoods = SimpleFoodManager.getManager().getFoodCatAt(LearnCategoriesActivity.categoryToLearn-1).getFoodsContained();
+		for (int i = 0; i < tempFoods.size(); i++)
+		{
+			if (tempFoods.get(i).getId() == foodId)
+				descriptionToPlay = tempFoods.get(i).getSound_ids().get(1);
+		}
+		mediaPlayer = MediaPlayer.create(this, descriptionToPlay);
+		mediaPlayer.setOnCompletionListener(new OnCompletionListener()
+		{
+
+			public void onCompletion(MediaPlayer mediaPlayer) {
+				mediaPlayer.release();
+			}
+		});
+		mediaPlayer.start();
+	}
+	
+	/* Used as a handler for the readDescription button.
+	 * Simply invokes playFoodDescription() with the right
+	 * argument (current food id).
+	 */
+	public void playDescription(View v)
+	{
+		playFoodDescription(foodToShow);
 	}
 	
 	/* This method returns the index of the next

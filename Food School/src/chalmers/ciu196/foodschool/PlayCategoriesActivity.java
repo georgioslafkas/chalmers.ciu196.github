@@ -1,5 +1,7 @@
 package chalmers.ciu196.foodschool;
 
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -20,6 +22,8 @@ public class PlayCategoriesActivity extends Activity {
 	public static int categoryToPlay = -1; /* Category picked
 											* Static, because we need it
 											* in other activities */
+	private MediaPlayer mediaPlayer = new MediaPlayer();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -76,26 +80,32 @@ public class PlayCategoriesActivity extends Activity {
 			case R.id.btnFruit:
 				/* Set the respective category */
 				categoryToPlay = FRUITS;
+				playCategorySound(R.raw.categories_fruits);
 				break;	
 			case R.id.btnVegetables:
 				/* Set the respective category */
 				categoryToPlay = VEGETABLES;
+				playCategorySound(R.raw.categories_vegetables);
 				break;
 			case R.id.btnMeat:
 				/* Set the respective category */
 				categoryToPlay = MEAT;
+				playCategorySound(R.raw.categories_protein);
 				break;
 			case R.id.btnDairy:
 				/* Set the respective category */
 				categoryToPlay = DAIRY;
+				playCategorySound(R.raw.categories_dairy);
 				break;
 			case R.id.btnCereals:
 				/* Set the respective category */
 				categoryToPlay = CEREALS;
+				playCategorySound(R.raw.categories_cereals);
 				break;
 			case R.id.btnAll:
 				/* Set the respective category */
 				categoryToPlay = ALL;
+				playCategorySound(R.raw.categories_all);
 				break;
 			default:
 				break;
@@ -109,5 +119,21 @@ public class PlayCategoriesActivity extends Activity {
 		Intent goHome = new Intent(this, MainActivity.class);
 		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(goHome);
+	}
+	
+	/* This method simply reproduces the name of the food category.
+	 * The argument it needs is the ID of the category, which in
+	 * our case is the image of the category inside the raw folder. */
+	public void playCategorySound(int categoryID)
+	{
+		mediaPlayer = MediaPlayer.create(this, categoryID);
+		mediaPlayer.setOnCompletionListener(new OnCompletionListener()
+		{
+
+			public void onCompletion(MediaPlayer mediaPlayer) {
+				mediaPlayer.release();
+			}
+		});
+		mediaPlayer.start();
 	}
 }

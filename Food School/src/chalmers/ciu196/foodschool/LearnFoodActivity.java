@@ -1,5 +1,9 @@
 package chalmers.ciu196.foodschool;
 
+import java.util.ArrayList;
+
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,6 +23,7 @@ public class LearnFoodActivity extends Activity {
 					  DAIRY = 4,
 					  CEREALS = 5;
 	Intent startDetailFood; /* The intent that will take us to the detail view for a food */
+	MediaPlayer mediaPlayer = new MediaPlayer();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -211,15 +216,18 @@ public class LearnFoodActivity extends Activity {
 		{
 			case R.id.btn1_1:
 				foodToShow = R.drawable.img_fruits_apple;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_2:
 				foodToShow = R.drawable.img_fruits_banana;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_3:
 				foodToShow = R.drawable.img_fruits_cherry;
 				break;
 			case R.id.btn1_4:
 				foodToShow = R.drawable.img_fruits_grapes;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_1:
 				foodToShow = R.drawable.img_fruits_lemon;
@@ -229,6 +237,7 @@ public class LearnFoodActivity extends Activity {
 				break;
 			case R.id.btn2_3:
 				foodToShow = R.drawable.img_fruits_orange;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_4:
 				foodToShow = R.drawable.img_fruits_peach;
@@ -260,12 +269,15 @@ public class LearnFoodActivity extends Activity {
 				break;
 			case R.id.btn1_2:
 				foodToShow = R.drawable.img_vegetables_cabbage;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_3:
 				foodToShow = R.drawable.img_vegetables_carrot;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_4:
 				foodToShow = R.drawable.img_vegetables_cucumber;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_1:
 				foodToShow = R.drawable.img_vegetables_eggplant;
@@ -290,6 +302,7 @@ public class LearnFoodActivity extends Activity {
 				break;
 			case R.id.btn3_4:
 				foodToShow = R.drawable.img_vegetables_tomato;
+				playFoodSound(foodToShow);
 				break;
 			default:
 				break;
@@ -371,6 +384,34 @@ public class LearnFoodActivity extends Activity {
 		}
 	}
 
+	/* This method plays the sound
+	 * of a food in the grid.
+	 * It receives the food id as
+	 * an argument, scans the list
+	 * of foods for that category until it
+	 * finds it and then obtains the sound.
+	 * Finally it reproduces it.
+	 */
+	public void playFoodSound(int foodId)
+	{
+		int soundToPlay = 0;
+		ArrayList<Food> tempFoods = SimpleFoodManager.getManager().getFoodCatAt(LearnCategoriesActivity.categoryToLearn-1).getFoodsContained();
+		for (int i = 0; i < tempFoods.size(); i++)
+		{
+			if (tempFoods.get(i).getId() == foodId)
+				soundToPlay = tempFoods.get(i).getSound_ids().get(0);
+		}
+		mediaPlayer = MediaPlayer.create(this, soundToPlay);
+		mediaPlayer.setOnCompletionListener(new OnCompletionListener()
+		{
+
+			public void onCompletion(MediaPlayer mediaPlayer) {
+				mediaPlayer.release();
+			}
+		});
+		mediaPlayer.start();
+	}
+	
 	/* Categories button listener */
 	public void goToCategories(View v)
 	{

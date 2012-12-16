@@ -69,14 +69,16 @@
             android:layout_weight="1"
             android:ems="10"
             android:text="There are more than 7000 varieties of apples grown worldwide. " />
+
         <ImageButton
-            android:id="@+id/imageButton1"
+            android:id="@+id/btnReadQuiz"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/fruits_detail_detail_playdescription"
-            android:background="@android:color/transparent"/>
+            android:onClick = "playQuiz" />
         
     </TableRow>
 

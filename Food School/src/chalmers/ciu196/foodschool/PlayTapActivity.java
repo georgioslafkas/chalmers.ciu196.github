@@ -37,7 +37,6 @@ public class PlayTapActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play_tap);
 
-		
 		PlayTapActivity.activityInstance = this;	/* Initialize the instance of this activity */
 		/* Set timers and progress bar */
 		ProgressBar tapProgBar = (ProgressBar) findViewById(R.id.progBarTap);
@@ -103,7 +102,6 @@ public class PlayTapActivity extends Activity {
 		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
-	
 	
 	@Override
 	public void onStop()
