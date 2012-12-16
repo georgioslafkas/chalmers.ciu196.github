@@ -75,6 +75,10 @@ public class LearnDetailActivity extends Activity {
 	public void loadFoodContent(int foodToShow)
 	{
 		ImageButton btnMainImage = (ImageButton) findViewById(R.id.btnMainFoodImg);
+		ImageButton btnImage1 = (ImageButton) findViewById(R.id.btnImage1);
+		ImageButton btnImage2 = (ImageButton) findViewById(R.id.btnImage2);
+		ImageButton btnImage3 = (ImageButton) findViewById(R.id.btnImage3);
+		ImageButton btnImage4 = (ImageButton) findViewById(R.id.btnImage4);
 		TextView txtDescription = (TextView) findViewById(R.id.txtDescription);
 		
 		/* Obtain a copy of the current category's food list */
@@ -87,6 +91,10 @@ public class LearnDetailActivity extends Activity {
 			if (currentCat.get(i).getId() == foodToShow)
 			{
 				btnMainImage.setImageResource(foodToShow);
+				btnImage1.setImageResource(currentCat.get(i).getImage_ids().get(0));
+				btnImage2.setImageResource(currentCat.get(i).getImage_ids().get(1));
+				btnImage3.setImageResource(currentCat.get(i).getImage_ids().get(2));
+				btnImage4.setImageResource(currentCat.get(i).getImage_ids().get(3));
 				txtDescription.setText(currentCat.get(i).getDescription());
 			}
 	}

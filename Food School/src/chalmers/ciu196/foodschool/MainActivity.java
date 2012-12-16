@@ -86,26 +86,42 @@ public class MainActivity extends Activity {
 	foodManager.addFoodToCategory(oats, cereals);
 	foodManager.addFoodToCategory(bread, cereals);
 	
-	// add values to the apple 
+	/**** SAMPLE FOOD CREATION ****
+	 * This is how you create an object
+	 * for usage in this application.
+	 * Use apple as an example for the
+	 * rest of the foods.
+	 **** ******************** ****/
+	apple.setName("apple");
+	apple.setDescription("red fruit"); /* This should have the actual description */
+	apple.setId(R.drawable.img_fruits_apple);
+	ArrayList<Integer> appleImages = new ArrayList<Integer>();
+	appleImages.add(R.drawable.fruits_detail_apple_applebasket);
+	appleImages.add(R.drawable.fruits_detail_apple_applejuice);
+	appleImages.add(R.drawable.fruits_detail_apple_appletree);
+	appleImages.add(R.drawable.fruits_detail_apple_peeledapple);
+	apple.setImage_ids(appleImages);
 	ArrayList<Integer> appleSounds = new ArrayList<Integer>();
 	appleSounds.add(R.raw.apple);
 	appleSounds.add(R.raw.description_fruits_apple);
 	appleSounds.add(R.raw.quiz_fruits_apple);
 	apple.setSound_ids(appleSounds);
-	apple.setName("apple");
-	apple.setDescription("red fruit");
-	apple.setId(R.drawable.img_fruits_apple);
 	ArrayList<String> cosa=new ArrayList<String>();
 	cosa.add("url1");
 	cosa.add("url2");	
 	apple.setImage_paths(cosa);
-	//apple.setSound_paths("path");
 	
 	ArrayList<Integer> orangeSounds = new ArrayList<Integer>();
 	orangeSounds.add(R.raw.orange);
 	orangeSounds.add(R.raw.description_fruits_orange);
 	orangeSounds.add(R.raw.quiz_fruits_orange);
 	orange.setSound_ids(orangeSounds);
+	ArrayList<Integer> orangeImages = new ArrayList<Integer>();
+	orangeImages.add(R.drawable.fruits_detail_orange_large);
+	orangeImages.add(R.drawable.fruits_detail_orange_orangejuice);
+	orangeImages.add(R.drawable.fruits_detail_orange_orangetree);
+	orangeImages.add(R.drawable.fruits_detail_orange_pressedorange);
+	orange.setImage_ids(orangeImages);
 	orange.setName("orange");
 	orange.setDescription("round fruit");
 	orange.setId(R.drawable.img_fruits_orange);

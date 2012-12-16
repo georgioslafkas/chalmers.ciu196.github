@@ -96,38 +96,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp" >
+
         <ImageButton
-            android:id="@+id/imageButtonw"
+            android:id="@+id/btnImage1"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:src="@drawable/fruits_detail_apple_applejuice"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fruits_detail_apple_applejuice" />
+
         <ImageButton
-            android:id="@+id/imageButtonx"
+            android:id="@+id/btnImage2"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:src="@drawable/fruits_detail_apple_applebasket"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fruits_detail_apple_applebasket" />
+
          <ImageButton
-            android:id="@+id/imageButtony"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            android:src="@drawable/fruits_detail_apple_appletree"
-            android:background="@android:color/transparent"/>
+             android:id="@+id/btnImage3"
+             android:layout_width="wrap_content"
+             android:layout_height="200dp"
+             android:layout_weight="1"
+             android:background="@android:color/transparent"
+             android:scaleType="fitCenter"
+             android:src="@drawable/fruits_detail_apple_appletree" />
+
          <ImageButton
-            android:id="@+id/imageButtonz"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            android:src="@drawable/fruits_detail_apple_peeledapple"
-            android:background="@android:color/transparent"/>
+             android:id="@+id/btnImage4"
+             android:layout_width="wrap_content"
+             android:layout_height="200dp"
+             android:layout_weight="1"
+             android:background="@android:color/transparent"
+             android:scaleType="fitCenter"
+             android:src="@drawable/fruits_detail_apple_peeledapple" />
+
     </TableRow>
 
 
