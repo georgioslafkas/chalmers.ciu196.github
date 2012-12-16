@@ -232,11 +232,11 @@ public class MainActivity extends Activity {
 	// End of database related code ===========================================
 	
 	
-	XmlParser uf=new XmlParser();
-	CategoryCollection nene=new CategoryCollection();
-	nene=uf.categoryfromXML(R.raw.data, this);
-	Log.d("SOCOOOORRO",String.valueOf(nene.getList().get(0).getFoodsContained().get(0).getId()));
-	Log.d("SOCOOOORRO2",String.valueOf(R.drawable.img_cereals_bread));
+	//XmlParser uf=new XmlParser();
+	//CategoryCollection nene=new CategoryCollection();
+	//nene=uf.categoryfromXML(R.raw.data, this);
+	//Log.d("SOCOOOORRO",String.valueOf(nene.getList().get(0).getFoodsContained().get(0).getId()));
+	//Log.d("SOCOOOORRO2",String.valueOf(R.drawable.img_cereals_bread));
 	
 	
 	}
@@ -258,8 +258,6 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	
-	
 	@Override
 	public void onDestroy(){
 		super.onDestroy();
@@ -275,8 +273,15 @@ public class MainActivity extends Activity {
          super.onPause();
          dbManager().close();
          databaseManager = null;
+         stopService(new Intent(this,MediaServiceA.class));
      }
 	
+	@Override
+	protected void onStop()
+	{
+		super.onStop();
+		stopService(new Intent(this,MediaServiceA.class));
+	}
 	// End of Database related variables ======================================
 
 	/* Learn button click listener, takes you to the food

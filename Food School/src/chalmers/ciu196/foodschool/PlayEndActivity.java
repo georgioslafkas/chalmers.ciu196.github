@@ -21,22 +21,29 @@ public class PlayEndActivity extends Activity {
 	}
 	
 	@Override
-	public void onResume()
+	protected void onResume()
 	{
 		super.onResume();
 		stopService(new Intent(this,MediaServiceB.class));
 	}
 	
 	@Override
-	public void onPause()
+	protected void onPause()
 	{
 		super.onPause();
+		Intent goToPlay = new Intent(this, PlayCategoriesActivity.class);
+		goToPlay.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goToPlay);
+		finish();
 	}
 	
 	@Override
-	public void onStop()
+	protected void onStop()
 	{
 		super.onStop();
+		Intent goToPlay = new Intent(this, PlayCategoriesActivity.class);
+		goToPlay.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goToPlay);
 		finish();
 	}
 }

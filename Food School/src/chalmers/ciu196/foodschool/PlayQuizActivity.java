@@ -98,12 +98,14 @@ public class PlayQuizActivity extends Activity {
 		/* Cancel the timers */
 		timer.cancel();
 		cooldownTimer.cancel();
+		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
 	
 	@Override
 	public void onDestroy(){
 		super.onDestroy();
+		//stopService(new Intent(this,MediaServiceB.class));
 		}
 	
 	@Override
@@ -112,6 +114,7 @@ public class PlayQuizActivity extends Activity {
 		super.onStop();
 		timer.cancel();
 		cooldownTimer.cancel();
+		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
 	
@@ -400,6 +403,7 @@ public class PlayQuizActivity extends Activity {
 				goToPlayTap.putExtra("currentFood", currentFood);
 				goToPlayTap.putExtra("foodlist", foods);
 				timer.cancel();
+				disableButtons();
 				cooldownTimer.start();
 				break;
 			case R.id.btnAnswer2:
@@ -410,6 +414,7 @@ public class PlayQuizActivity extends Activity {
 				goToPlayTap.putExtra("currentFood", currentFood);
 				goToPlayTap.putExtra("foodlist", foods);
 				timer.cancel();
+				disableButtons();
 				cooldownTimer.start();
 				break;
 			case R.id.btnAnswer3:
@@ -420,6 +425,7 @@ public class PlayQuizActivity extends Activity {
 				goToPlayTap.putExtra("currentFood", currentFood);
 				goToPlayTap.putExtra("foodlist", foods);
 				timer.cancel();
+				disableButtons();
 				cooldownTimer.start();
 				break;
 			case R.id.btnAnswer4:
@@ -430,6 +436,7 @@ public class PlayQuizActivity extends Activity {
 				goToPlayTap.putExtra("currentFood", currentFood);
 				goToPlayTap.putExtra("foodlist", foods);
 				timer.cancel();
+				disableButtons();
 				cooldownTimer.start();
 				break;
 				default:
@@ -437,10 +444,24 @@ public class PlayQuizActivity extends Activity {
 					goToPlayTap.putExtra("currentFood", currentFood);
 					goToPlayTap.putExtra("foodlist", foods);
 					timer.cancel();
+					disableButtons();
 					cooldownTimer.start();
 					break;
 		}//end switch
 	}//end checkAnswer
+	
+	public void disableButtons()
+	{
+		ImageButton btnAnswer1 = (ImageButton) findViewById(R.id.btnAnswer1);
+		ImageButton btnAnswer2 = (ImageButton) findViewById(R.id.btnAnswer2);
+		ImageButton btnAnswer3 = (ImageButton) findViewById(R.id.btnAnswer3);
+		ImageButton btnAnswer4 = (ImageButton) findViewById(R.id.btnAnswer4);
+		
+		btnAnswer1.setEnabled(false);
+		btnAnswer2.setEnabled(false);
+		btnAnswer3.setEnabled(false);
+		btnAnswer4.setEnabled(false);
+	}
 	
 	/* Listener for the home button */
 	public void goHome(View v)
@@ -449,6 +470,7 @@ public class PlayQuizActivity extends Activity {
 		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(goHome);
 	}
+	/* Listener for categories button */
 	public void goToCategories(View v)
 	{
 		Intent goToCategories = new Intent(this, PlayCategoriesActivity.class);

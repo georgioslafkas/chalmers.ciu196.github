@@ -100,6 +100,7 @@ public class PlayTapActivity extends Activity {
 			goToEndGame.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(goToEndGame);
 		}
+		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
 	
@@ -116,6 +117,7 @@ public class PlayTapActivity extends Activity {
 			goToEndGame.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(goToEndGame);
 		};
+		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
 	
@@ -157,7 +159,8 @@ public class PlayTapActivity extends Activity {
 		ArrayList<Food> tempFoodList = new ArrayList<Food>(foods);
 		
 		/* Remove the food in question from this list 
-		 * and shuffle it*/
+		 * and shuffle it
+		 **/
 		tempFoodList.remove(currentFood);
 		Collections.shuffle(tempFoodList);
 		
@@ -249,8 +252,11 @@ public class PlayTapActivity extends Activity {
 				break;
 			case 5:
 				btnTap1.setTag(wrongAnswer);
+				btnTap1.setImageResource(wrongAnswerImages.get(0));
 				btnTap2.setTag(wrongAnswer);
+				btnTap2.setImageResource(wrongAnswerImages.get(1));
 				btnTap3.setTag(wrongAnswer);
+				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
 				btnTap5.setTag(correctAnswer);
 				btnTap5.setImageResource(foods.get(currentFood).getId());
@@ -260,8 +266,11 @@ public class PlayTapActivity extends Activity {
 				break;
 			case 6:
 				btnTap1.setTag(wrongAnswer);
+				btnTap1.setImageResource(wrongAnswerImages.get(0));
 				btnTap2.setTag(wrongAnswer);
+				btnTap2.setImageResource(wrongAnswerImages.get(1));
 				btnTap3.setTag(wrongAnswer);
+				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
 				btnTap5.setTag(wrongAnswer);
 				btnTap6.setTag(correctAnswer);
@@ -271,8 +280,11 @@ public class PlayTapActivity extends Activity {
 				break;
 			case 7:
 				btnTap1.setTag(wrongAnswer);
+				btnTap1.setImageResource(wrongAnswerImages.get(0));
 				btnTap2.setTag(wrongAnswer);
+				btnTap2.setImageResource(wrongAnswerImages.get(1));
 				btnTap3.setTag(wrongAnswer);
+				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
 				btnTap5.setTag(wrongAnswer);
 				btnTap6.setTag(wrongAnswer);
@@ -282,8 +294,11 @@ public class PlayTapActivity extends Activity {
 				break;
 			case 8:
 				btnTap1.setTag(wrongAnswer);
+				btnTap1.setImageResource(wrongAnswerImages.get(0));
 				btnTap2.setTag(wrongAnswer);
+				btnTap2.setImageResource(wrongAnswerImages.get(1));
 				btnTap3.setTag(wrongAnswer);
+				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
 				btnTap5.setTag(wrongAnswer);
 				btnTap6.setTag(wrongAnswer);
@@ -321,73 +336,104 @@ public class PlayTapActivity extends Activity {
 				if (btnTap1.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 			case R.id.btnTap2:
 				if (btnTap2.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 			case R.id.btnTap3:
 				if (btnTap3.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 			case R.id.btnTap4:
 				if (btnTap4.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 			case R.id.btnTap5:
 				if (btnTap5.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 			case R.id.btnTap6:
 				if (btnTap6.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 			case R.id.btnTap7:
 				if (btnTap7.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 			case R.id.btnTap8:
 				if (btnTap8.getTag().equals(correctAnswer))
 					Toast.makeText(getApplicationContext(), "Good!", Toast.LENGTH_SHORT).show();
 				else
-					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName() + ", try again!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Hmm that doesn't look like " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 				timer.cancel();
+				disableButtons();
 				tapCoolDownTimer.start();
 				break;
 				default:
 					Toast.makeText(getApplicationContext(), "Ohh you didn't pick every " + foods.get(currentFood-1).getName(), Toast.LENGTH_SHORT).show();
 					timer.cancel();
+					disableButtons();
 					tapCoolDownTimer.start();
 					break;
 		}//end switch
 	}//end checkAnswer
+	
+	/* Disable all the buttons after user clicked on one */
+	public void disableButtons()
+	{
+		ImageButton btnTap1 = (ImageButton) findViewById(R.id.btnTap1);
+		ImageButton btnTap2 = (ImageButton) findViewById(R.id.btnTap2);
+		ImageButton btnTap3 = (ImageButton) findViewById(R.id.btnTap3);
+		ImageButton btnTap4 = (ImageButton) findViewById(R.id.btnTap4);
+		ImageButton btnTap5 = (ImageButton) findViewById(R.id.btnTap5);
+		ImageButton btnTap6 = (ImageButton) findViewById(R.id.btnTap6);
+		ImageButton btnTap7 = (ImageButton) findViewById(R.id.btnTap7);
+		ImageButton btnTap8 = (ImageButton) findViewById(R.id.btnTap8);
+		
+		btnTap1.setEnabled(false);
+		btnTap2.setEnabled(false);
+		btnTap3.setEnabled(false);
+		btnTap4.setEnabled(false);
+		btnTap5.setEnabled(false);
+		btnTap6.setEnabled(false);
+		btnTap7.setEnabled(false);
+		btnTap8.setEnabled(false);
+	}
 	
 	/* Home button listener */
 	public void goHome(View v)
@@ -396,6 +442,7 @@ public class PlayTapActivity extends Activity {
 		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(goHome);
 	}
+	/* Listener for categories button */
 	public void goToCategories(View v)
 	{
 		Intent goToCategories = new Intent(this, PlayCategoriesActivity.class);

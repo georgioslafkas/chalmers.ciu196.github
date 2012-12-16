@@ -49,12 +49,21 @@ public class LearnDetailActivity extends Activity {
 		startActivity(goHome);
 	}
 	
+	/* This method loads the necessary content
+	 * for a food, to the detail activity GUI
+	 * elements (images, text fields)
+	 */
 	public void loadFoodContent(int foodToShow)
 	{
 		ImageButton btnMainImage = (ImageButton) findViewById(R.id.btnMainFoodImg);
 		TextView txtDescription = (TextView) findViewById(R.id.txtDescription);
 		
+		/* Obtain a copy of the current category's food list */
 		ArrayList<Food> currentCat = new ArrayList<Food>(SimpleFoodManager.getManager().getFoodCatAt(LearnCategoriesActivity.categoryToLearn-1).getFoodsContained());
+		/* Scan that copy, compare id's and when
+		 * you find the one we're interested in
+		 * load it's content to the GUI elements
+		 */
 		for (int i = 0; i < currentCat.size(); i++)
 			if (currentCat.get(i).getId() == foodToShow)
 			{
@@ -63,11 +72,20 @@ public class LearnDetailActivity extends Activity {
 			}
 	}
 	
+	/* This method returns the index of the next
+	 * food in the grid, to be used in the next
+	 * button handler
+	 */
 	public int getNextFoodIndex(int foodToShow)
 	{
 		int nextFood = 0;
+		/* Copy of the current category's list of foods */
 		ArrayList<Food> currentCat = new ArrayList<Food>(SimpleFoodManager.getManager().getFoodCatAt(LearnCategoriesActivity.categoryToLearn-1).getFoodsContained());
 
+		/* Scan it, when you find the food we're interested in,
+		 * increment the nextIndex to point to the next food.
+		 * If it goes out of bounds, set it to 0 (circulates the list)
+		 */
 		for (int i = 0; i < currentCat.size(); i++)
 			if (currentCat.get(i).getId() == foodToShow)
 			{
@@ -75,22 +93,30 @@ public class LearnDetailActivity extends Activity {
 				if (!(nextFood < currentCat.size()))
 						nextFood = 0;
 			}
-		System.out.println("Next food index from inside getNext is "+nextFood);
+		/* Return the index */
 		return nextFood;
 	}
 	
+	/* This method uses the nextFood index from above to
+	 * actually show the details of the next food.
+	 * It restarts the current activity with a different
+	 * food as the selected one.
+	 */
 	public void goToNextFood(View v)
 	{
 		int nextFood = getNextFoodIndex(foodToShow);
+		/* Copy of the current category's list of foods */
 		ArrayList<Food> currentCat = new ArrayList<Food>(SimpleFoodManager.getManager().getFoodCatAt(LearnCategoriesActivity.categoryToLearn-1).getFoodsContained());
+		/* Take the id of the next food */
 		foodToShow = currentCat.get(nextFood).getId();
+		/* Start the activity again with the next food as extra info */
 		Intent showNextFood = new Intent(this, LearnDetailActivity.class);
 		showNextFood.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		showNextFood.putExtra("food", foodToShow);
-		System.out.println("Food index from inside goToNext is "+foodToShow);
 		startActivity(showNextFood);
 	}
 	
+	/* Same as above, but for the previous food index */
 	public int getPreviousFoodIndex(int foodToShow)
 	{
 		int previousFood = 0;
@@ -102,6 +128,10 @@ public class LearnDetailActivity extends Activity {
 		return previousFood;
 	}
 	
+	/* Same as goToNextFood, but with previousFood index.
+	 * Only difference, if you go back from the first food,
+	 * it takes you to the food categories grid.
+	 */
 	public void goToPreviousFood(View v)
 	{
 		Intent showPreviousFood;
@@ -119,9 +149,10 @@ public class LearnDetailActivity extends Activity {
 		startActivity(showPreviousFood);
 	}
 	
-	public void goToCategories(View v)
+	/* Takes you back to the grid with foods from that category */
+	public void goToFoods(View v)
 	{
-		Intent goToCategories = new Intent(this, LearnCategoriesActivity.class);
+		Intent goToCategories = new Intent(this, LearnFoodActivity.class);
 		goToCategories.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(goToCategories);
 	}

@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class LearnFoodActivity extends Activity {
-	private final int NOT_FOUND = 0;
-	private int foodToShow = -1;
+	private final int NOT_FOUND = 0;	/* If a food or category is not found, 
+										 * use that to indicate it */
+	private int foodToShow = -1;	/* Similarly for the food chosen */
 	/* These variables represent the category of food
 	 * the user can choose to learn about */
 	private final int FRUITS = 1,
@@ -17,15 +18,37 @@ public class LearnFoodActivity extends Activity {
 					  MEAT = 3,
 					  DAIRY = 4,
 					  CEREALS = 5;
-	Intent startDetailFood;
+	Intent startDetailFood; /* The intent that will take us to the detail view for a food */
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_learn_food);
+	}
 
+	@Override
+	public void onResume()
+	{
+		super.onResume();
 		/* Get the intent that started this activity */
 		Intent startedThis = getIntent();
-		
+		/* Set the right food images on the buttons */
+		setFoodButtons();
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_learn_food, menu);
+		return true;
+	}
+
+	/* This method sets the appropriate images
+	 * on the buttons of the grid, according
+	 * to what category was selected
+	 */
+	public void setFoodButtons()
+	{
 		/* Take references to all the buttons */
 		ImageButton btn1_1 = (ImageButton) findViewById(R.id.btn1_1);
 		ImageButton btn1_2 = (ImageButton) findViewById(R.id.btn1_2);
@@ -126,14 +149,6 @@ public class LearnFoodActivity extends Activity {
 				break;
 		}
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_learn_food, menu);
-		return true;
-	}
-
 	
 	/* Click handler that takes you to the detail
 	 * activity for a specific food.
@@ -159,6 +174,11 @@ public class LearnFoodActivity extends Activity {
 		startActivity(goHome);
 	}
 	
+	/* This method handles what food was picked
+	 * to learn more about, by calling the
+	 * appropriate method, depending on what
+	 * category we're in
+	 */
 	public void pickFoodToShow(View v)
 	{
 		switch (LearnCategoriesActivity.categoryToLearn)
@@ -351,6 +371,7 @@ public class LearnFoodActivity extends Activity {
 		}
 	}
 
+	/* Categories button listener */
 	public void goToCategories(View v)
 	{
 		Intent goToCategories = new Intent(this, LearnCategoriesActivity.class);

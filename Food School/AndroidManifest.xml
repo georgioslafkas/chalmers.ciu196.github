@@ -15,8 +15,7 @@
         <activity
             android:name="chalmers.ciu196.foodschool.MainActivity"
             android:label="@string/title_activity_main" 
-            android:screenOrientation="landscape"
-            android:clearTaskOnLaunch="true">
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

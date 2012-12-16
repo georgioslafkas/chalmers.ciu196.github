@@ -8,13 +8,18 @@ import android.view.View;
 
 
 public class LearnCategoriesActivity extends Activity {
+	/* Category indices */
 	private final int FRUITS = 1,
 					  VEGETABLES = 2,
 					  MEAT = 3,
 					  DAIRY = 4,
 					  CEREALS = 5;
 	
+	/* The first index of the food to be displayed
+	 * must always be the 0 (food at 0 position of array list)
+	 */
 	private final int firstFood = 0;
+	/* The category of food to learn about */
 	public static int categoryToLearn = -1;				  
 	
 	@Override
@@ -40,10 +45,8 @@ public class LearnCategoriesActivity extends Activity {
 
 	/* Click handler that takes you to the food activity
 	 * that displays all the different foods.
-	 * NOTE: This should send extra info in order to
-	 * start the activity with the proper content,
-	 * e.g. tapping "Fruit" should fill the grid
-	 * with the fruits etc.
+	 * Simply sets the static variable categoryToLearn
+	 * to the respective index of food category
 	 */
 	public void startLearnFoodActivity(View v)
 	{

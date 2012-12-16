@@ -39,7 +39,7 @@ public class SimpleFoodManager implements FoodManager {
 	{
 	}
 	
-	public void initialize(Context cont){
+	/*public void initialize(Context cont){
 		XmlParser ains=new XmlParser();
 		CategoryCollection test=ains.categoryfromXML(R.raw.data, cont);
 		FoodCategoryCollectionB=test.getList();
@@ -49,7 +49,7 @@ public class SimpleFoodManager implements FoodManager {
 			}
 		}
 		
-	}
+	}*/
 	
 	/* Return number of categories */
 	public int getCatCount() { 
