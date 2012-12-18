@@ -13,7 +13,7 @@ import android.view.Menu;
 import android.view.View;
 
 public class MainActivity extends Activity {
-	
+	public ArrayList<Integer> test = new ArrayList<Integer>();
 	// Database related variables =============================================
 	private DbManager databaseManager;
 	// End of Database related variables ======================================
