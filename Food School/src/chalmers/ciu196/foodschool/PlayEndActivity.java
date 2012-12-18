@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 
 public class PlayEndActivity extends Activity {
 
@@ -24,7 +25,7 @@ public class PlayEndActivity extends Activity {
 	protected void onResume()
 	{
 		super.onResume();
-		stopService(new Intent(this,MediaServiceB.class));
+		startService(new Intent(this,MediaServiceB.class));	
 	}
 	
 	@Override
@@ -41,9 +42,24 @@ public class PlayEndActivity extends Activity {
 	protected void onStop()
 	{
 		super.onStop();
+		stopService(new Intent(this,MediaServiceB.class));
 		Intent goToPlay = new Intent(this, PlayCategoriesActivity.class);
 		goToPlay.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(goToPlay);
 		finish();
+	}
+	/* Home button listener */
+	public void goHome(View v)
+	{
+		Intent goHome = new Intent(this, MainActivity.class);
+		goHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goHome);
+	}
+	/* Listener for categories button */
+	public void goToCategories(View v)
+	{
+		Intent goToCategories = new Intent(this, PlayCategoriesActivity.class);
+		goToCategories.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(goToCategories);
 	}
 }

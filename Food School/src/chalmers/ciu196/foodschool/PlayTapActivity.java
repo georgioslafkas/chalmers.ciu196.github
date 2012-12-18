@@ -50,8 +50,6 @@ public class PlayTapActivity extends Activity {
 	public void onResume()
 	{
 		super.onResume();
-		stopService(new Intent(this,MediaServiceA.class));
-		startService(new Intent(this,MediaServiceB.class));
 		/* Initialize the intent that takes back to the quiz */
 		goToPlayQuiz = new Intent(this, PlayQuizActivity.class);
 		goToPlayQuiz.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

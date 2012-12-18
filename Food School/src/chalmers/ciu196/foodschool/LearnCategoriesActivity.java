@@ -34,12 +34,7 @@ public class LearnCategoriesActivity extends Activity {
 
 
 	}
-	@Override
-	public void onResume(){
-		super.onResume();
-		stopService(new Intent(this,MediaServiceA.class));
 
-	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

@@ -55,8 +55,6 @@ public class PlayQuizActivity extends Activity {
 	public void onResume()
 	{
 		super.onResume();
-		stopService(new Intent(this,MediaServiceA.class));
-		startService(new Intent(this,MediaServiceB.class));
 		/* Get the intent that started this activity */
 		Intent startedThis = getIntent();
 		
@@ -102,16 +100,10 @@ public class PlayQuizActivity extends Activity {
 		timer.cancel();
 		cooldownTimer.cancel();
 		mediaPlayer.release();
-		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
 	
-	@Override
-	public void onDestroy(){
-		super.onDestroy();
-		//stopService(new Intent(this,MediaServiceB.class));
-		}
-	
+
 	@Override
 	public void onStop()
 	{
@@ -119,7 +111,6 @@ public class PlayQuizActivity extends Activity {
 		timer.cancel();
 		cooldownTimer.cancel();
 		mediaPlayer.release();
-		//stopService(new Intent(this,MediaServiceB.class));
 		finish();
 	}
 	
