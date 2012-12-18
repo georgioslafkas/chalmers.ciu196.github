@@ -1,14 +1,71 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     tools:context=".PlayEndActivity" >
 
-    <TextView
+    <TableRow
+        android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        android:layout_margin="20dp"
+        android:layout_marginTop="100dp" >
 
-</RelativeLayout>
+        <ImageButton
+            android:id="@+id/CatBtn"
+            android:scaleType="fitStart"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/img_navigation_grid_button"
+            android:layout_weight="1"
+            android:onClick="goToCategories" />
+
+        <ImageButton
+            android:id="@+id/HomeBtn"
+            android:scaleType="fitEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/img_navigation_home_english"
+            android:layout_weight="1"
+            android:onClick="goHome"  />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:id="@+id/EndText"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:height="300dp"
+            android:text="Congratulations!"
+            android:textColor="@android:color/white"
+            android:textSize="50sp" />
+
+    </TableRow>
+    
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:id="@+id/EndText2"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="You finished the quiz, try some other games or learn about new topics..."
+            android:textColor="@android:color/white"
+            android:textSize="30sp"/>
+
+    </TableRow>
+</TableLayout>

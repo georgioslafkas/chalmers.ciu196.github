@@ -21,7 +21,6 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume(){
 		super.onResume();
-		stopService(new Intent(this,MediaServiceB.class));
 		startService(new Intent(this,MediaServiceA.class));
 	}
 	
@@ -47,252 +46,359 @@ public class MainActivity extends Activity {
 	foodManager.addCategory(dairy);
 	foodManager.addCategory(cereals);
 	
-	Food apple = new Food();
-	Food orange = new Food();
-	Food banana = new Food();
-	Food grapes = new Food();
-	foodManager.addFoodToCategory(apple, fruits);
-	foodManager.addFoodToCategory(orange, fruits);
-	foodManager.addFoodToCategory(banana, fruits);
-	foodManager.addFoodToCategory(grapes, fruits);
-	
-	Food tomato = new Food();
-	Food cucumber = new Food();
-	Food cabbage = new Food();
-	Food carrot = new Food();
-	foodManager.addFoodToCategory(tomato, vegetables);
-	foodManager.addFoodToCategory(cucumber, vegetables);
-	foodManager.addFoodToCategory(cabbage, vegetables);
-	foodManager.addFoodToCategory(carrot, vegetables);
-	
-	Food pork = new Food();
-	Food salmon = new Food();
-	Food chicken = new Food();
-	foodManager.addFoodToCategory(pork, meats);
-	foodManager.addFoodToCategory(salmon, meats);
-	foodManager.addFoodToCategory(chicken, meats);
-	
-	Food gouda = new Food();
-	Food yoghurt = new Food();
-	Food milk = new Food();
-	foodManager.addFoodToCategory(gouda, dairy);
-	foodManager.addFoodToCategory(yoghurt, dairy);
-	foodManager.addFoodToCategory(milk, dairy);
-	
-	Food corn = new Food();
-	Food oats = new Food();
-	Food bread = new Food();
-	foodManager.addFoodToCategory(corn, cereals);
-	foodManager.addFoodToCategory(oats, cereals);
-	foodManager.addFoodToCategory(bread, cereals);
-	
 	/**** SAMPLE FOOD CREATION ****
 	 * This is how you create an object
 	 * for usage in this application.
 	 * Use apple as an example for the
 	 * rest of the foods.
 	 **** ******************** ****/
-	apple.setName("apple");
-	apple.setDescription("red fruit"); /* This should have the actual description */
-	apple.setId(R.drawable.img_fruits_apple);
-	ArrayList<Integer> appleImages = new ArrayList<Integer>();
-	appleImages.add(R.drawable.fruits_detail_apple_applebasket);
-	appleImages.add(R.drawable.fruits_detail_apple_applejuice);
-	appleImages.add(R.drawable.fruits_detail_apple_appletree);
-	appleImages.add(R.drawable.fruits_detail_apple_peeledapple);
-	apple.setImage_ids(appleImages);
-	ArrayList<Integer> appleSounds = new ArrayList<Integer>();
-	appleSounds.add(R.raw.apple);
-	appleSounds.add(R.raw.description_fruits_apple);
-	appleSounds.add(R.raw.quiz_fruits_apple);
-	apple.setSound_ids(appleSounds);
-	ArrayList<String> cosa=new ArrayList<String>();
-	cosa.add("url1");
-	cosa.add("url2");	
-	apple.setImage_paths(cosa);
+	Food auxfood=new Food();
 	
-	ArrayList<Integer> orangeSounds = new ArrayList<Integer>();
-	orangeSounds.add(R.raw.orange);
-	orangeSounds.add(R.raw.description_fruits_orange);
-	orangeSounds.add(R.raw.quiz_fruits_orange);
-	orange.setSound_ids(orangeSounds);
-	ArrayList<Integer> orangeImages = new ArrayList<Integer>();
-	orangeImages.add(R.drawable.fruits_detail_orange_large);
-	orangeImages.add(R.drawable.fruits_detail_orange_orangejuice);
-	orangeImages.add(R.drawable.fruits_detail_orange_orangetree);
-	orangeImages.add(R.drawable.fruits_detail_orange_pressedorange);
-	orange.setImage_ids(orangeImages);
-	orange.setName("orange");
-	orange.setDescription("round fruit");
-	orange.setId(R.drawable.img_fruits_orange);
+	//--------------CEREALS-------------------
+	auxfood.setName("bread");
+	auxfood.setDescription("Bread is prepared by cooking a dough of flour and other ingredients. There are hundreds of types of bread made from different types of flours and with different ingredients. The nutritional content varies depending on the ingredients used.");
+	auxfood.setId(R.drawable.img_cereals_bread);
+	ArrayList<Integer> auximageids = new ArrayList<Integer>();
+	auximageids.add(R.drawable.cereals_detail_bread_large);
+	auximageids.add(R.drawable.cereals_detail_bread_braidedbread);
+	auximageids.add(R.drawable.cereals_detail_bread_sandwich);
+	auximageids.add(R.drawable.cereals_detail_bread_slicedbread);
+	auxfood.setImage_ids(auximageids);
+	ArrayList<Integer> auxsoundids = new ArrayList<Integer>();
+	auxsoundids.add(R.raw.bread);
+	auxsoundids.add(R.raw.description_cereals_bread);
+	auxsoundids.add(R.raw.quiz_cereals_bread);
+	auxfood.setSound_ids(auxsoundids);
+	ArrayList<String> auxquestions=new ArrayList<String>();
+	auxquestions.add("This cereal product is made from flour and other ingredients. There are hundreds of types made from different kinds of flour");
+	auxfood.setQuestions(auxquestions);
+	ArrayList<String> auxanswers=new ArrayList<String>();
+	auxanswers.add("That's right, it is bread!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, cereals);
 	
-	ArrayList<Integer> bananaSounds = new ArrayList<Integer>();
-	bananaSounds.add(R.raw.banana);
-	bananaSounds.add(R.raw.description_fruits_banana);
-	bananaSounds.add(R.raw.quiz_fruits_banana);
-	System.out.println("R.raw.banana is "+R.raw.quiz_fruits_banana);
-	banana.setSound_ids(bananaSounds);
-	banana.setName("banana");
-	banana.setDescription("long fruit");
-	banana.setId(R.drawable.img_fruits_banana);
-	//banana.setSound_paths("path");
+	auxfood.setName("maize");
+	auxfood.setDescription("Maize (also known as corn) is one of the world's major cereal crops and it is used as flour to make bread, breadkfast cereal, popcorn and a variety of meals. Sweet maize is grown and sold as a vegetable. It is a great source of dietary fibre and contains vitamin C, niacin, folate and potassium, which helps balancing the body's fluids.");
+	auxfood.setId(R.drawable.img_cereals_corn);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_cereals_corn);
+	auximageids.add(R.drawable.cereals_detail_corn_large);
+	auximageids.add(R.drawable.cereals_detail_corn_corngrains);
+	auximageids.add(R.drawable.cereals_detail_corn_cornplant);
+	auximageids.add(R.drawable.cereals_detail_corn_popcorn);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.maize);
+	auxsoundids.add(R.raw.description_cereals_maize);
+	auxsoundids.add(R.raw.quiz_cereals_maize);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This cereal crop is used as flour to make bread, breakfast cereal, popcorn and a variety of meals. It also grown as sweet corn to be sold as a vegetable. It contains dietary fibre, vitamin C and potassium, among others");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Well done, it is maize!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, cereals);
 	
-	ArrayList<Integer> grapesSounds = new ArrayList<Integer>();
-	grapesSounds.add(R.raw.grapes);
-	grapesSounds.add(R.raw.description_fruits_grapes);
-	grapesSounds.add(R.raw.quiz_fruits_grapes);
-	grapes.setSound_ids(grapesSounds);
-	grapes.setName("grapes");
-	grapes.setDescription("little tasties");
-	grapes.setId(R.drawable.img_fruits_grapes);
+	auxfood.setName("pasta");
+	auxfood.setDescription("Pasta comes in many shapes and it is usually made from wheat flour. Pasta contains complex carbohydrates which release energy slowly compared to sugar, providing energy for a longer time. It is also a source of iron and vitamin B.");
+	auxfood.setId(R.drawable.img_cereals_pasta);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_cereals_pasta);
+	auximageids.add(R.drawable.cereals_detail_pasta_large);
+	auximageids.add(R.drawable.cereals_detail_pasta_lasagna);
+	auximageids.add(R.drawable.cereals_detail_pasta_ravioli);
+	auximageids.add(R.drawable.cereals_detail_pasta_spaghetti);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.pasta);
+	auxsoundids.add(R.raw.description_cereals_pasta);
+	auxsoundids.add(R.raw.quiz_cereals_pasta);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This cereal product is usually made from wheat flour and can be found in many shapes. It provides you with energy for a long time because of its complex carbohydrates.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Excellent, it is pasta!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, cereals);
 	
-	ArrayList<Integer> tomatoSounds = new ArrayList<Integer>();
-	tomatoSounds.add(R.raw.tomato);
-	tomatoSounds.add(R.raw.description_vegetables_tomato);
-	tomatoSounds.add(R.raw.quiz_vegetables_tomato);
-	tomato.setSound_ids(tomatoSounds);
-	tomato.setName("tomato");
-	tomato.setDescription("juicy vegetable");
-	tomato.setId(R.drawable.img_vegetables_tomato);
+	auxfood.setName("maize");
+	auxfood.setDescription("Maize (also known as corn) is one of the world's major cereal crops and it is used as flour to make bread, breadkfast cereal, popcorn and a variety of meals. Sweet maize is grown and sold as a vegetable. It is a great source of dietary fibre and contains vitamin C, niacin, folate and potassium, which helps balancing the body's fluids.");
+	auxfood.setId(R.drawable.img_cereals_corn);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_cereals_corn);
+	auximageids.add(R.drawable.cereals_detail_corn_large);
+	auximageids.add(R.drawable.cereals_detail_corn_corngrains);
+	auximageids.add(R.drawable.cereals_detail_corn_cornplant);
+	auximageids.add(R.drawable.cereals_detail_corn_popcorn);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.maize);
+	auxsoundids.add(R.raw.description_cereals_maize);
+	auxsoundids.add(R.raw.quiz_cereals_maize);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This cereal crop is used as flour to make bread, breakfast cereal, popcorn and a variety of meals. It also grown as sweet corn to be sold as a vegetable. It contains dietary fibre, vitamin C and potassium, among others");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Well done, it is maize!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, cereals);
 	
-	ArrayList<Integer> cucumberSounds = new ArrayList<Integer>();
-	cucumberSounds.add(R.raw.cucumber);
-	cucumberSounds.add(R.raw.description_vegetables_cucumber);
-	cucumberSounds.add(R.raw.quiz_vegetables_cucumber);
-	cucumber.setSound_ids(cucumberSounds);
-	cucumber.setName("cucumber");
-	cucumber.setDescription("long vegetable");
-	cucumber.setId(R.drawable.img_vegetables_cucumber);
+	auxfood.setName("rice");
+	auxfood.setDescription("Rice is an excellent source of energy. In fact, it is the main source of energy for a lot of countries around the world. It is packed with itamins andminerals like itamin E, B and potassium. It is also low in fat.");
+	auxfood.setId(R.drawable.img_cereals_rice);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_cereals_rice);
+	auximageids.add(R.drawable.cereals_detail_rice_large);
+	auximageids.add(R.drawable.cereals_detail_rice_ricebag);
+	auximageids.add(R.drawable.cereals_detail_rice_riceplant);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.rice);
+	auxsoundids.add(R.raw.description_cereals_rice);
+	auxsoundids.add(R.raw.quiz_cereals_rice);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This cereal crop is the main source of energy for a lot of countries around the world. It is packed with vitamins and minerals, and it is also low in fat.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("That's right, it is rice!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, cereals);
 
-	ArrayList<Integer> cabbageSounds = new ArrayList<Integer>();
-	cabbageSounds.add(R.raw.cabbage);
-	cabbageSounds.add(R.raw.description_vegetables_cabbage);
-	cabbageSounds.add(R.raw.quiz_vegetables_cabbage);
-	cabbage.setSound_ids(cabbageSounds);
-	cabbage.setName("cabbage");
-	cabbage.setDescription("leafy vegetable");
-	cabbage.setId(R.drawable.img_vegetables_cabbage);
-
-	ArrayList<Integer> carrotSounds = new ArrayList<Integer>();
-	carrotSounds.add(R.raw.carrot);
-	carrotSounds.add(R.raw.description_vegetables_carrot);
-	carrotSounds.add(R.raw.quiz_vegetables_carrot);
-	carrot.setSound_ids(carrotSounds);
-	carrot.setName("carrot");
-	carrot.setDescription("long orange vegetable");
-	carrot.setId(R.drawable.img_vegetables_carrot);
+	auxfood.setName("maize");
+	auxfood.setDescription("Maize (also known as corn) is one of the world's major cereal crops and it is used as flour to make bread, breadkfast cereal, popcorn and a variety of meals. Sweet maize is grown and sold as a vegetable. It is a great source of dietary fibre and contains vitamin C, niacin, folate and potassium, which helps balancing the body's fluids.");
+	auxfood.setId(R.drawable.img_cereals_corn);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_cereals_corn);
+	auximageids.add(R.drawable.cereals_detail_corn_large);
+	auximageids.add(R.drawable.cereals_detail_corn_corngrains);
+	auximageids.add(R.drawable.cereals_detail_corn_cornplant);
+	auximageids.add(R.drawable.cereals_detail_corn_popcorn);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.maize);
+	auxsoundids.add(R.raw.description_cereals_maize);
+	auxsoundids.add(R.raw.quiz_cereals_maize);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This cereal crop is used as flour to make bread, breakfast cereal, popcorn and a variety of meals. It also grown as sweet corn to be sold as a vegetable. It contains dietary fibre, vitamin C and potassium, among others");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Well done, it is maize!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, cereals);
 	
-	pork.setName("pork");
-	pork.setDescription("red meat");
-	pork.setId(31);
-	//pork.setSound_paths("path");
-	salmon.setName("salmon");
-	salmon.setDescription("fish meat");
-	salmon.setId(32);
-	//salmon.setSound_paths("path");
-	chicken.setName("chicken");
-	chicken.setDescription("white meat");
-	chicken.setId(33);
-	//chicken.setSound_paths("path");
+	auxfood.setName("wheat");
+	auxfood.setDescription("Wheat is the leading source of vegetable protein in human food. It has a valuable content of protein. It contains iron which is an important component of blood. It is mostly used to make flour for a variety of food products like bread, cereal and pasta.");
+	auxfood.setId(R.drawable.img_cereals_wheat);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_cereals_wheat);
+	auximageids.add(R.drawable.cereals_detail_wheat_large);
+	auximageids.add(R.drawable.cereals_detail_wheat_wheatbread);
+	auximageids.add(R.drawable.cereals_detail_wheat_flour);
+	auximageids.add(R.drawable.cereals_detail_wheat_wheatplant);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.wheat);
+	auxsoundids.add(R.raw.description_cereals_wheat);
+	auxsoundids.add(R.raw.quiz_cereals_wheat);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This cereal crop is the leading source of vegetable protein in human food. It contains iron, which is an important component of blood. It is used to make flour for a variety of products like bread and pasta.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Well done, it is wheat!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, cereals);
 	
-	gouda.setName("gouda");
-	gouda.setDescription("yellow cheese");
-	gouda.setId(41);
-	//gouda.setSound_paths("path");
-	yoghurt.setName("yoghurt");
-	yoghurt.setDescription("creamy dairy");
-	yoghurt.setId(42);
-	//yoghurt.setSound_paths("path");
-	milk.setName("milk");
-	milk.setDescription("liquid dairy");
-	milk.setId(43);
-	//milk.setSound_paths("path");
+	//--------------DAIRY-------------------
+	auxfood.setName("butter");
+	auxfood.setDescription("Butter contains 'good' fat. It is used as a spread and for cooking and baking. It is rich in vitamin A, which helps your eyes, bones and skin. It also contains vitamin E, K and D. Vitamin D is essential in the absorption of calcium. It is a good source of iodine, which helps regulate the hormonesin the body.");
+	auxfood.setId(R.drawable.img_dairy_butter);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_dairy_butter);
+	auximageids.add(R.drawable.dairy_detail_butter_large);
+	auximageids.add(R.drawable.dairy_detail_butter_breadbutter);
+	auximageids.add(R.drawable.dairy_detail_butter_cake);
+	auximageids.add(R.drawable.dairy_detail_butter_croissant);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.butter);
+	auxsoundids.add(R.raw.description_dairy_butter);
+	auxsoundids.add(R.raw.quiz_dairy_butter);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This dairy product is a 'good' fat source that is used as a spread and for food preparation. Its vitamins help your eyes, bones and skin.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Excellent, it is butter!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, dairy);
 	
-	corn.setName("corn");
-	corn.setDescription("yellow grain");
-	corn.setId(51);
-	//corn.setSound_paths("path");
-	oats.setName("oats");
-	oats.setDescription("flakes grain");
-	oats.setId(52);
-	//oats.setSound_paths("path");
-	bread.setName("bread");
-	bread.setDescription("mashed grain");
-	corn.setId(53);
-	//corn.setSound_paths("path");
-
-	apple.setCategory(fruits.getCatName());
+	auxfood.setName("cheese");
+	auxfood.setDescription("There are hundreds of types of cheese made from milk from different animals, not only cows' milk. Cheese is valued for its portability, long life, and high content of fat, protein, calcium, and phosphorus. Calcium makes it good for your teeth and bones.");
+	auxfood.setId(R.drawable.img_dairy_cheese);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_dairy_cheese);
+	auximageids.add(R.drawable.dairy_detail_cheese_large);
+	auximageids.add(R.drawable.dairy_detail_cheese_cheeseblock);
+	auximageids.add(R.drawable.dairy_detail_cheese_cheeseslice);
+	auximageids.add(R.drawable.dairy_detail_cheese_sandwich);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.cheese);
+	auxsoundids.add(R.raw.description_dairy_cheese);
+	auxsoundids.add(R.raw.quiz_dairy_cheese);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("There are hundreds of types of this dairy product, coming from different animals. Its high content of calcium means that it is good for your teeth and bones.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Good job, it is cheese!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, dairy);
 	
-	ArrayList<String> imgpaths = new ArrayList<String>();
-	imgpaths.add("path1");
-	imgpaths.add("path2");
-	apple.setImage_paths(imgpaths);
+	auxfood.setName("milk");
+	auxfood.setDescription("Milk is the base of all dairy products. It is collected from many kinds of livestock, for example cattle, goats and sheep. It is a gread source of calcium, which helps keep your bones and teeth strong. It is also a good source of protein.");
+	auxfood.setId(R.drawable.img_dairy_milk);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_dairy_milk);
+	auximageids.add(R.drawable.dairy_detail_milk_large);
+	auximageids.add(R.drawable.dairy_detail_milk_cereal);
+	auximageids.add(R.drawable.dairy_detail_milk_cow);
+	auximageids.add(R.drawable.dairy_detail_milk_icecream);
+	auximageids.add(R.drawable.dairy_detail_milk_milkcarton);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.milk);
+	auxsoundids.add(R.raw.description_dairy_milk);
+	auxsoundids.add(R.raw.quiz_dairy_milk);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This white liquid is the base for all dairy products. It is collected from many kinds of livestock, and it is a great source of calcium, keeping your bones and teeth strong.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("You are really good, it is milk!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, dairy);
 	
-	ArrayList<String> qstns = new ArrayList<String>();
-	qstns.add("path1");
-	qstns.add("path2");
-	apple.setQuestions(qstns);
+	auxfood.setName("yogurt");
+	auxfood.setDescription("Yogurt is made from milk using 'good' bacteria. It is a good regulator of the functions of your digestive system. It is rich in calcium, which helps keep your bones and teeth strong and healthy.");
+	auxfood.setId(R.drawable.img_dairy_yogurt);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_dairy_yogurt);
+	auximageids.add(R.drawable.dairy_detail_yogurt_large);
+	auximageids.add(R.drawable.dairy_detail_yogurt_frozenyogurt);
+	auximageids.add(R.drawable.dairy_detail_yogurt_yogurtpack);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.yogurt);
+	auxsoundids.add(R.raw.description_dairy_yogurt);
+	auxsoundids.add(R.raw.quiz_dairy_yogurt);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This dairty product is made from milk and using 'good' bacteria. It is good fro your digestive system, your bones and your teeth.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Well done, it is yogurt!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, dairy);
 	
-	ArrayList<String> answrs = new ArrayList<String>();
-	answrs.add("path1");
-	answrs.add("path2");
-	apple.setAnswers(answrs);
+	//--------------FRUITS-------------------
+	auxfood.setName("apple");
+	auxfood.setDescription("Apples are sweet, delicious, and good for you. They contain vitamin C, which helps keep your immune system strong. They also protect your heart, brain, lungs and other vital organs.");
+	auxfood.setId(R.drawable.img_fruits_apple);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_fruits_apple);
+	auximageids.add(R.drawable.fruits_detail_apple_large);
+	auximageids.add(R.drawable.fruits_detail_apple_applebasket);
+	auximageids.add(R.drawable.fruits_detail_apple_applejuice);
+	auximageids.add(R.drawable.fruits_detail_apple_appletree);
+	auximageids.add(R.drawable.fruits_detail_apple_peeledapple);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.apple);
+	auxsoundids.add(R.raw.description_fruits_apple);
+	auxsoundids.add(R.raw.quiz_fruits_apple);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This sweet fruit helps keep your immune system strong, and protect your heart, brain, lungs and other vital organs.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("That's right, it is apple!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, fruits);
 	
-	ArrayList<String> sndpaths = new ArrayList<String>();
-	sndpaths.add("path1");
-	sndpaths.add("path2");
-	apple.setSound_paths(sndpaths);
+	auxfood.setName("banana");
+	auxfood.setDescription("Bananas are a great snack. They are high in natural sugar and fibre, and they keep you full for a long time. They have a lot of potassium, which helps keep your heart, nervous system and kidneys healthy.");
+	auxfood.setId(R.drawable.img_fruits_banana);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_fruits_banana);
+	auximageids.add(R.drawable.fruits_detail_banana_large);
+	auximageids.add(R.drawable.fruits_detail_banana_bananasplit);
+	auximageids.add(R.drawable.fruits_detail_banana_bananatree);
+	auximageids.add(R.drawable.fruits_detail_banana_peeledbanana);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.banana);
+	auxsoundids.add(R.raw.description_fruits_banana);
+	auxsoundids.add(R.raw.quiz_fruits_banana);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("This sugary fruit is a great snack because it keeps you full for a long time. Thanks to potassium, it helps keep your heart, brain and kidneys healthy.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Excellent, it is banana!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, fruits);
 	
-	// end of adding values to the apple
+	auxfood.setName("cherries");
+	auxfood.setDescription("Cherries are small fruits that contain antioxidants, which are good for the body in many different ways. They can help reduce headaches, iprove your sleep and prevent cancer.");
+	auxfood.setId(R.drawable.img_fruits_cherry);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_fruits_cherry);
+	auximageids.add(R.drawable.fruits_detail_cherry_large);
+	auximageids.add(R.drawable.fruits_detail_cherry_cannedcherries);
+	auximageids.add(R.drawable.fruits_detail_cherry_cherrydrink);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.cherry);
+	auxsoundids.add(R.raw.description_fruits_cherries);
+	auxsoundids.add(R.raw.quiz_fruits_cherries);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("These small fruits contain antioxidants that can help your body reduce headaches, improve your sleep and prevent cancer.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("Well done, it is cherries!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, fruits);
 	
-	// store the objects to the database note that there is a separate method for objects of each class
-	dbManager().storeFoodCat(fruits);
-	dbManager().storeFoodCat(vegetables);
-	dbManager().storeFoodCat(meats);
-	dbManager().storeFoodCat(dairy);
-	dbManager().storeFoodCat(cereals);
-	
-	dbManager().storeFood(apple);
-	dbManager().storeFood(orange);
-	dbManager().storeFood(banana);
-	
-	dbManager().storeFood(tomato);
-	dbManager().storeFood(cucumber);
-	dbManager().storeFood(cabbage);
-	
-	dbManager().storeFood(gouda);
-	dbManager().storeFood(yoghurt);
-	dbManager().storeFood(milk);
-	
-	dbManager().storeFood(pork);
-	dbManager().storeFood(salmon);
-	dbManager().storeFood(chicken);
-	
-	dbManager().storeFood(corn);
-	dbManager().storeFood(oats);
-	dbManager().storeFood(bread);
-	
-	System.out.println(foodManager.getFoodCatNames());
-	System.out.println(foodManager.getAllFoodNames());
-	System.out.println(foodManager.getFoodCountFromCat(vegetables));
-	
-	// test object of FoodCategory created to load object from database
-	FoodCategory testLoadCat = new FoodCategory();
-	testLoadCat = dbManager().getCategory(fruits.getCatName());
-	Log.d("Db4o", "Category "+testLoadCat.getCatName()+" was succesfully stored and retrieved from database.");
-	
-	// test object of Food created to load object from database
-	Food testLoadFood = new Food();
-	testLoadFood = dbManager().getFood(apple.getName());
-	Log.d("Db4o", "Food "+testLoadFood.getName()+" was successfully stored and retrieved from database.");
-	// End of database related code ===========================================
-	
-	
-	//XmlParser uf=new XmlParser();
-	//CategoryCollection nene=new CategoryCollection();
-	//nene=uf.categoryfromXML(R.raw.data, this);
-	//Log.d("SOCOOOORRO",String.valueOf(nene.getList().get(0).getFoodsContained().get(0).getId()));
-	//Log.d("SOCOOOORRO2",String.valueOf(R.drawable.img_cereals_bread));
+	auxfood.setName("grapes");
+	auxfood.setDescription("Grapes are sweet, juicy and packed with essential vitamins and minerals. They provide dietary fibre, vitamin C and potassium. The energy you get from grapes lasts longer because it is slowly digested.");
+	auxfood.setId(R.drawable.img_fruits_grapes);
+	auximageids.clear();
+	auximageids.add(R.drawable.img_fruits_grapes);
+	auximageids.add(R.drawable.fruits_detail_grapes_large);
+	auximageids.add(R.drawable.fruits_detail_grapes_grapejuice);
+	auximageids.add(R.drawable.fruits_detail_grapes_raisins);
+	auximageids.add(R.drawable.fruits_detail_grapes_wine);
+	auxfood.setImage_ids(auximageids);
+	auxsoundids.clear();
+	auxsoundids.add(R.raw.grapes);
+	auxsoundids.add(R.raw.description_fruits_grapes);
+	auxsoundids.add(R.raw.quiz_fruits_grapes);
+	auxfood.setSound_ids(auxsoundids);
+	auxquestions.clear();
+	auxquestions.add("These sweet and juicy fruits are great for the body because they contain essential vitamins and mienrals, including vitamin C and potassium.");
+	auxfood.setQuestions(auxquestions);
+	auxanswers.clear();
+	auxanswers.add("That's right, it is grapes!");
+	auxfood.setAnswers(auxanswers);
+	foodManager.addFoodToCategory(auxfood, fruits);
 	
 	
 	}
@@ -314,11 +420,6 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	@Override
-	public void onDestroy(){
-		super.onDestroy();
-		stopService(new Intent(this,MediaServiceA.class));
-	}
 	
 	// Database related variables =============================================
 
