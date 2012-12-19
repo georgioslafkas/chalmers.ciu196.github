@@ -91,11 +91,30 @@ public class LearnDetailActivity extends Activity {
 			if (currentCat.get(i).getId() == foodToShow)
 			{
 				btnMainImage.setImageResource(foodToShow);
-				btnImage1.setImageResource(currentCat.get(i).getImage_ids().get(0));
-				btnImage2.setImageResource(currentCat.get(i).getImage_ids().get(1));
-				btnImage3.setImageResource(currentCat.get(i).getImage_ids().get(2));
-				btnImage4.setImageResource(currentCat.get(i).getImage_ids().get(3));
 				txtDescription.setText(currentCat.get(i).getDescription());
+				/* Check the number of images for each food and set accordingly */
+				if (currentCat.get(i).getImage_ids().size() >= 4)
+				{
+					btnImage1.setImageResource(currentCat.get(i).getImage_ids().get(0));
+					btnImage2.setImageResource(currentCat.get(i).getImage_ids().get(1));
+					btnImage3.setImageResource(currentCat.get(i).getImage_ids().get(2));
+					btnImage4.setImageResource(currentCat.get(i).getImage_ids().get(3));
+				}
+				else if (currentCat.get(i).getImage_ids().size() == 3)
+				{
+					btnImage1.setImageResource(currentCat.get(i).getImage_ids().get(0));
+					btnImage2.setImageResource(currentCat.get(i).getImage_ids().get(1));
+					btnImage3.setImageResource(currentCat.get(i).getImage_ids().get(2));
+					btnImage4.setVisibility(View.GONE);
+				}
+				else if (currentCat.get(i).getImage_ids().size() == 2)
+				{
+					btnImage1.setImageResource(currentCat.get(i).getImage_ids().get(0));
+					btnImage2.setImageResource(currentCat.get(i).getImage_ids().get(1));
+					btnImage3.setImageResource(View.GONE);
+					btnImage4.setImageResource(View.GONE);
+				}
+					
 			}
 	}
 	

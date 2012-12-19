@@ -2,11 +2,6 @@ package chalmers.ciu196.foodschool;
 
 import java.util.ArrayList;
 
-import android.content.Context;
-
-import chalmers.ciu196.foodschool.Database.XmlParser;
-
-
 public class SimpleFoodManager implements FoodManager {
 	
 	// This should be a singleton in order to avoid multiple instances

@@ -30,7 +30,7 @@ public class PlayTapActivity extends Activity {
 	public static Activity activityInstance = null; /* an instance of this activity, used in the cool down timer */
 	public Object correctAnswer = new Object(), wrongAnswer = new Object();
 
-	public final int POSSIBLE_WRONG_ANSWERS = 3; /* CHANGE THAT TO 7 WHEN DB IS COMPLETE */
+	private int POSSIBLE_WRONG_ANSWERS = 0; /* this depends on the number of items in each category */
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -135,10 +135,22 @@ public class PlayTapActivity extends Activity {
 		btnToLookFor.setImageResource(foods.get(currentFood).getId());
 	}
 	
-	/* Generate a random number, 1-8 */
-	public int generateRandomNumber()
+	/* Generate a random number.
+	 * The number depends on the size
+	 * of the food list (upperlimit). That
+	 * size determines the total number of
+	 * foods that will appear on the grid.
+	 * We do not need numbers over that
+	 * size, because this number is used
+	 * to generate which button will hold
+	 * the correct food. If e.g. there are only
+	 * 5 total answers, that means that there will be
+	 * 5 buttons. We don't need numbers over 5 in that
+	 * case.
+	 **/
+	public int generateRandomNumber(int upperlimit)
 	{
-		return randomNo.nextInt(8)+1;
+		return randomNo.nextInt(upperlimit)+1;
 	}
 	
 	/* This method creates a list with random images.
@@ -159,12 +171,11 @@ public class PlayTapActivity extends Activity {
 		 **/
 		tempFoodList.remove(currentFood);
 		Collections.shuffle(tempFoodList);
-		
+		POSSIBLE_WRONG_ANSWERS = tempFoodList.size();
 		/* Loop through the copy of the food list
 		 * and add the images of those objects to
 		 * the list with the images
 		 */
-		/* **************** CHANGE POSSIBLE ANSWERS (SEE ABOVE CLASS DECLARATION) ************************* */
 		for (int i = 0; i < POSSIBLE_WRONG_ANSWERS; i++)
 			wrongAnswerImages.add(tempFoodList.get(i).getId());
 		
@@ -186,7 +197,13 @@ public class PlayTapActivity extends Activity {
 		ImageButton btnTap6 = (ImageButton) findViewById(R.id.btnTap6);
 		ImageButton btnTap7 = (ImageButton) findViewById(R.id.btnTap7);
 		ImageButton btnTap8 = (ImageButton) findViewById(R.id.btnTap8);
-		int correctButton = generateRandomNumber();
+		/* The list with the wrong images is 1 smaller than the total
+		 * number of images (since all images except one are wrong). But
+		 * we need to generate numbers up to the size of the list (all wrong
+		 * answers + the correct one = total food list size). That's why
+		 * we add 1 to this argument.
+		 */
+		int correctButton = generateRandomNumber(wrongAnswerImages.size()+1);
 		
 		switch (correctButton)
 		{
@@ -199,10 +216,47 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setImageResource(wrongAnswerImages.get(1));
 				btnTap4.setTag(wrongAnswer);
 				btnTap4.setImageResource(wrongAnswerImages.get(2));
+				/* If there are 3 wrong answers, than there
+				 * are 4 answers in total, so we do not need
+				 * the extra buttons. Hide them and exit.
+				 */
+				if (wrongAnswerImages.size() == 3)
+				{
+					btnTap5.setVisibility(View.INVISIBLE);
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap5.setTag(wrongAnswer);
+				btnTap5.setImageResource(wrongAnswerImages.get(3));
+				/* If there are 4 wrong answers, than there
+				 * are 5 answers in total, so we do not need
+				 * the extra buttons. Hide them and exit.
+				 */
+				if (wrongAnswerImages.size() == 4)
+				{
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap6.setTag(wrongAnswer);
+				btnTap6.setImageResource(wrongAnswerImages.get(4));
+				/* If there are 5 wrong answers, than there
+				 * are 6 answers in total, so we do not need
+				 * the extra buttons. Hide them and exit.
+				 */
+				if (wrongAnswerImages.size() == 5)
+				{
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap7.setTag(wrongAnswer);
+				btnTap7.setImageResource(wrongAnswerImages.get(5));
 				btnTap8.setTag(wrongAnswer);
+				btnTap8.setImageResource(wrongAnswerImages.get(6));
 				break;
 			case 2:
 				btnTap1.setTag(wrongAnswer);
@@ -213,10 +267,35 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setImageResource(wrongAnswerImages.get(1));
 				btnTap4.setTag(wrongAnswer);
 				btnTap4.setImageResource(wrongAnswerImages.get(2));
+				if (wrongAnswerImages.size() == 3)
+				{
+					btnTap5.setVisibility(View.INVISIBLE);
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap5.setTag(wrongAnswer);
+				btnTap5.setImageResource(wrongAnswerImages.get(3));
+				if (wrongAnswerImages.size() == 4)
+				{
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap6.setTag(wrongAnswer);
+				btnTap6.setImageResource(wrongAnswerImages.get(4));
+				if (wrongAnswerImages.size() == 5)
+				{
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap7.setTag(wrongAnswer);
+				btnTap7.setImageResource(wrongAnswerImages.get(5));
 				btnTap8.setTag(wrongAnswer);
+				btnTap8.setImageResource(wrongAnswerImages.get(6));
 				break;
 			case 3:
 				btnTap1.setTag(wrongAnswer);
@@ -227,10 +306,35 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setImageResource(foods.get(currentFood).getId());
 				btnTap4.setTag(wrongAnswer);
 				btnTap4.setImageResource(wrongAnswerImages.get(2));
+				if (wrongAnswerImages.size() == 3)
+				{
+					btnTap5.setVisibility(View.INVISIBLE);
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap5.setTag(wrongAnswer);
+				btnTap5.setImageResource(wrongAnswerImages.get(3));
+				if (wrongAnswerImages.size() == 4)
+				{
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap6.setTag(wrongAnswer);
+				btnTap6.setImageResource(wrongAnswerImages.get(4));
+				if (wrongAnswerImages.size() == 5)
+				{
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap7.setTag(wrongAnswer);
+				btnTap7.setImageResource(wrongAnswerImages.get(5));
 				btnTap8.setTag(wrongAnswer);
+				btnTap8.setImageResource(wrongAnswerImages.get(6));
 				break;
 			case 4:
 				btnTap1.setTag(wrongAnswer);
@@ -241,10 +345,35 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(correctAnswer);
 				btnTap4.setImageResource(foods.get(currentFood).getId());
+				if (wrongAnswerImages.size() == 3)
+				{
+					btnTap5.setVisibility(View.INVISIBLE);
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap5.setTag(wrongAnswer);
+				btnTap5.setImageResource(wrongAnswerImages.get(3));
+				if (wrongAnswerImages.size() == 4)
+				{
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap6.setTag(wrongAnswer);
+				btnTap6.setImageResource(wrongAnswerImages.get(4));
+				if (wrongAnswerImages.size() == 5)
+				{
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap7.setTag(wrongAnswer);
+				btnTap7.setImageResource(wrongAnswerImages.get(5));
 				btnTap8.setTag(wrongAnswer);
+				btnTap8.setImageResource(wrongAnswerImages.get(6));
 				break;
 			case 5:
 				btnTap1.setTag(wrongAnswer);
@@ -254,11 +383,28 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setTag(wrongAnswer);
 				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
+				btnTap4.setImageResource(wrongAnswerImages.get(3));
 				btnTap5.setTag(correctAnswer);
 				btnTap5.setImageResource(foods.get(currentFood).getId());
+				if (wrongAnswerImages.size() == 4)
+				{
+					btnTap6.setVisibility(View.INVISIBLE);
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap6.setTag(wrongAnswer);
+				btnTap6.setImageResource(wrongAnswerImages.get(4));
+				if (wrongAnswerImages.size() == 5)
+				{
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap7.setTag(wrongAnswer);
+				btnTap7.setImageResource(wrongAnswerImages.get(5));
 				btnTap8.setTag(wrongAnswer);
+				btnTap8.setImageResource(wrongAnswerImages.get(6));
 				break;
 			case 6:
 				btnTap1.setTag(wrongAnswer);
@@ -268,11 +414,21 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setTag(wrongAnswer);
 				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
+				btnTap4.setImageResource(wrongAnswerImages.get(3));
 				btnTap5.setTag(wrongAnswer);
+				btnTap5.setImageResource(wrongAnswerImages.get(4));
 				btnTap6.setTag(correctAnswer);
 				btnTap6.setImageResource(foods.get(currentFood).getId());
+				if (wrongAnswerImages.size() == 5)
+				{
+					btnTap7.setVisibility(View.INVISIBLE);
+					btnTap8.setVisibility(View.INVISIBLE);
+					break;
+				}
 				btnTap7.setTag(wrongAnswer);
+				btnTap7.setImageResource(wrongAnswerImages.get(5));
 				btnTap8.setTag(wrongAnswer);
+				btnTap8.setImageResource(wrongAnswerImages.get(6));
 				break;
 			case 7:
 				btnTap1.setTag(wrongAnswer);
@@ -282,11 +438,15 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setTag(wrongAnswer);
 				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
+				btnTap4.setImageResource(wrongAnswerImages.get(3));
 				btnTap5.setTag(wrongAnswer);
+				btnTap5.setImageResource(wrongAnswerImages.get(4));
 				btnTap6.setTag(wrongAnswer);
+				btnTap6.setImageResource(wrongAnswerImages.get(5));
 				btnTap7.setTag(correctAnswer);
 				btnTap7.setImageResource(foods.get(currentFood).getId());
 				btnTap8.setTag(wrongAnswer);
+				btnTap8.setImageResource(wrongAnswerImages.get(6));
 				break;
 			case 8:
 				btnTap1.setTag(wrongAnswer);
@@ -296,9 +456,13 @@ public class PlayTapActivity extends Activity {
 				btnTap3.setTag(wrongAnswer);
 				btnTap3.setImageResource(wrongAnswerImages.get(2));
 				btnTap4.setTag(wrongAnswer);
+				btnTap4.setImageResource(wrongAnswerImages.get(3));
 				btnTap5.setTag(wrongAnswer);
+				btnTap5.setImageResource(wrongAnswerImages.get(4));
 				btnTap6.setTag(wrongAnswer);
+				btnTap6.setImageResource(wrongAnswerImages.get(5));
 				btnTap7.setTag(wrongAnswer);
+				btnTap7.setImageResource(wrongAnswerImages.get(6));
 				btnTap8.setTag(correctAnswer);
 				btnTap8.setImageResource(foods.get(currentFood).getId());
 				break;

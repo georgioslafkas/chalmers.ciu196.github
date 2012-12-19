@@ -20,7 +20,7 @@ import android.widget.Toast;
 public class PlayQuizActivity extends Activity {
 	public static GameTimerBar timer; /* timer is the count down timer */
 	public static CoolDownTimer cooldownTimer; /* timer that counts down to the next question */
-	private static final int TOTAL_TIME = 10000; /* 10 seconds count down */
+	private static final int TOTAL_TIME = 20000; /* 20 seconds count down */
 	private static final int INTERVAL = 500;	/* 0.5 second interval */
 	private static final int COOL_DOWN = 3000; /* time to next question */
 	private final int NOT_FOUND = -1; /* in case a category was not found */
@@ -212,7 +212,7 @@ public class PlayQuizActivity extends Activity {
 		if (currentFood < foods.size())
 		{
 			TextView txtQuestion = (TextView) findViewById(R.id.txtQuestion);
-			txtQuestion.setText(foods.get(currentFood).getDescription());
+			txtQuestion.setText(foods.get(currentFood).getQuestions().get(0));
 		}
 	}
 	

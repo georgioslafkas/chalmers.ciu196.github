@@ -1,7 +1,5 @@
 package chalmers.ciu196.foodschool;
 
-import java.util.ArrayList;
-
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;

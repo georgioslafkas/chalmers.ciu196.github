@@ -93,11 +93,11 @@ public class LearnFoodActivity extends Activity {
 				btn1_1.setImageResource(R.drawable.img_vegetables_broccoli);
 				btn1_2.setImageResource(R.drawable.img_vegetables_cabbage);
 				btn1_3.setImageResource(R.drawable.img_vegetables_carrot);
-				btn1_4.setImageResource(R.drawable.img_vegetables_cucumber);
-				btn2_1.setImageResource(R.drawable.img_vegetables_eggplant);
-				btn2_2.setImageResource(R.drawable.img_vegetables_green_peas);
-				btn2_3.setImageResource(R.drawable.img_vegetables_lettuce);
-				btn2_4.setImageResource(R.drawable.img_vegetables_mushrooms);
+				btn1_4.setImageResource(R.drawable.img_vegetables_celery);
+				btn2_1.setImageResource(R.drawable.img_vegetables_cucumber);
+				btn2_2.setImageResource(R.drawable.img_vegetables_eggplant);
+				btn2_3.setImageResource(R.drawable.img_vegetables_garlic);
+				btn2_4.setImageResource(R.drawable.img_vegetables_lettuce);
 				btn3_1.setImageResource(R.drawable.img_vegetables_onion);
 				btn3_2.setImageResource(R.drawable.img_vegetables_pepper);
 				btn3_3.setImageResource(R.drawable.img_vegetables_potato);
@@ -112,12 +112,12 @@ public class LearnFoodActivity extends Activity {
 				btn2_1.setImageResource(R.drawable.img_protein_sausage);
 				btn2_2.setImageResource(R.drawable.img_protein_egg);
 				/* Hide unnecessary buttons */
-				btn2_3.setVisibility(View.GONE);
-				btn2_4.setVisibility(View.GONE);
-				btn3_1.setVisibility(View.GONE);
-				btn3_2.setVisibility(View.GONE);
-				btn3_3.setVisibility(View.GONE);
-				btn3_4.setVisibility(View.GONE);
+				btn2_3.setVisibility(View.INVISIBLE);
+				btn2_4.setVisibility(View.INVISIBLE);
+				btn3_1.setVisibility(View.INVISIBLE);
+				btn3_2.setVisibility(View.INVISIBLE);
+				btn3_3.setVisibility(View.INVISIBLE);
+				btn3_4.setVisibility(View.INVISIBLE);
 				break;
 			/* DAIRY */
 			case 4:
@@ -125,14 +125,14 @@ public class LearnFoodActivity extends Activity {
 				btn1_2.setImageResource(R.drawable.img_dairy_cheese);
 				btn1_3.setImageResource(R.drawable.img_dairy_milk);
 				btn1_4.setImageResource(R.drawable.img_dairy_yogurt);
-				btn2_1.setVisibility(View.GONE);
-				btn2_2.setVisibility(View.GONE);
-				btn2_3.setVisibility(View.GONE);
-				btn2_4.setVisibility(View.GONE);
-				btn3_1.setVisibility(View.GONE);
-				btn3_2.setVisibility(View.GONE);
-				btn3_3.setVisibility(View.GONE);
-				btn3_4.setVisibility(View.GONE);
+				btn2_1.setVisibility(View.INVISIBLE);
+				btn2_2.setVisibility(View.INVISIBLE);
+				btn2_3.setVisibility(View.INVISIBLE);
+				btn2_4.setVisibility(View.INVISIBLE);
+				btn3_1.setVisibility(View.INVISIBLE);
+				btn3_2.setVisibility(View.INVISIBLE);
+				btn3_3.setVisibility(View.INVISIBLE);
+				btn3_4.setVisibility(View.INVISIBLE);
 				break;
 			/* CEREALS */
 			case 5:
@@ -141,13 +141,13 @@ public class LearnFoodActivity extends Activity {
 				btn1_3.setImageResource(R.drawable.img_cereals_pasta);
 				btn1_4.setImageResource(R.drawable.img_cereals_rice);
 				btn2_1.setImageResource(R.drawable.img_cereals_wheat);
-				btn2_2.setVisibility(View.GONE);
-				btn2_3.setVisibility(View.GONE);
-				btn2_4.setVisibility(View.GONE);
-				btn3_1.setVisibility(View.GONE);
-				btn3_2.setVisibility(View.GONE);
-				btn3_3.setVisibility(View.GONE);
-				btn3_4.setVisibility(View.GONE);
+				btn2_2.setVisibility(View.INVISIBLE);
+				btn2_3.setVisibility(View.INVISIBLE);
+				btn2_4.setVisibility(View.INVISIBLE);
+				btn3_1.setVisibility(View.INVISIBLE);
+				btn3_2.setVisibility(View.INVISIBLE);
+				btn3_3.setVisibility(View.INVISIBLE);
+				btn3_4.setVisibility(View.INVISIBLE);
 				break;
 			/* NOT FOUND, DEFAULT */
 			default:
@@ -224,6 +224,7 @@ public class LearnFoodActivity extends Activity {
 				break;
 			case R.id.btn1_3:
 				foodToShow = R.drawable.img_fruits_cherry;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_4:
 				foodToShow = R.drawable.img_fruits_grapes;
@@ -231,9 +232,11 @@ public class LearnFoodActivity extends Activity {
 				break;
 			case R.id.btn2_1:
 				foodToShow = R.drawable.img_fruits_lemon;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_2:
 				foodToShow = R.drawable.img_fruits_lime;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_3:
 				foodToShow = R.drawable.img_fruits_orange;
@@ -241,18 +244,23 @@ public class LearnFoodActivity extends Activity {
 				break;
 			case R.id.btn2_4:
 				foodToShow = R.drawable.img_fruits_peach;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_1:
 				foodToShow = R.drawable.img_fruits_pear;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_2:
 				foodToShow = R.drawable.img_fruits_pineapple;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_3:
 				foodToShow = R.drawable.img_fruits_strawberries;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_4:
 				foodToShow = R.drawable.img_fruits_watermelon;
+				playFoodSound(foodToShow);
 				break;
 			default:
 				break;
@@ -266,6 +274,7 @@ public class LearnFoodActivity extends Activity {
 		{
 			case R.id.btn1_1:
 				foodToShow = R.drawable.img_vegetables_broccoli;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_2:
 				foodToShow = R.drawable.img_vegetables_cabbage;
@@ -276,29 +285,36 @@ public class LearnFoodActivity extends Activity {
 				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_4:
-				foodToShow = R.drawable.img_vegetables_cucumber;
+				foodToShow = R.drawable.img_vegetables_celery;
 				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_1:
-				foodToShow = R.drawable.img_vegetables_eggplant;
+				foodToShow = R.drawable.img_vegetables_cucumber;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_2:
-				foodToShow = R.drawable.img_vegetables_green_peas;
+				foodToShow = R.drawable.img_vegetables_eggplant;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_3:
-				foodToShow = R.drawable.img_vegetables_lettuce;
+				foodToShow = R.drawable.img_vegetables_garlic;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_4:
-				foodToShow = R.drawable.img_vegetables_mushrooms;
+				foodToShow = R.drawable.img_vegetables_lettuce;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_1:
 				foodToShow = R.drawable.img_vegetables_onion;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_2:
 				foodToShow = R.drawable.img_vegetables_pepper;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_3:
 				foodToShow = R.drawable.img_vegetables_potato;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn3_4:
 				foodToShow = R.drawable.img_vegetables_tomato;
@@ -316,21 +332,27 @@ public class LearnFoodActivity extends Activity {
 		{
 			case R.id.btn1_1:
 				foodToShow = R.drawable.img_protein_beef;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_2:
 				foodToShow = R.drawable.img_protein_chicken;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_3:
 				foodToShow = R.drawable.img_protein_fish;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_4:
 				foodToShow = R.drawable.img_protein_pork;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_1:
 				foodToShow = R.drawable.img_protein_sausage;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_2:
 				foodToShow = R.drawable.img_protein_egg;
+				playFoodSound(foodToShow);
 				break;
 			default:
 				break;
@@ -344,15 +366,19 @@ public class LearnFoodActivity extends Activity {
 		{
 			case R.id.btn1_1:
 				foodToShow = R.drawable.img_dairy_butter;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_2:
-				foodToShow = R.drawable.img_dairy_milk;
+				foodToShow = R.drawable.img_dairy_cheese;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_3:
-				foodToShow = R.drawable.img_dairy_cheese;
+				foodToShow = R.drawable.img_dairy_milk;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_4:
 				foodToShow = R.drawable.img_dairy_yogurt;
+				playFoodSound(foodToShow);
 				break;
 			default:
 				break;
@@ -366,18 +392,23 @@ public class LearnFoodActivity extends Activity {
 		{
 			case R.id.btn1_1:
 				foodToShow = R.drawable.img_cereals_bread;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_2:
 				foodToShow = R.drawable.img_cereals_corn;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_3:
 				foodToShow = R.drawable.img_cereals_pasta;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn1_4:
 				foodToShow = R.drawable.img_cereals_rice;
+				playFoodSound(foodToShow);
 				break;
 			case R.id.btn2_1:
 				foodToShow = R.drawable.img_cereals_wheat;
+				playFoodSound(foodToShow);
 				break;
 			default:
 				break;

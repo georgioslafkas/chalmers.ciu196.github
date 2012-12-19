@@ -170,14 +170,16 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp" >
+
         <ImageButton
             android:id="@+id/imageButtonw"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:scaleType="fitStart"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
             android:src="@drawable/play_timer"
-            android:background="@android:color/transparent"/>
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/btnLookFor"
@@ -189,13 +191,15 @@
             android:src="@drawable/img_fruits_apple" />
 
          <ImageButton
-            android:id="@+id/imageButtonz"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:scaleType="fitEnd"
-            android:layout_weight="1"
-            android:src="@drawable/play_basket"
-            android:background="@android:color/transparent"/>
+             android:id="@+id/imageButtonz"
+             android:layout_width="wrap_content"
+             android:layout_height="200dp"
+             android:layout_weight="1"
+             android:background="@android:color/transparent"
+             android:scaleType="fitEnd"
+             android:src="@drawable/play_basket"
+             android:visibility="invisible" />
+
     </TableRow>
 
 
