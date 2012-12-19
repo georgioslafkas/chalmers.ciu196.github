@@ -146,11 +146,16 @@ public class PlayTapActivity extends Activity {
 	 * the correct food. If e.g. there are only
 	 * 5 total answers, that means that there will be
 	 * 5 buttons. We don't need numbers over 5 in that
-	 * case.
+	 * case. Finally, we add a check since we don't
+	 * want the upperlimit to be greater than 8, because
+	 * that's the total number of buttons in our GUI.
 	 **/
 	public int generateRandomNumber(int upperlimit)
 	{
-		return randomNo.nextInt(upperlimit)+1;
+		if (upperlimit > 8)
+			return randomNo.nextInt(8)+1;
+		else
+			return randomNo.nextInt(upperlimit)+1;
 	}
 	
 	/* This method creates a list with random images.
