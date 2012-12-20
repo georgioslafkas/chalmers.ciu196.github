@@ -95,6 +95,8 @@ public class MainActivity extends Activity {
 	
 	/* This method creates and initializes all the
 	 * objects that the application is using.
+	 * NOTE: Should be removed when parsing delay
+	 * problem is solved.
 	 */
 	public void initObjects()
 	{
